@@ -6,11 +6,11 @@ Notes are written in Markdown with LaTeX. I write and view them in Obsidian.
 
 ### Courses:
 Current courses are:
-- CSC336H1 F (Fall) Numerical Methods
-- ENV100H1 F (Fall) Introduction to Environmental Studies
-- PHY350H1 F (Fall) Electromagnetic Theory
-- PHY407H1 F (Fall) Computational Physics
-- PHY407H1 F (Fall) Computational Physics
+- CSC336: Numerical Methods
+- ENV100: Introduction to Environmental Studies
+- PHY350: Electromagnetic Theory
+- PHY407: Computational Physics
+- PHY456: Quantum Mechanics II
 
 Dropped courses are:
 - Nothing yet
