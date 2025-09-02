@@ -3,7 +3,6 @@ Repository for saving my class notes for U of T Fall 2025 session.
 
 Notes are written in Markdown with LaTeX. I write and view them in Obsidian.
 
-
 ### Courses:
 Current courses are:
 - CSC336: Numerical Methods
