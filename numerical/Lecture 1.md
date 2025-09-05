@@ -133,4 +133,112 @@ The relative error in the floating point representation of $y$ is at the level o
 - Generally speaking subtracting nearly equal numbers will result in having no correct digits
 - This is one of the very few cases where arithmetic operations give large errors
 ### Error Propagation
-- Page 29
+Let $fl(x)=x(1+\delta_{x})$ and assume $f(x)$ is a twice differentiable function about $x$. Then, if $f(x)\neq 0$, using Taylor series we obtain the approximation:
+$$
+f(fl(x)) \approx f(x)(1+\delta_{f})
+$$
+Where I have defined the quantity,
+$$
+\delta_{f} = \frac{xf'(x)}{f(x)} \delta_{x}
+$$
+If $|\delta_{x}|\leq \varepsilon _\text{mach}$ we have:
+$$
+|\delta_{f}| \leq \left| \frac{xf'(x)}{f(x)} \right| \varepsilon _\text{mach} = \kappa_{f} \varepsilon _\text{mach}
+$$
+The factor out front is called the relative condition *number* of $f(x)$.
+
+A computation is called *well-conditioned* if relatively small changes in the input product relatively small changes in the output, otherwise it is called *ill-conditioned*.
+
+For the function $\sqrt{ x }$, $\kappa_{f}=1 /2$. A small number independent of $x$, and so this is a well-conditioned computation.
+
+For the function $e^{ x }$, $\kappa_{f}=|x|$, a function linearly dependent on $x$. For large $x$, we will have overflow, and so claim that the computation is well-conditioned for all acceptable values of $x$.
+
+If $\kappa_{f}>\varepsilon _\text{mach}^{-1}$, we risk having no correct digits at all in the computed result.
+
+A numerical algorithm is called stable if small changed in the input parameters have a small effect on the output, otherwise it is called unstable.
+
+Define $a=15.6$ and $b=15.7$. Under this computation,
+$$
+(a-b)^{2} = a^{2}-2ab+b^{2}
+$$
+Rounded to 3 decimals we have:
+$$
+(a-b)^{2} = .1\times 10^{-1}
+$$
+$$
+a^{2}-2ab+b^{2} = -0.1 \times 10^{1}
+$$
+Which is an entirely different number. In this case, computing the left function is far more stable than the right function, despite the expressions being mathematically equivalent.
+
+Generally speaking to maximise stability we try to:
+- Avoid subtracting nearly equal numbers
+- Minimise the number of operations
+- Add numbers starting from smallest and proceeding to the largest
+- Be alert when adding numbers of different scales
+### Forward and Backward Errors
+Define $y=f(x)$. Assume the inverse function $f^{-1}$ exists. Lets say instead of $y$ we compute $\hat{y}$ due to various errors like round-off error and propagation.
+
+$y-\hat{y}$ is called *forward error*. $\hat{y}$ can be seen as the result of exact computations $f$ on inexact input $\hat{x}$ and therefore $\hat{y}=f(\hat{x})$. Furthermore, we have $\hat{x}=f^{-1}(\hat{y})$
+
+$x-\hat{x}$ is called *backward error*. $\hat{x}$ denotes an input value for which the exact function $f$ would give the computed output $\hat{y}$. Alternatively, we have $\hat{y}=\hat{f}(x)$, and so we can conclude
+$$
+\hat{f}(x) = f(\hat{x}) \qquad \hat{x}=f^{-1}(\hat{f}(x))
+$$
+![[Pasted image 20250905093234.png]]
+The relative forward and backward errors are, respectively:
+$$
+\frac{y-\hat{y}}{y} \qquad \frac{x-\hat{x}}{x}
+$$
+Where we have:
+$$
+\left| \text{Relative forward error} \right| \approx \text{Condition Number} \times \left| \text{Relative backward error} \right|
+$$
+- Can help in case one is easier to solve than the other
+### Truncation and Rounding Error
+Sometimes mathematical expressions are approximated by other expressions, typically because they are more convenient for calculation. Assuming the computations are done in exact arithmetic, the error is called *truncation* or *discretization* error.
+
+The combination of truncation and rounding errors form *computational error*.
+### Total Error
+Define the input data $x$ and computer representation $\hat{x}$. Define the computation $f$ with approximation $g$ and computation evaluation $\hat{g}$. The total error is:
+$$
+\begin{align}
+= & f(x)-\hat{g}(\hat{x}) = \left[ f(x)-f(\hat{x}) \right]  + \left[ f(\hat{x})-g(\hat{x}) + g(\hat{x}) - \hat{g}(\hat{x}) \right]  \\
+= & \text{Propagated Error} + \left[ \text{Truncation Error} + \text{Rounding Error} \right] 
+\end{align}
+$$
+- The choice of numerical algorithm does not affect the propagated error, only the computational error
+- Propagated error depends on the condition number, and the error in the data
+![[Pasted image 20250905095358.png]]
+### Taylor's Theorem
+Recall the infinite Taylor series expansions of functions. Now, for some function Taylor series we have:
+$$
+f(x) = t_{k}(x) + \frac{f^{(k+1)}(\xi)}{(k+1)!}(x-a)^{k+1}
+$$
+Where $t_{k}$ is in the familiar *Taylor polynomial* form:
+$$
+t_{k}(x) = f(a) + f'(a)(x-a) + \dots + \frac{f^{(k)}(a)}{k!}(x-a)^{k}
+$$
+And the final term is the *remainder*,
+$$
+R_{k+1}(x) \equiv \frac{f^{(k+1)}(\xi)}{(k+1)!} (x-a)^{k+1}
+$$
+Therefore we have:
+$$
+f(x) = t_{k}(x) + R_{k+1}(x) \approx t_{k}(x)
+$$
+Where we can see that the truncation error is the remainder.
+### Notation
+The notation $O(n^{\beta})$ is used to denote asymptotic complexity of algorithms in terms of the problem size $n$. Under $n\to \infty$ we have:
+$$
+O(n^{\beta}) = c_{0} + c_{1} n + c_{2} n^{2} + \dots + c_{\beta} n^{\beta}
+$$
+Where $c_{i}$ are constant independent of $n$.
+
+$O(n^{\alpha})$ is used to denote asymptotic behaviour of error of some computational method, in terms of the distance between neighbour discretization points. Under $h\to 0$ we have:
+$$
+O(h^{\alpha}) = c_{\alpha} h^{\alpha} + c_{\alpha+1} h^{\alpha+1} + \dots
+$$
+Note that $h=(b-a) /n$ and so $h\propto n^{-1}$, therefore:
+$$
+O(h^{\alpha}) = O(n^{-\alpha}) = c_{\alpha} \frac{1}{n^{\alpha}} + c_{\alpha+1} \frac{1}{n^{\alpha+1}} + \dots = \dots + c_{\alpha+1} \frac{1}{n^{\alpha+1}} + c_{\alpha} \frac{1}{n^{\alpha}}
+$$
