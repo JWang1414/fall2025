@@ -145,7 +145,7 @@ If $|\delta_{x}|\leq \varepsilon _\text{mach}$ we have:
 $$
 |\delta_{f}| \leq \left| \frac{xf'(x)}{f(x)} \right| \varepsilon _\text{mach} = \kappa_{f} \varepsilon _\text{mach}
 $$
-The factor out front is called the relative condition *number* of $f(x)$.
+The factor out front is called the *relative condition number* of $f(x)$.
 
 A computation is called *well-conditioned* if relatively small changes in the input product relatively small changes in the output, otherwise it is called *ill-conditioned*.
 
