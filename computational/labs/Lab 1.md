@@ -29,10 +29,48 @@ Some sample "pseudocode" for the Euler-Cromer method
 # While the current time is less than the simulation time,
 	# Calculate the velocity of the planet
 	# Calculate the position of the planet
-	# Save the velocity and position values onto a list
+	# Save the velocity and position values onto a list (for plotting)
 # Draw plots. Including velocity (v_x and v_y) as a function of time, and the orbit (y as a function of x) in space
 ```
 ---
 Other parts of this question have been done in a Python file elsewhere
 
 ### Question 2
+---
+a.
+```python
+# Define the initial values for another planet (Jupiter in this case)
+# While the current time is less than the simulation time
+	# Calculate the velocity of Jupiter
+	# Calculate the position of Jupiter
+	# Calculate the velocity of Earth
+	# Calculate the position of Earth
+	# Save the velocity and position of all planets into a list
+# Draw plots
+```
+Programming done on another file
+
+---
+b.
+The increased mass of Jupiter destabilises Earth's orbit and flings it outside of the solar system.
+
+---
+c.
+Work was done on another file
+
+### Question 3
+---
+a.
+```python
+# Define an array of N Gaussian-distributed numbers between -5 and 5
+# Use linspace to define bin edges from -5 to 5
+# Define the histogram with a list of N zeroes
+# Check each random number
+	# Sort the random number into the correct bin
+	# Add it to the bin
+# Plot or print out the histogram for error checking
+```
+Our timing will begin at the point when we start sorting our numbers into the correct bins. We believe this to be valid because the time it takes to generate the numbers, and initialize the histogram to be inconsequential.
+
+---
+b.
