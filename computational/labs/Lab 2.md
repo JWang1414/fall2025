@@ -14,6 +14,8 @@ d.
 In issue in the previous part is that the mean is too large, therefore, we need to calculate the mean for smaller numbers. This can be done by shifting all the values in the dataset closer to the origin, calculating the standard deviation, and then shifting it back to where it was before.
 
 We will use some random data-point, like the first data-point to shift the mean closer to the origin. This relies on the data being closely distributed, otherwise, our shift may not be significant enough to reduce the error.
+
+It would be more accurate to shift the data by the mean, but by choosing one data-point we can continue to compute the standard deviation in one pass.
 ### Question 2
 ---
 av.
