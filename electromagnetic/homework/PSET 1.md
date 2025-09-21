@@ -116,14 +116,26 @@ For the second term,
 $$
 \int _{\mathcal{V}} V \, d\tau = \frac{q}{4\pi\epsilon_{0}} \int_{0}^{r} \int_{0}^{\pi} \int_{0}^{2\pi} \frac{e^{ -r'/\lambda }}{r'} (r'^{2} \sin \theta) \, d\phi  \, d\theta  \, dr' = \frac{q}{\epsilon_{0}} \int_{0}^{r} r'e^{ -r'/\lambda } \, dr'
 $$
+- Integral calculator
 $$
--\frac{q}{\epsilon_{0}} \lambda (r+\lambda) e^{ -r/\lambda }
+\int_{0}^{r} r' e^{ -r'/\lambda } \, dr' = \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda }
 $$
-Substitute in,
+Substitute.
 $$
-\frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } - \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda }
+\int _{\mathcal{V}} V \, d\tau = \frac{q}{\epsilon_{0}} \left[ \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda } \right]
 $$
-- I can't get this one right for some reason
+Therefore,
+$$
+\oint_{S} \vec{E}\cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} V \, d\tau = \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } + \frac{1}{\lambda^{2}} \left( \frac{q}{\epsilon_{0}} \left[ \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda } \right] \right)
+$$
+$$
+\frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } + \frac{q}{\epsilon_{0}} \left[ 1 - \left( 1 + \frac{r}{\lambda} \right) e^{ -r/\lambda } \right]
+$$
+$$
+\frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } + \frac{q}{\epsilon_{0}} - \frac{q}{\epsilon_{0}}\left( 1 + \frac{r}{\lambda} \right) e^{ -r/\lambda } = \frac{q}{\epsilon_{0}}
+$$
+As needed.
+
 ---
 e.
 For $n$ number of charges contained within a surface,
@@ -144,3 +156,47 @@ $$
 $$
 ---
 f.
+Here is the one in the textbook for reference
+![[Pasted image 20250921140908.png]]
+
+- The bottom line doesn't change
+- Curl of $\vec{E}$ is still 0
+- $\rho\to \vec{E}$ is given
+- $\rho\to V$ should be very similar to the given equation
+
+Find the differential form for Gauss' law,
+$$
+\oint_{S} \vec{E}\cdot d\vec{a} = \int _{\mathcal{V}} (\nabla \cdot \vec{E}) \, d\tau
+$$
+Therefore,
+$$
+\int _{\mathcal{V}} (\nabla \cdot \vec{E}) \, d\tau  + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} V \, d\tau = \frac{1}{\epsilon_{0}} \int _{\mathcal{V}} \rho \, d\tau
+$$
+The volume $\mathcal{V}$ here is the same for every single integral,
+$$
+\int _{\mathcal{V}} (\nabla \cdot \vec{E}) + \frac{V}{\lambda^{2}} \, d\tau = \frac{1}{\epsilon_{0}} \int _{\mathcal{V}} \rho \, d\tau
+$$
+Differential equation,
+$$
+\vec{\nabla}\cdot \vec{E} + \frac{V}{\lambda^{2}} = \frac{\rho}{\epsilon_{0}} \implies \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_{0}} - \frac{V}{\lambda^{2}}
+$$
+For the Laplacian of $V$,
+$$
+\nabla^{2}V = \nabla \cdot \nabla V= - \nabla \cdot \vec{E} = \frac{V}{\lambda^{2}} - \frac{\rho}{\epsilon_{0}}
+$$
+Which is equivalent to,
+$$
+\left( \nabla^{2} - \frac{1}{\lambda^{2}} \right)V =-\frac{\rho}{\epsilon_{0}}
+$$
+The last equation, $\rho\to V$ is,
+$$
+V = \frac{1}{4\pi\epsilon_{0}} \int \frac{\rho}{r} e^{ -r/\lambda } \, d\tau
+$$
+- Should be all the equations I need. Just have to write this down on a piece of paper.
+---
+g.
+Since $\vec{E}=0$, I can largely apply the same logic used in existing electrostatics. by Gauss' law,
+$$
+\vec{\nabla} \cdot \vec{E} + \frac{V}{\lambda^{2}} = \vec{\nabla}\cdot \vec{E} - \frac{1}{\lambda^{2}} \int \vec{E}\cdot d\vec{l} =0= \frac{\rho}{\epsilon_{0}}
+$$
+Therefore, the inside of a conductor is an equipotential, with $\rho=0$. The net charge must therefore reside on the surface of the conductor.
