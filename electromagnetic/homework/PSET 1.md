@@ -72,3 +72,75 @@ $$
 $$
 From here it's trivial to see the axis and radius of the cylinder. Note that I have used $C$ to represent some arbitrary constant, it will actually be something dependent on $V_{0}$. Interestingly (something that can also be seen from graphing) is that the axis of the cylinder also depends on $V_{0}$, not just the radius.
 ### Problem 2.55
+---
+a.
+The electric field from the single charge is,
+$$
+\vec{F} = q\vec{E} \implies \vec{E} = \frac{1}{4\pi\epsilon_{0}} \frac{Q}{r^{2}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } \hat{r}
+$$
+For a continuous distribution of charges:
+$$
+\vec{E} = \frac{1}{4\pi\epsilon_{0}} \int \frac{e^{ -r/\lambda }}{r^{2}}\left( 1+\frac{r}{\lambda} \right) \hat{r} \, dq
+$$
+For a volume charge,
+$$
+\vec{E} = \frac{1}{4\pi\epsilon_{0}} \int \frac{\rho(\vec{r}')}{r^{2}}\left( 1+\frac{r}{\lambda} \right)e^{ -r/\lambda }\hat{r} \, d\tau' 
+$$
+---
+b.
+The corrective term is exclusively in terms of radius, or distance. Because it has no dependence on radial components, the new electric field is unlikely to have developed any curl. Any vector whose curl is zero is equal to the gradient of some scalar, and so I believe this field admits a scalar potential.
+
+---
+c.
+$$
+\begin{align}
+V(r) & =- \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d\vec{l} =-\frac{1}{4\pi\epsilon_{0}} \int_{\infty}^{r} \frac{q}{r'^{2}}\left( 1+\frac{r'}{\lambda} \right) e^{ -r'/\lambda } \, dr' \\
+ & = -\frac{q}{4\pi\epsilon_{0}} \int_{\infty}^{r} \left( \frac{1}{r'^{2}} + \frac{1}{\lambda r'} \right)e^{ -r'/\lambda } \, dr'  \\
+\end{align}
+$$
+Integral calculator says this integral is,
+$$
+\int \left( \frac{1}{r'^{2}} + \frac{1}{\lambda r'} \right)e^{ -r'^{2}/\lambda } \, dr' = -\frac{e^{ -r/\lambda }}{r}
+$$
+Choose $\mathcal{O}\to \infty$ and the scalar potential is,
+$$
+V(r) = -\frac{q}{4\pi\epsilon_{0}} \left[ -\frac{e^{ -r/\lambda }}{r} \right] = \frac{1}{4\pi\epsilon_{0}} \frac{q}{r} e^{ -r/\lambda }
+$$
+---
+d.
+For the first term,
+$$
+\oint_{S} \vec{E}\cdot d\vec{a} = (4\pi r^{2}) \vec{E} = \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda }
+$$
+For the second term,
+$$
+\int _{\mathcal{V}} V \, d\tau = \frac{q}{4\pi\epsilon_{0}} \int_{0}^{r} \int_{0}^{\pi} \int_{0}^{2\pi} \frac{e^{ -r'/\lambda }}{r'} (r'^{2} \sin \theta) \, d\phi  \, d\theta  \, dr' = \frac{q}{\epsilon_{0}} \int_{0}^{r} r'e^{ -r'/\lambda } \, dr'
+$$
+$$
+-\frac{q}{\epsilon_{0}} \lambda (r+\lambda) e^{ -r/\lambda }
+$$
+Substitute in,
+$$
+\frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } - \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda }
+$$
+- I can't get this one right for some reason
+---
+e.
+For $n$ number of charges contained within a surface,
+$$
+\sum_{i=1}^{n} \left[ \oint_{S} \vec{E}_{i}\cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} V_{i} \, d\tau  \right] = \sum_{i=1}^{n} \frac{q_{i}}{\epsilon_{0}}
+$$
+By linearity,
+$$
+\oint_{S} \sum_{i=1}^{n} \vec{E}_{i}\cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} \sum_{i=1}^{n} V_{i} \, d\tau = \frac{1}{\epsilon_{0}} \sum_{i=1}^{n} q_{i}
+$$
+Each of these summations are equivalent to the total electric field, potential, and charge enclosed within the surface,
+$$
+\vec{E} = \sum_{i=1}^{n} \vec{E}_{i} \qquad V = \sum_{i=1}^{n} V_{i} \qquad Q_\text{enc} = \sum_{i=1}^{n} q_{i}
+$$
+Therefore,
+$$
+\oint_{S} \vec{E} \cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} V \, d\tau = \frac{Q_\text{enc}}{\epsilon_{0}}
+$$
+---
+f.
