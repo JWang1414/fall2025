@@ -74,57 +74,85 @@ From here it's trivial to see the axis and radius of the cylinder. Note that I h
 ### Problem 2.55
 ---
 a.
-The electric field from the single charge is,
+The electric field from the single charge $Q$ is,
 $$
 \vec{F} = q\vec{E} \implies \vec{E} = \frac{1}{4\pi\epsilon_{0}} \frac{Q}{r^{2}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } \hat{r}
 $$
-For a continuous distribution of charges:
+Replacing $Q$ with an integral, the electric field for a continuous distribution of charges is:
 $$
 \vec{E} = \frac{1}{4\pi\epsilon_{0}} \int \frac{e^{ -r/\lambda }}{r^{2}}\left( 1+\frac{r}{\lambda} \right) \hat{r} \, dq
 $$
-For a volume charge,
+For a volume charge, $dq\to \rho \, d\tau$.
 $$
 \vec{E} = \frac{1}{4\pi\epsilon_{0}} \int \frac{\rho(\vec{r}')}{r^{2}}\left( 1+\frac{r}{\lambda} \right)e^{ -r/\lambda }\hat{r} \, d\tau' 
 $$
 ---
 b.
-The corrective term is exclusively in terms of radius, or distance. Because it has no dependence on radial components, the new electric field is unlikely to have developed any curl. Any vector whose curl is zero is equal to the gradient of some scalar, and so I believe this field admits a scalar potential.
+The corrective term is exclusively in terms of radius, or distance. Because it has no dependence on radial components, the new electric field is unlikely to have developed any curl. A theorem states that any vector whose curl is zero is equal to the gradient of some scalar. I conclude this field admits a scalar potential.
 
 ---
 c.
+Using $\mathcal{O}\to \infty$, I will compute the potential using the definition.
 $$
 \begin{align}
 V(r) & =- \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d\vec{l} =-\frac{1}{4\pi\epsilon_{0}} \int_{\infty}^{r} \frac{q}{r'^{2}}\left( 1+\frac{r'}{\lambda} \right) e^{ -r'/\lambda } \, dr' \\
  & = -\frac{q}{4\pi\epsilon_{0}} \int_{\infty}^{r} \left( \frac{1}{r'^{2}} + \frac{1}{\lambda r'} \right)e^{ -r'/\lambda } \, dr'  \\
 \end{align}
 $$
-Integral calculator says this integral is,
+By linearity, this integral is,
 $$
-\int \left( \frac{1}{r'^{2}} + \frac{1}{\lambda r'} \right)e^{ -r'^{2}/\lambda } \, dr' = -\frac{e^{ -r/\lambda }}{r}
+\int \left( \frac{1}{r^{2}} + \frac{1}{\lambda r} \right)e^{ -r/\lambda } \, dr = \int \frac{e^{ -r/\lambda }}{r^{2}} \, dr + \frac{1}{\lambda} \int \frac{e^{ -r/\lambda }}{r} \, dr
 $$
-Choose $\mathcal{O}\to \infty$ and the scalar potential is,
+Apply integration by parts to the first integral,
+$$
+\int \frac{e^{ -r/\lambda }}{r^{2}} \, dr = - \frac{e^{ -r/\lambda }}{r}- \frac{1}{\lambda} \int \frac{e^{ -r/\lambda }}{r} \, dr
+$$
+Therefore,
+$$
+\int \left( \frac{1}{r^{2}} + \frac{1}{\lambda r} \right) e^{ -r/\lambda } \, dr = - \frac{e^{ -r/\lambda }}{r}- \frac{1}{\lambda} \int \frac{e^{ -r/\lambda }}{r} \, dr + \frac{1}{\lambda} \int \frac{e^{ -r/\lambda }}{r} \, dr = -\frac{e^{ -r/\lambda }}{r}
+$$
+This integral vanishes at $\infty$. Substituting it back into the computation,
 $$
 V(r) = -\frac{q}{4\pi\epsilon_{0}} \left[ -\frac{e^{ -r/\lambda }}{r} \right] = \frac{1}{4\pi\epsilon_{0}} \frac{q}{r} e^{ -r/\lambda }
 $$
 ---
 d.
-For the first term,
+Using a "Gaussian sphere", the electric field about this point is,
 $$
 \oint_{S} \vec{E}\cdot d\vec{a} = (4\pi r^{2}) \vec{E} = \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda }
 $$
-For the second term,
+The electric potential is,
 $$
 \int _{\mathcal{V}} V \, d\tau = \frac{q}{4\pi\epsilon_{0}} \int_{0}^{r} \int_{0}^{\pi} \int_{0}^{2\pi} \frac{e^{ -r'/\lambda }}{r'} (r'^{2} \sin \theta) \, d\phi  \, d\theta  \, dr' = \frac{q}{\epsilon_{0}} \int_{0}^{r} r'e^{ -r'/\lambda } \, dr'
 $$
-- Integral calculator
+Using the substitution $u=-r /\lambda$, this integral becomes,
 $$
-\int_{0}^{r} r' e^{ -r'/\lambda } \, dr' = \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda }
+\int re^{ -r/\lambda } \, dr = \lambda^{2} \int ue^{ u } \, du
 $$
-Substitute.
+Apply integration by parts,
+$$
+\int ue^{ u } \, du = ue^{ u } - \int e^{ u } \, du = ue^{ u } - e^{ u }
+$$
+Substituting variables back in,
+$$
+\lambda^{2} \int ue^{ u } \, du = \lambda^{2} (ue^{ u } - e^{ u })= -\lambda re^{ -r/\lambda } - \lambda^{2} e^{ -r/\lambda }
+$$
+Simplifying this result,
+$$
+\int re^{ -r/\lambda } \, dr = -\lambda (r+\lambda) e^{ -r/\lambda }
+$$
+Substitute back into the original equation,
+$$
+\begin{align}
+\frac{q}{\epsilon_{0}} \int_{0}^{r} r'e^{ -r'/\lambda } \, dr' & = -\frac{q\lambda}{\epsilon_{0}} \left[ (r'+\lambda)e^{ -r'/\lambda } \right] ^{r}_{0} \\
+ & = -\frac{q\lambda}{\epsilon_{0}} \left[ (r+\lambda)e^{ -r/\lambda } - \lambda \right]
+\end{align}
+$$
+Distributing the $-\lambda$ term, the electric potential is,
 $$
 \int _{\mathcal{V}} V \, d\tau = \frac{q}{\epsilon_{0}} \left[ \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda } \right]
 $$
-Therefore,
+Hence, the full expression is,
 $$
 \oint_{S} \vec{E}\cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} V \, d\tau = \frac{q}{\epsilon_{0}} \left( 1+\frac{r}{\lambda} \right) e^{ -r/\lambda } + \frac{1}{\lambda^{2}} \left( \frac{q}{\epsilon_{0}} \left[ \lambda^{2} - (\lambda^{2} + r\lambda) e^{ -r/\lambda } \right] \right)
 $$
@@ -146,7 +174,7 @@ By linearity,
 $$
 \oint_{S} \sum_{i=1}^{n} \vec{E}_{i}\cdot d\vec{a} + \frac{1}{\lambda^{2}} \int _{\mathcal{V}} \sum_{i=1}^{n} V_{i} \, d\tau = \frac{1}{\epsilon_{0}} \sum_{i=1}^{n} q_{i}
 $$
-Each of these summations are equivalent to the total electric field, potential, and charge enclosed within the surface,
+Each of these summations are equivalent to the total electric field, potential, and charge enclosed within the surface, respectively.
 $$
 \vec{E} = \sum_{i=1}^{n} \vec{E}_{i} \qquad V = \sum_{i=1}^{n} V_{i} \qquad Q_\text{enc} = \sum_{i=1}^{n} q_{i}
 $$
@@ -199,4 +227,4 @@ Since $\vec{E}=0$, I can largely apply the same logic used in existing electrost
 $$
 \vec{\nabla} \cdot \vec{E} + \frac{V}{\lambda^{2}} = \vec{\nabla}\cdot \vec{E} - \frac{1}{\lambda^{2}} \int \vec{E}\cdot d\vec{l} =0= \frac{\rho}{\epsilon_{0}}
 $$
-Therefore, the inside of a conductor is an equipotential, with $\rho=0$. The net charge must therefore reside on the surface of the conductor.
+Therefore, the inside of a conductor is an equipotential, with constant charge density. The net charge must therefore reside on the surface of the conductor.
