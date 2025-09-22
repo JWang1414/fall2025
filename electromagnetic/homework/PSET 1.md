@@ -1,39 +1,35 @@
 ### Problem 2.53
-The electric field of a finite line segment of length $2L$ is with a uniform line charge as:
+---
+a.
+According to the textbook, the electric field from a uniformly charged wire with infinite length is,
 $$
-\vec{E} = \frac{1}{4\pi\varepsilon_{0}} \frac{2\lambda L}{z\sqrt{ z^{2}+L^{2} }}\hat{z}
+\vec{E}(\vec{r}) = \frac{\lambda}{2\pi\epsilon_{0}} \frac{1}{r} \hat{r}
 $$
-I have taken this from the textbook. The electric potential is defined to be,
+From the definition of electric potential, the potential from this same charge distribution is,
 $$
-V(\vec{r}) = - \int_{\mathcal{O}}^{\vec{r}} \vec{E}\cdot d\vec{l}
+\begin{align}
+V(r) & = - \int_{\mathcal{O}}^{r} \vec{E} \cdot d\vec{l} = -\frac{\lambda}{2\pi\epsilon_{0}} \int_{\mathcal{O}}^{r} \frac{1}{r'} \, dr' \\
+ & = -\frac{\lambda}{2\pi\epsilon_{0}} \left[ \ln r' \right] ^{r}_{\mathcal{O}} = - \frac{\lambda}{2\pi\epsilon_{0}} \ln\left( \frac{r}{\mathcal{O}} \right)
+\end{align}
 $$
-Rough work ---
-
+Choose reference point $\mathcal{O}=1$ and,
 $$
-V(\vec{r}) = - \frac{1}{4\pi\epsilon_{0}} 2\lambda L \int_{\mathcal{O}}^{\vec{r}} \frac{1}{z\sqrt{ z^{2}+L^{2} }} \, dz
+V(r) = - \frac{\lambda}{2\pi\epsilon_{0}} \ln r = \frac{\lambda}{2\pi\epsilon_{0}} \ln\left( \frac{1}{r} \right)
 $$
-- The steps for this integral are surprisingly intuitive after the first step. I'll write them down later, but the result of this integral is,
+The distance to each wire is,
 $$
-\int \frac{1}{z\sqrt{ z^{2}+L^{2} }} \, dz = \frac{1}{2L} \left[ \ln \left| \sqrt{ z^{2}+L^{2} }-L \right| - \ln \left| \sqrt{ z^{2}+L^{2} } +L \right|  \right]
+r_{+}= \sqrt{ (y-a)^{2} + z^{2} } \qquad r_{-} = \sqrt{ (y+a)^{2}+z^{2} }
 $$
-Which can also be simplified into,
+Where the subscripts indicate the wires with charge $+\lambda$ and $-\lambda$ respectively. The total field is the sum:
 $$
-\frac{1}{2L} \ln \left( \frac{\left| \sqrt{ z^{2}+L^{2} } -L \right| }{ \left| \sqrt{ z^{2}+L^{2} }+L \right|  } \right)
+V(r) = \frac{\lambda}{2\pi\epsilon_{0}} \left[ \ln\left( \frac{1}{r_{+}} \right)- \ln\left( \frac{1}{r_{-}} \right) \right] = \frac{\lambda}{2\pi\epsilon_{0}} \ln\left( \frac{r_{-}}{r_{+}} \right)
 $$
-Perform the approximation done here: <https://www.miniphysics.com/uy1-electric-potential-of-an-infinite-line-charge.html>
-- I'm getting conflicting answers from this source <https://physics.stackexchange.com/questions/348692/electric-potential-of-uniformly-charged-wire>
-
-For an infinite line of charge, the potential should be,
+Expanding this out,
 $$
-V(\vec{r}) \approx \frac{\lambda}{2\pi\epsilon_{0}} \ln\left( \frac{2L}{|\vec{r}|} \right)
+V(r) = \frac{\lambda}{2\pi\epsilon_{0}} \ln \left[ \frac{\sqrt{ (y+a)^{2}+z^{2} }}{\sqrt{ (y-a)^{2}+z^{2} }} \right]
 $$
-Because the wires stretch infinitely in the $x$ dimension, the closest point the distance $\vec{r}$ will always be measured from for both wires is purely in the $y$ and $z$ dimensions. This length will be the difference in $y$ followed by the difference in $z$.
-
-The magnitude from each wire is,
-$$
-\vec{r}_{+} = \sqrt{ (y-a)^{2} + z^{2} } \qquad \vec{r}_{-} = \sqrt{ (y+a)^{2}+z^{2} }
-$$
-Where the subscripts indicate the wires with charge $+\lambda$ and $-\lambda$ respectively
+---
+b.
 
 
 $$
