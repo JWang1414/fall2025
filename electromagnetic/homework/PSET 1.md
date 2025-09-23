@@ -30,43 +30,58 @@ V(r) = \frac{\lambda}{2\pi\epsilon_{0}} \ln \left[ \frac{\sqrt{ (y+a)^{2}+z^{2} 
 $$
 ---
 b.
-
-
+For some equipotential surfaces corresponding to a given potential $V_{0}$,
 $$
-1-4ay = C \left[ (a+y)^{2}+z^{2} \right] = C(a^{2}+2ay+y^{2}+z^{2})= Ca^{2} + 2Cay + Cy^{2} + Cz^{2}
+V_{0} = \frac{\lambda}{2\pi\epsilon_{0}} \ln \left[ \frac{\sqrt{ (y+a)^{2}+z^{2} }}{\sqrt{ (y-a)^{2}+z^{2} }} \right]
 $$
+This can be re-arranged into,
 $$
-Cz^{2} + Cy^{2} + 2Cay + 4ay + Ca^{2} - 1 =0
+e^{ 4\pi\epsilon_{0}V_{0}/\lambda } = \frac{(y+a)^{2}+z^{2}}{(y-a)^{2}+z^{2}} = \frac{4ay}{(y-a)^{2}+z^{2}}+1
 $$
-Complete the square,
+Define a new quantity $\xi=e^{ 4\pi\epsilon_{0}V_{0}/\lambda }-1$, which is constant. Expanding this equation,
 $$
-Cy^{2} + 2Cay + 4ay = Cy^{2} + (2Ca + 4a)y = C \left[ y^{2} + \frac{2}{C}(Ca + 2a)y \right]
+4ay = \xi \left[ (y-a)^{2}+z^{2} \right] = \xi(a^{2}-2ay+y^{2}+z^{2})
 $$
+Moving all terms to one side,
 $$
-C \left[ y^{2} + 2\left( a + \frac{2a}{C} \right)y + \left( a+\frac{2a}{C} \right)^{2} - \left( a+\frac{2a}{C} \right)^{2} \right]
+\xi a^{2} - 2\xi ay + \xi y^{2} + \xi z^{2} - 4ay = (\xi z^{2}) + (\xi y^{2} - 2\xi ay - 4ay) + (\xi a^{2}) =0
 $$
+Where I have suggestively grouped together some parts of this expression. With the intention of achieving a formula similar to the typical cylinder formula, I intend to complete the square of the parts in terms of $y$.
 $$
-C \left[ \left( y + \left( a+\frac{2a}{C} \right) \right)^{2} - \left( a+\frac{2a}{C} \right)^{2} \right]
+\xi y^{2} - 2\xi ay - 4ay = \xi y^{2} - (2\xi a + 4a)y = \xi  \left[ y^{2} - \frac{2a}{\xi }(\xi  + 2)y \right]
 $$
+Now, complete the square,
 $$
-C\left( y+a\left( 1+\frac{2}{C} \right) \right)^{2} - a^{2} (C+2)
+\begin{align}
+ & = \xi  \left[ y^{2} - \frac{2a}{\xi }(\xi  + 2)y + a^{2}\left( 1+\frac{2}{\xi} \right)^{2} - a^{2}\left( 1+\frac{2}{\xi} \right)^{2} \right] \\
+ & = \xi \left[ \left( y - a \left( 1+\frac{2}{\xi} \right) \right)^{2} - a^{2}\left( 1+\frac{2}{\xi} \right)^{2} \right]  \\
+ & = \xi \left( y - a \left( 1+\frac{2}{\xi} \right) \right)^{2} - \frac{a^{2}}{\xi} \left( 1+\frac{2}{\xi} \right)^{2}
+\end{align}
 $$
-Substitute back in,
+Substitute this back into the equation,
 $$
-Cz^{2} + C\left( y+a\left( 1+\frac{2}{C} \right) \right)^{2} - a^{2}(C+2) + Ca^{2}-1 =0
+\xi z^{2} + \xi \left( y - a \left( 1+\frac{2}{\xi} \right) \right)^{2} - \frac{a^{2}}{\xi} \left( 1+\frac{2}{\xi} \right)^{2} + \xi a^{2} =0
 $$
-Re-arrange,
+Divide everything by $\xi$,
 $$
-Cz^{2} + C\left( y+a\left( 1+\frac{2}{C} \right) \right)^{2} = a^{2}(C+2) - Ca^{2} - 1 = 2a^{2}-1
+z^{2} + \left( y-a\left( 1+\frac{2}{\xi} \right) \right)^{2} - \frac{a^{2}}{\xi^{2}}\left( 1+\frac{2}{\xi} \right)^{2} + a^{2} =0
 $$
+Move the constant terms to the right-hand side,
 $$
-z^{2} + \left( y+a\left( 1+\frac{2}{C} \right) \right)^{2} = \frac{2a^{2}-1}{C}
+z^{2} + \left( y-a\left( 1+\frac{2}{\xi} \right) \right)^{2} = \frac{a^{2}}{\xi^{2}} \left( 1+\frac{2}{\xi} \right)^{2} - a^{2}
 $$
-The formula for an arbitrary cylinder is,
+Now, the formula for some arbitrary cylinder is,
 $$
-(y-a)^{2} + (z-b)^{2} = r^{2}
+(y-a')^{2} + (z-b')^{2} = r^{2}
 $$
-From here it's trivial to see the axis and radius of the cylinder. Note that I have used $C$ to represent some arbitrary constant, it will actually be something dependent on $V_{0}$. Interestingly (something that can also be seen from graphing) is that the axis of the cylinder also depends on $V_{0}$, not just the radius.
+Where $a'$ and $b'$ are two constants shifting the axis of the cylinder, and $r$ is the radius of the cylinder. By inspection, the axis of the cylinder (which stretches infinitely in the $x$ direction) is located at,
+$$
+(y_{0}, z_{0}) = \left( a\left( 1+\frac{2}{\xi} \right), 0 \right)
+$$
+It has radius,
+$$
+r = \sqrt{ \frac{a^{2}}{\xi^{2}} \left( 1+\frac{2}{\xi} \right)^{2} - a^{2} }
+$$
 ### Problem 2.55
 ---
 a.
