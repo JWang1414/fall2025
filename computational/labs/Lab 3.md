@@ -90,3 +90,21 @@ $$
 $$
 u = x\sqrt{ \frac{2}{\lambda z} } \qquad C(u) = \int_{0}^{u} \cos\left( \frac{\pi}{2}t^{2} \right) \, dt \qquad S(u) = \int_{0}^{u} \sin\left( \frac{\pi}{2}t^{2} \right) \, dt
 $$
+$$
+T = 4 \int_{0}^{x_{0}} \frac{1}{g(x')} \, dx'
+$$
+$$
+g(x) = c \left[ \frac{2\beta (2mc^{2}+\beta)}{2(mc^{2}+\beta)^{2}} \right]^{1/2}
+$$
+$$
+\beta = \frac{k}{2} (x_{0}^{2}-x^{2})
+$$
+$$
+T_\text{classic} = 2\pi \sqrt{ \frac{m}{k} } \qquad T_\text{relative} = \frac{4x_{0}}{c}
+$$
+$$
+T_\text{classic} = 2\pi \sqrt{ \frac{m}{k} } = 2\pi \sqrt{ \frac{1}{12} } \approx 1.8138
+$$
+$$
+v_\text{max} = x_{0} \omega \implies c = x_{c}\omega \implies \frac{1}{x_{c}} = \frac{1}{c} \sqrt{ \frac{k}{m} } \implies x_{c} \approx 86.5\times 10^6
+$$
