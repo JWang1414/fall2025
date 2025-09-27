@@ -63,30 +63,3 @@ d.
 The central difference scheme appears to be at least as good or better for all points except for one. The central difference scheme is worse for the largest values of $h$, when the approximation errors dominate.
 
 Interestingly, it appears the central difference scheme is best for $10^{-6}$
-
-
-Rough work ---
-
-$$
-e^{ -x^{2} }
-$$
-$$
-f'(x) = -2xe^{ -x^{2} }
-$$
-
-$$
-\epsilon = \frac{2C|f(x)|}{h} + \frac{h}{2} |f''(x)|
-$$
-
-$$
-I = \int_{0}^{1} \frac{4}{(1+x^{2})} \, dx
-$$
-$$
-\epsilon_{N} = I_{2N} - I_{N}
-$$
-$$
-\frac{I}{I_{0}} = \frac{1}{8} \left( [2C(u)+1]^{2} + [2S(u)+1]^{2} \right)
-$$
-$$
-u = x\sqrt{ \frac{2}{\lambda z} } \qquad C(u) = \int_{0}^{u} \cos\left( \frac{\pi}{2}t^{2} \right) \, dt \qquad S(u) = \int_{0}^{u} \sin\left( \frac{\pi}{2}t^{2} \right) \, dt
-$$
