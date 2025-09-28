@@ -44,7 +44,27 @@ c.
 ### Question 3
 ---
 ai.
-This one is true because strictly row diagonally dominant matrices are based off absolute values
+Define $A$ as some strictly row diagonally dominant matrix. Then,
+$$
+|a_{ii}| > \sum_{j\neq i} |a_{ij}|
+$$
+For all rows $i$ and columns $j$ in $A$. In $-A$, all entries in the matrix are multiplied by $-1$ such that,
+$$
+a_{ij} = -a_{ij}
+$$
+By definition of the absolute value, or magnitude,
+$$
+|a_{ij}| = |-a_{ij}|
+$$
+Which implies that,
+$$
+|a_{ii}| = |-a_{ii}| \qquad \sum_{j\neq i} |a_{ij}| = \sum_{j\neq i} |-a_{ij}|
+$$
+And so I therefore re-obtain the identity listed prior,
+$$
+|a_{ii}| > \sum_{j\neq i} |a_{ij}| \iff |-a_{ii}| > \sum_{j\neq i} |-a_{ij}|
+$$
+These two statements are equivalent to each other.
 
 ---
 aii.
@@ -63,6 +83,7 @@ A^{T} = \begin{bmatrix}
 0 & 0 & 2
 \end{bmatrix}
 $$
+In the first row, $a_{11}=1<1+1=a_{12}+a_{13}$ and so $A^{T}$ is not strictly row diagonally dominant.
 
 ---
 aiii.
@@ -82,6 +103,7 @@ A+B = \begin{bmatrix}
 0 & 0
 \end{bmatrix}
 $$
+In the first row, $a_{11}=a_{12}$ and so $A+B$ is not strictly row diagonally dominant.
 
 ---
 aiv.
@@ -100,5 +122,52 @@ A^{2} = \begin{bmatrix}
 0 & 0 & 4
 \end{bmatrix}
 $$
+In the first row, $a_{11}=4<4+1<a_{12}+a_{13}$ and so $A^{2}$ is not strictly row diagonally dominant.
+
 ---
 b.
+Define from arbitrary vector, $\vec{x}$,  with $n$ entries labelled from $a_{1}$ to $a_{n}$. For $A$ to be positive definite, I require:
+$$
+\vec{x}^{T} A\vec{x} >0
+$$
+Expanding out this calculation,
+$$
+\vec{x}^{T} A \vec{x} =  \begin{bmatrix}
+a_{1} & \cdots & a_{n}
+\end{bmatrix} \begin{bmatrix}
+2 & -1 \\
+-1 & 2 & -1 \\
+ & . & . & . \\
+ &  & -1 & 2 & -1 \\
+ &  &  & -1 & 2
+\end{bmatrix} \begin{bmatrix}
+a_{1} \\
+\vdots \\
+a_{n}
+\end{bmatrix}
+$$
+Which becomes the series,
+$$
+2a_{1}^{2} - a_{1}a_{2} + 2a_{2}^{2} - a_{1}a_{2} - a_{2}a_{3} + 2a_{3}^{2} - a_{2}a_{3} - a_{3}a_{4} + \dots + 2a_{n}^{2} - a_{n-1}a_{n}
+$$
+Notice, in summation notation this is equivalent to,
+$$
+2 \sum_{i=1}^{n} a_{i}^{2} - 2 \sum_{i=1}^{n-1} a_{i}a_{i+1}
+$$
+For all real numbers, the following is valid:
+$$
+(\alpha-\beta)^{2} = \alpha^{2} - 2\alpha \beta + \beta^{2} \implies \alpha^{2} + \beta^{2} = 2\alpha \beta + (\alpha-\beta)^{2} > 2\alpha \beta
+$$
+Applying this to the summation,
+$$
+2 \sum_{i=1}^{n} a_{i}^{2} - 2 \sum_{i=1}^{n-1} a_{i}a_{i+1} > 2 \sum_{i=1}^{n} a_{i}^{2} - \sum_{i=1}^{n-1} (a_{i}^{2} + a_{i+1}^{2})
+$$
+By linearity,
+$$
+= 2 \sum_{i=1}^{n} a_{i}^{2} - \sum_{i=1}^{n-1} a_{i}^{2} - \sum_{i=1}^{n-1} a_{i+1}^{2} = a_{1}^{2} + a_{n}^{2} > 0
+$$
+I obtain that,
+$$
+\vec{x}^{T} A \vec{x} = a_{1}^{2} + a_{n}^{2} > 0
+$$
+And so $A$ is positive definite, as needed.
