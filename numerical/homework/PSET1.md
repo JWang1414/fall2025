@@ -40,7 +40,13 @@ Where I have multiplied the numerator and denominator by the conjugate of the nu
 
 ---
 c.
-- I have to write a MATLAB script for this one
+Notes for the script:
+- The condition number for both equations is equivalent
+- The relative error can be computed using the formula below:
+$$
+\frac{|x-y|}{x}
+$$
+Where $x$ is the more accurate solution, and $y$ is the approximation.
 ### Question 3
 ---
 ai.
