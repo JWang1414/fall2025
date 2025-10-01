@@ -5,32 +5,30 @@ The condition number is defined to be,
 $$
 \text{Condition Number} = \left| \frac{xf'(x)}{f(x)} \right|
 $$
-Derivative of $f(x)$,
+The derivative of $f(x)$, $f'(x)$ is:
 $$
 \frac{df}{dx} = \frac{d}{dx} (a+x)^{1/4} - \frac{d}{dx} a^{1/4} = \frac{1}{4(a+x)^{3/4}}
 $$
-Compute the condition number,
+Substitute this into the definition of the condition number:
 $$
 \left| \frac{xf'(x)}{f(x)} \right| = \left| \frac{x}{4(a+x)^{3/4}} \frac{1}{(a+x)^{1/4}-a^{1/4}} \right| = \left| \frac{x}{4(a+x - a^{1/4}(a+x)^{3/4})} \right|
 $$
-Check when the denominator is zero, because ill-conditioning is most likely to appear there,
+Ill-conditioning is most-likely to occur when the denominator is zero. Check when this is the case:
 $$
 a+x - a^{1/4} (a+x)^{3/4} =0 \implies a+x = a^{1/4} (a+x)^{3/4}
 $$
 $$
 (a+x)^{4} = a(a+x)^{3} \implies a+x = a \implies x=0
 $$
-The denominator is 0 exclusively when $x=0$. Trivially, because the numerator and denominator are both of order 1, as $x\to \infty$ the condition number will remain finite. Therefore, I am most interested in its behaviour as $x\to 0$.
-
-Check what happens to the condition number at $x=0$. I will use L'Hopital's rule here,
+The denominator is 0 exclusively when $x=0$. By inspection, because the numerator and denominator are both of order 1, as $x\to \infty$ the condition number will remain finite. Check what happens as $x\to 0$:
 $$
-\lim_{ x \to 0 } \left| \frac{x}{4(a+x - a^{1/4}(a+x)^{3/4})} \right| = \lim_{ x \to 0 } \frac{4(a+x)^{1/4}}{3a^{1/4}} = \frac{4}{3}
+\lim_{ x \to 0 } \left| \frac{x}{4(a+x - a^{1/4}(a+x)^{3/4})} \right| = \lim_{ x \to 0 } \left| \frac{(a+x)^{1/4}}{4(a+x)^{1/4}-3a^{1/4}} \right| = \left| \frac{a^{1/4}}{4a^{1/4}-3a^{1/4}} \right| =1
 $$
-So the condition number remains finite and near one. I conclude that $f(x)$ is well-conditioned for all values of $x>0$ and $a>0$.
+Where I have used L'Hopital's rule to evaluate this limit. I conclude that the condition number remains finite and near one, and so $f(x)$ is well-conditioned for all values of $x>0$ and $a>0$.
 
 ---
 b.
-When $x$ is close to zero, $(a+x)^{1/4}\approx a^{1/4}$ and so $f(x)$ will take the difference between two similar numbers. If $a$ is large, for example, than truncation errors may destroy data from $x$.
+When $x$ is close to zero, $(a+x)^{1/4}\approx a^{1/4}$ and so $f(x)$ will take the difference between two similar numbers. As a result, catastrophic cancellation may occur, especially if $a\gg x$.
 
 A mathematically equivalent, but more stable expression is,
 $$
@@ -62,7 +60,7 @@ By definition of the absolute value, or magnitude,
 $$
 |a_{ij}| = |-a_{ij}|
 $$
-Which implies that,
+Which implies that, in $-A$ I have:
 $$
 |a_{ii}| = |-a_{ii}| \qquad \sum_{j\neq i} |a_{ij}| = \sum_{j\neq i} |-a_{ij}|
 $$
@@ -70,7 +68,7 @@ And so I therefore re-obtain the identity listed prior,
 $$
 |a_{ii}| > \sum_{j\neq i} |a_{ij}| \iff |-a_{ii}| > \sum_{j\neq i} |-a_{ij}|
 $$
-These two statements are equivalent to each other.
+I conclude that $-A$ is also strictly row diagonally dominant.
 
 ---
 aii.
@@ -132,11 +130,11 @@ In the first row, $a_{11}=4<4+1<a_{12}+a_{13}$ and so $A^{2}$ is not strictly ro
 
 ---
 b.
-Define from arbitrary vector, $\vec{x}$,  with $n$ entries labelled from $a_{1}$ to $a_{n}$. For $A$ to be positive definite, I require:
+Define some arbitrary vector, $\vec{x}$,  with $n$ entries labelled from $a_{1}$ to $a_{n}$. For $A$ to be positive definite, I require:
 $$
 \vec{x}^{T} A\vec{x} >0
 $$
-Expanding out this calculation,
+Expanding out this calculation:
 $$
 \vec{x}^{T} A \vec{x} =  \begin{bmatrix}
 a_{1} & \cdots & a_{n}
@@ -152,23 +150,23 @@ a_{1} \\
 a_{n}
 \end{bmatrix}
 $$
-Which becomes the series,
+Which becomes the series:
 $$
 2a_{1}^{2} - a_{1}a_{2} + 2a_{2}^{2} - a_{1}a_{2} - a_{2}a_{3} + 2a_{3}^{2} - a_{2}a_{3} - a_{3}a_{4} + \dots + 2a_{n}^{2} - a_{n-1}a_{n}
 $$
-Notice, in summation notation this is equivalent to,
+Notice, in summation notation this is equivalent to:
 $$
 2 \sum_{i=1}^{n} a_{i}^{2} - 2 \sum_{i=1}^{n-1} a_{i}a_{i+1}
 $$
-For all real numbers, the following is valid:
+Note the following identity, valid for all real numbers.
 $$
 (\alpha-\beta)^{2} = \alpha^{2} - 2\alpha \beta + \beta^{2} \implies \alpha^{2} + \beta^{2} = 2\alpha \beta + (\alpha-\beta)^{2} > 2\alpha \beta
 $$
-Applying this to the summation,
+Applying this to the summation:
 $$
 2 \sum_{i=1}^{n} a_{i}^{2} - 2 \sum_{i=1}^{n-1} a_{i}a_{i+1} > 2 \sum_{i=1}^{n} a_{i}^{2} - \sum_{i=1}^{n-1} (a_{i}^{2} + a_{i+1}^{2})
 $$
-By linearity,
+By linearity:
 $$
 = 2 \sum_{i=1}^{n} a_{i}^{2} - \sum_{i=1}^{n-1} a_{i}^{2} - \sum_{i=1}^{n-1} a_{i+1}^{2} = a_{1}^{2} + a_{n}^{2} > 0
 $$
