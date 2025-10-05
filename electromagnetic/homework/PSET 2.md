@@ -104,3 +104,74 @@ V(x, y, z) = \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} C_{n, m} \left[ 2 \sinh\lef
 $$
 - Substituting this in would be too wide for the page to fit it
 ![[Pasted image 20251004163920.png]]
+Use triple angle formulae,
+$$
+\cos(3\theta) = 4 \cos ^{3}\theta - 3 \cos\theta
+$$
+$$
+V_{0} = k(4 \cos ^{3}\theta - 3 \cos\theta) = 4k \cos ^{3}\theta - 3k \cos\theta
+$$
+From the textbook, the general solution in spherical coordinate is,
+$$
+V(r, \theta) = \sum_{l=0}^{\infty} \left( A_{l}r^{l} + B_{L}r^{-(l+1)} \right)  P_{l}(\cos\theta)
+$$
+Which is done before any boundary conditions have been used.
+
+On the inside, $B_{l}$ necessarily must be 0. Otherwise the potential would blow up at the origin. In accordance with the given boundary condition,
+$$
+V(R, \theta) = \sum_{l=0}^{\infty} A_{l} R^{l} P_{l} (\cos\theta) = 4k \cos ^{3}\theta - 3k \cos\theta = V_{0}
+$$
+Match this with the 3rd Legendre polynomial,
+$$
+\frac{1}{2} (5x^{3}-3x) \implies \frac{1}{2} \left( 5\cos ^{3}\theta - 3\cos\theta \right)
+$$
+$$
+A_{3} R^{3} \left( \frac{5}{2} \right) = 4k \implies A_{3} = \frac{2}{5} \frac{1}{R^{3}} 4k = \frac{8k}{5R^{3}}
+$$
+$$
+A_{3} R^{3} \left( -\frac{3}{2} \right) + A_{1}R = -\frac{12}{5}k + A_{1}R = -3k
+$$
+$$
+A_{1}R = -\frac{3}{5}k \implies A_{1} = -\frac{3k}{5R}
+$$
+- Afterwards you can just plug this back into the original equation
+- This can probably be formulated as a system of equations too
+
+Outside the sphere, $A_{l}$ is necessarily zero because otherwise the potential would blow up at infinity. Applying the boundary condition,
+$$
+V(R, \theta) = \sum_{l=0}^{\infty} \frac{B_{l}}{R^{l+1}} P_{l}(\cos\theta) = 4k \cos ^{3}\theta - 3k \cos\theta = V_{0}
+$$
+As a system of equations this requires,
+$$
+\frac{B_{3}}{R^{4}} \left( \frac{5}{2} \right) = 4k
+$$
+$$
+\frac{B_{3}}{R^{4}} \left( -\frac{3}{2} \right) + \frac{B_{1}}{R^{2}} = -3k
+$$
+Solve for $B_{3}$ with the first equation,
+$$
+B_{3} = \frac{2}{5} R^{4} (4k) = \frac{8}{5} kR^{4}
+$$
+Solve for $B_{1}$ from the second equation,
+$$
+\frac{B_{3}}{R^{4}} \left( -\frac{3}{2} \right) + \frac{B_{1}}{R^{2}} = \frac{8}{5} k \left( -\frac{3}{2} \right) + \frac{B_{1}}{R^{2}} = -\frac{12}{5}k + \frac{B_{1}}{R^{2}} = -3k
+$$
+$$
+\frac{B_{1}}{R^{2}} = -\frac{3}{5} k \implies B_{1} = -\frac{3}{5} kR^{2}
+$$
+- These can alternatively be solved using the property that the coefficients of like Legendre polynomials are equal
+$$
+B_{l} = A_{l} R^{2l+1}
+$$
+Recall that the radial derivative of $V$ has a discontinuity at the surface,
+$$
+\left[ \frac{ \partial V_\text{out} }{ \partial r } - \frac{ \partial V_\text{in} }{ \partial r }  \right] _{r=R} = -\frac{\sigma_{0}(\theta)}{\epsilon_{0}}
+$$
+$$
+-\sum_{l=0}^{\infty} (l+1) \frac{B_{l}}{R^{l+2}} P_{l}(\cos\theta) - \sum_{l=0}^{\infty} lA_{l} R^{l-1} P_{l}(\cos\theta) = - \frac{\sigma_{0}(\theta)}{\epsilon_{0}}
+$$
+Applying the equivalence of the polynomials, this generally means that,
+$$
+\sum_{l=0}^{\infty} (2l+1) A_{l} R^{l-1} P_{l} (\cos\theta) = \frac{\sigma_{0}(\theta)}{\epsilon_{0}}
+$$
+- Since I have found $A_{l}$ already, this is as simply as just substituting numbers in
