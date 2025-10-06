@@ -91,6 +91,6 @@ $$
 $$
 Hence,
 $$
-\ket{\psi_{n}} = \ket{\psi_{n}^{(0)}} - \sum_{m\neq n} \frac{\bra{\psi_{m}^{(0)}} V \ket{\psi_{n}^{(0)}}}{\epsilon_{m}^{(0)} - \epsilon_{n}^{(0)}} \ket{\psi_{m}^{(0)}}
+\ket{\psi_{n}} = \ket{\psi_{n}^{(0)}} - \sum_{m\neq n} \frac{\bra{\psi_{m}^{(0)}} V \ket{\psi_{n}^{(0)}}}{\epsilon_{m}^{(0)} - \epsilon_{n}^{(0)}} \ket{\psi_{m}^{(0)}} + \mathcal{O}(V^{2})
 $$
 - This is the first order correction. The one for $\lambda=1$
