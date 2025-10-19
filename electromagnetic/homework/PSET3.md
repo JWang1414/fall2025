@@ -93,3 +93,62 @@ $$
  & = \frac{3E_{0}b^{3}}{2a^{3}(\epsilon_{r}-1) + b^{3} (\epsilon_{r}+2)} \left[ \left( 1+\frac{2a^{3}}{r^{3}} \right) \cos\theta \hat{r} + \left( \frac{a^{3}}{r^{3}}-1 \right) \sin\theta \hat{\theta} \right]
 \end{align}
 $$
+![[Pasted image 20251019103720.png]]
+The dielectric constant can be modelled like:
+- Draw a diagram for this system
+$$
+\epsilon_{r} = \frac{x}{d} + 1
+$$
+Which implies that the permittivity is,
+$$
+\epsilon_{r} = \frac{x}{d} + 1 = 1 + \chi_{e} \implies \chi_{e} = \frac{x}{d}
+$$
+By Gauss' law, the displacement field for one plate of the capacitor is,
+$$
+\oint \mathbf{D}\cdot d\mathbf{A} = \frac{Q_\text{free}}{\epsilon_{0}}
+$$
+Use a Gaussian pillbox wrapping the plates with sides of area $A$, then:
+- Draw a diagram for the pillbox
+$$
+2DA = \sigma_{f} A \implies D = \frac{\sigma_{f}}{2}
+$$
+Where $\sigma_{f}$ is the free surface change density on the plate. The displacement field from both plates, inside the capacitor is therefore,
+$$
+\mathbf{D} = \sigma_{f} \hat{x}
+$$
+From the displacement field, the electric field is given by,
+$$
+\mathbf{D} = \epsilon \mathbf{E} \implies \mathbf{E} = \frac{\mathbf{D}}{\epsilon_{0} \epsilon_{r}} = \frac{\sigma_{f}}{\epsilon_{0}} \left( \frac{x}{d}+1 \right)^{-1} \hat{x}
+$$
+The polarization is therefore,
+$$
+\mathbf{P} = \epsilon_{0} \chi_{e} \mathbf{E} = \epsilon_{0} \left( \frac{x}{d} \right) \left[ \frac{\sigma_{f}}{\epsilon_{0}} \left( \frac{x}{d}+1 \right)^{-1} \hat{x} \right] = \frac{\sigma_{f} x}{x+d} \hat{x}
+$$
+The bound charges on the plates are,
+$$
+\sigma_{b} = \mathbf{P} \cdot \hat{n} = \begin{cases}
+\sigma_{f} /2 & x=d \\
+0 & x=0
+\end{cases}
+$$
+The bound charge density within the capacitor is,
+$$
+\rho_{b} = - \nabla \cdot \mathbf{P} = - \sigma_{f} \frac{ \partial  }{ \partial x } \frac{x}{x+d} = - \frac{\sigma_{f}d}{(x+d)^{2}}
+$$
+The total bound charge is,
+$$
+Q_\text{bound} = \int \rho_{b} \, d\tau + \int \sigma_{b} \, da = -\sigma_{f} d \int_{0}^{\alpha} \int_{0}^{\beta} \int_{0}^{d} \frac{1}{(x+d)^{2}} \, dx  \, dy  \, dz + \frac{\sigma_{f}}{2} \int_{0}^{\alpha} \int_{0}^{\beta}  \, dy  \, dz
+$$
+Where $\alpha$ and $\beta$ are the dimensions of the capacitor. Separating the variables,
+$$
+Q_\text{bound} = -\sigma_{f} \alpha \beta d \int_{0}^{d} \frac{1}{(x+d)^{2}} \, dx + \frac{\sigma_{f}}{2} \alpha \beta
+$$
+Evaluate the integral,
+$$
+\int_{0}^{d} \frac{1}{(x+d)^{2}} \, dx = - \frac{1}{x+d} \bigg|_{0}^{d} = \frac{1}{2d}
+$$
+So,
+$$
+Q_\text{bound} = - \sigma_{f} \alpha \beta d \left( \frac{1}{2d} \right) + \frac{\sigma_{f}}{2} \alpha \beta = - \frac{\sigma_{f}}{2} \alpha \beta + \frac{\sigma_{f}}{2} \alpha \beta =0
+$$
+As needed.
