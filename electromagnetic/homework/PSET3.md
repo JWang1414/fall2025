@@ -94,7 +94,7 @@ $$
 \end{align}
 $$
 ![[Pasted image 20251019103720.png]]
-The dielectric constant can be modelled like:
+The dielectric constant for this system is equivalent to:
 - Draw a diagram for this system
 $$
 \epsilon_{r} = \frac{x}{d} + 1
@@ -152,3 +152,12 @@ $$
 Q_\text{bound} = - \sigma_{f} \alpha \beta d \left( \frac{1}{2d} \right) + \frac{\sigma_{f}}{2} \alpha \beta = - \frac{\sigma_{f}}{2} \alpha \beta + \frac{\sigma_{f}}{2} \alpha \beta =0
 $$
 As needed.
+
+It is also possible to solve for the surface free charge in terms of the potential from the battery $V$.
+$$
+V = - \int_{\mathcal{O}}^{0} \mathbf{E}\cdot d\mathbf{l} = \frac{\sigma_{f}}{\epsilon_{0}} \int_{0}^{\mathcal{O}} \left( \frac{x}{d}+1 \right)^{-1} \, dx = \frac{\sigma_{f}d}{\epsilon_{0}} \ln \left| \frac{x}{d}+1 \right| \bigg|_{0}^{\mathcal{O}}
+$$
+Use $\mathcal{O}=d$ to find that,
+$$
+V = \frac{\sigma_{f}d}{\epsilon_{0}} \ln 2 \implies \sigma_{f} = \frac{\epsilon_{0}V}{d \ln 2}
+$$
