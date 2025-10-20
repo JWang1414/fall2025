@@ -98,9 +98,8 @@ $$
 Furthermore, to solve for $C$ we can differentiate this equation,
 $$
 \begin{align}
-\frac{d}{dt} \left[ -\frac{1}{\omega_{0}^{2}} \left( \frac{C}{\tau} + \gamma e^{ -C/v_{f} } \right) \right] & = \frac{d}{dt} (x-v_{p}t) \\
-0 & = \dot{x} - v_{p} \\
- v_{p} & = \dot{x}
+\frac{dx}{dt} & = \frac{d}{dt} v_{p}t - \frac{d}{dt} \frac{1}{\omega_{0}^{2}} \left( \frac{C}{\tau} + \gamma e^{ -C/v_{f} } \right) \\
+\dot{x} & = v_{p}
 \end{align}
 $$
 And, since $\dot{x}=C$ we find that $v_{p}=C$.
@@ -133,19 +132,19 @@ $$
 $$
 Substitute in $x$ and $\dot{x}$,
 $$
-\ddot{u} = -\omega_{0}^{2} (\left[ x_{0} + v_{p}t + u \right] -v_{p}t) - \frac{v_{p} + \dot{u}}{\tau} - \gamma e^{ -(v_{p} + \dot{u})/v_{f} }
+\ddot{u} = -\omega_{0}^{2} (\left[ x_{0} + v_{p}t + u \right] -v_{p}t) - \frac{(v_{p} + \dot{u})}{\tau} - \gamma e^{ -(v_{p} + \dot{u})/v_{f} }
 $$
 Substitute in $x_{0}$,
 $$
-\ddot{u} = -\omega_{0}^{2} \left( \left[ \left( -\frac{1}{\omega_{0}^{2}} \left( \frac{v_{p}}{\tau} + \gamma e^{ -v_{p}/v_{f} } \right) \right)  + v_{p}t + u \right] -v_{p}t \right)  - \frac{v_{p} + \dot{u}}{\tau} - \gamma e^{ -(v_{p} + \dot{u})/v_{f} }
+\ddot{u} = -\omega_{0}^{2} \left( \left[ \left( -\frac{1}{\omega_{0}^{2}} \left( \frac{v_{p}}{\tau} + \gamma e^{ -v_{p}/v_{f} } \right) \right)  + v_{p}t + u \right] -v_{p}t \right)  - \frac{(v_{p} + \dot{u})}{\tau} - \gamma e^{ -(v_{p} + \dot{u})/v_{f} }
 $$
 Simplify this equation,
 $$
--\omega_{0}^{2} \left[ -\frac{1}{\omega_{0}^{2}} \left( \frac{v_{p}}{\tau} + \gamma e^{ -v_{p}/v_{f} } \right) + v_{p}t + u - v_{p}t \right] - \frac{v_{p}+\dot{u}}{\tau} - \gamma e^{ -(v_{p}+\dot{u})/v_{f} }
+-\omega_{0}^{2} \left[ -\frac{1}{\omega_{0}^{2}} \left( \frac{v_{p}}{\tau} + \gamma e^{ -v_{p}/v_{f} } \right) + v_{p}t + u - v_{p}t \right] - \frac{(v_{p}+\dot{u})}{\tau} - \gamma e^{ -(v_{p}+\dot{u})/v_{f} }
 $$
 $$
 \frac{v_{p}}{\tau} + \gamma e^{ -v_{p}/v_{f} } - \omega_{0}^{2} u - \frac{v_{p}+\dot{u}}{\tau} - \gamma e^{ -(v_{p}+\dot{u})/v_{f} }
 $$
 $$
-\frac{\dot{u}}{\tau} - \omega_{0}^{2} u + \gamma e^{ -v_{p}/v_{f} } (1 - e^{ -\dot{u}/v_{f} })
+- \omega_{0}^{2} u + \gamma e^{ -v_{p}/v_{f} } (1 - e^{ -\dot{u}/v_{f} }) - \frac{\dot{u}}{\tau}
 $$
