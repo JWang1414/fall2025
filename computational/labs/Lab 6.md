@@ -39,6 +39,7 @@ $$
 \alpha -  \frac{\beta}{v_{f}} < 0  \implies \beta > \alpha v_{f}
 $$
 - This doesn't use the property that $\dot{x}<v_{f}$, I have no clue why it's relevant
+
 ---
 aii.
 Equation 16 is the correction for the static friction,
@@ -55,7 +56,7 @@ $$
 aiii.
 The given equation of motion is,
 $$
-m \ddot{x} =-k(x-v_{p}t) - \alpha \ddot{x}
+m \ddot{x} =-k(x-v_{p}t) - \alpha \dot{x} - \beta e^{ -\dot{x}/v_{f} }
 $$
 Substituting in the quantities,
 $$
