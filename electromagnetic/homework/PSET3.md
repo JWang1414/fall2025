@@ -91,6 +91,11 @@ A_{1} (b^{3}-a^{3}) = -E_{0}b^{3} + C_{1} \\
 \epsilon_{r} A_{1} (b^{3}+2a^{3}) = -E_{0}b^{3} - 2C_{1}
 \end{cases}
 $$
+Isolating for $C_{1}$,
+$$
+A_{1}(b^{3}-a^{3}) + E_{0}b^{3} = -\frac{1}{2} \left( \epsilon_{r} A_{1} (b^{3}+2a^{3}) + E_{0}b^{3} \right) 
+$$
+Solving for $A_{1}$,
 $$
 A_{1} = - \frac{3E_{0}b^{3}}{2a^{3}(\epsilon_{r}-1) + b^{3} (\epsilon_{r}+2)}
 $$
