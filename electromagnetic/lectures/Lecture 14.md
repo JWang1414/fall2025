@@ -1,0 +1,1 @@
+In the examples of the magnetic dipoles, how do we determine that the magnetic vector potential is $A=\pi r^{2}$?

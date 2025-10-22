@@ -21,3 +21,6 @@ Analysis
 	- Capitalist ideology, and the dualist, hierarchy philosophy that enables it
 ### Question 2
 Convey:
+- Life, through evolution, has reached a delicate balance. However, the pace at which life must adapt to man-made chemicals is unnaturally quick
+- DDT does not just linger in nature. It is absorbed by plants, eaten by animals, and eventually makes its way to the top of the food chain, where it gathers.
+- Carson does not believe it is realistic to expect such widespread liberal use of pesticides to selectively target just a few harmful species. 
