@@ -78,4 +78,3 @@ Analysis:
 - Orr points out that, if we were judged, we perhaps may have little to offer besides the promise to improve
 	- Although modern humans may not be eligible to join, I can realistically see a future where we are
 	- It would require living in tandem with Earth. To incorporate ourselves with nature, as opposed to placing ourselves outside of it to try and control it
-,
