@@ -23,4 +23,35 @@ Analysis
 Convey:
 - Life, through evolution, has reached a delicate balance. However, the pace at which life must adapt to man-made chemicals is unnaturally quick
 - DDT does not just linger in nature. It is absorbed by plants, eaten by animals, and eventually makes its way to the top of the food chain, where it gathers.
-- Carson does not believe it is realistic to expect such widespread liberal use of pesticides to selectively target just a few harmful species. 
+- Carson does not believe it is realistic to expect such widespread liberal use of pesticides to selectively target just a few harmful species.
+	- It is absurd that, in an effort to kill off a few select pests, we have threatened the surrounding environment, including ourselves
+- Carson point out yet another issue with crop mono-cultures
+	- The populations of insects that depend on these crops will explode because of the increase in quantity
+	- Man, which displays a passion to simplify nature, undoes the checks and balances that hold species within their bounds
+	- Examples include wheat farms, and densely planted elm trees in cities
+- Invasive species of insects from importing plants
+	- The most troublesome insects are typically the ones that are introduced, the ones with no natural enemies
+- These are all attempts at exercising control over nature. Believing that there would be no consequences for spraying poisons, building crop mono-cultures, and importing species.
+	- In our arrogance, we have built a world that does not concern itself with the effects on the soil, water, and wildlife. It pays no mind to the prospects of future generations
+Analysis:
+- Carson points out that nature is a vastly complex system, one that has adapted and balanced itself over the course of millions of years. To arbitrarily believe we can temper such a complex system without consequences lacks foresight.
+- The "control" that we have used against nature has largely just resulted in the destabilisation of ecosystems. Ecosystems that we ourselves rely on
+- Humans cannot place themselves in a position of power within a system that they reside. That is, we cannot control the system that we rely on, and are a part of.
+	- Everything we do will inevitably resound back to us
+	- To limit nature is in a sense to limit ourselves
+	- I claim that it has not been conducive to a sustainable future because humans rely heavily on nature to thrive. Earth provides us food, water, and shelter, carelessly controlling these immensely complex systems has just pitted the planet against us.
+- Identical to the dualist philosophy of nature and society. Separating the two and using nature for our convenience, has only ever provided short term benefit
+- The examples for this segment are really just the same as the ones in convey
+	- DDT and pesticides have poisoned the soil, water, and wildlife
+	- Mono-cultures have degraded soil quality and, spiked pest populations
+	- Invasive species have destabilised ecosystems. It has brought more pests to our farms and ruined our food supplies, all to bring something pretty from another country
+### Question 1
+Chosen readings:
+- *For Earth's Sake*, the chapter *Poor Bear Burden of Environmental Hazards* Stephan Scharper
+- *Reclaiming our Common Home* Vandana Shiva
+	- Both of these readings can be used to prove the we have not provided the fundamental rights of all sentient beings
+- *Cheap Nature* Raj Patel and Jason Moore
+- *Silent Spring* Rachel Carson
+	- Both of these readings can be used to prove we have not acknowledged the proper dignity and worth of all life forms.
+Convey:
+- 
