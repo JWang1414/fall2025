@@ -40,6 +40,10 @@ Analysis:
 	- Everything we do will inevitably resound back to us
 	- To limit nature is in a sense to limit ourselves
 	- I claim that it has not been conducive to a sustainable future because humans rely heavily on nature to thrive. Earth provides us food, water, and shelter, carelessly controlling these immensely complex systems has just pitted the planet against us.
+- IPCC reports on the widespread effects of climate change. It is described as a global phenomenon that requires a large scale intersectional response.
+- Raj Patel and Jason Moore inform us about the history of man's use of nature. We have historically relocated local peoples, and harvested natural resources en masse, with no regard for sustainability
+	- Local populations may have lived in tandem with nature, knowing that it was important to strike a balance. Despite this fact, we never heeded their warnings
+	- Blinded by short-term profits, Europeans devastated their own lands, and migrated outwards in an attempt to reap from foreign lands. It is a path of destruction that was doomed to fail as soon as there were no more lands to conquer
 - Identical to the dualist philosophy of nature and society. Separating the two and using nature for our convenience, has only ever provided short term benefit
 - The examples for this segment are really just the same as the ones in convey
 	- DDT and pesticides have poisoned the soil, water, and wildlife
@@ -54,4 +58,24 @@ Chosen readings:
 - *Silent Spring* Rachel Carson
 	- Both of these readings can be used to prove we have not acknowledged the proper dignity and worth of all life forms.
 Convey:
-- 
+- Stephan Scharper might highlight not just our mass neglect of the environment, but our treatment of other humans
+	- Other humans are most certainly counted within "sentient beings". But despite this, we are still more than willing to pick and choose which ones of us to oppress, even in modern society
+	- We build chemical plants, waste dumps and other hazardous sites specifically near impoverished communities, composed mostly of minorities. Is this not denying their right to clean air and drinking water?
+- Vandana Shiva might claim that the privatisation of the commons is in direct opposition to the "fundamental rights of sentient beings"
+	- Businesses denying and locking natural resources behind paywalls can be seen as nothing more than a denial of rights
+	- Much of these resources are not just naturally occurring, but important components of the surrounding ecosystem. Seeds, for example, are imperative to help support local biodiversity. To monetise the planting of seeds is to hold the stability of the ecosystem hostage
+- Raj Patel and Jason Moore may argue that our cheapening of nature, and its use as a vast money farm denies the "dignity and worth of all life-forms"
+	- Capitalism, the groundwork of our modern society, is based on transforming nature into money and productivity. The express goal of capitalism to reap profit from natural resources as quickly and efficiently as possible. There is little incentive towards sustainability.
+	- Humans have shown time and time again that we are more than willing to annihilate habitats, and mechanically optimise our use of the biosphere (crop mono-cultures, for example)
+- Rachel Carson might claim that our production and use of chemical agents is irresponsible and unstable
+	- We have invented and placed some hundreds of thousands of chemicals into nature. Most of which have no natural counterparts. Animals therefore have little to no capability to adapt so quickly
+	- We have stopped using DDT, but we continue to dump garbage and produced chemicals into the oceans and ecosystems
+Analysis:
+- I do not believe that we would eligible to join the Federation
+- The mass privatisation of resources, and the biases and oppression that remain prevalent in society prove to me that we do not affirm the fundamental rights of sentient beings
+- The vision of nature capitalism suggest we take, that is is something to control and harvest, I think neglects the dignity and worth of other life-forms on Earth
+	- Spreading poisons, creating chemicals, unsustainable mining, and mass logging. Despite our efforts to curb the effects, these continue to happen, and continue to destabilise the biosphere
+- Orr points out that, if we were judged, we perhaps may have little to offer besides the promise to improve
+	- Although modern humans may not be eligible to join, I can realistically see a future where we are
+	- It would require living in tandem with Earth. To incorporate ourselves with nature, as opposed to placing ourselves outside of it to try and control it
+,
