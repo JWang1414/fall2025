@@ -100,3 +100,28 @@ $$
 x_{m} = \frac{m}{M} L = am \qquad t_{n} = nh = n \times \text{time step}
 $$
 ### Von Neumann Stability Analysis
+The idea behind this stability analysis is to choose one Fourier mode, and see if it grows or not.
+
+By definition, $T^n_{m}$ as an inverse DFT is,
+$$
+T^n_{m} = \sum_{k} \hat{T}^n_{k} e^{ ikx_{m} }
+$$
+Now, pick one single Fourier mode, and substitute in $x_{m}=am$
+$$
+T^n_{m} = \hat{T}^n_{k} e^{ ikam }
+$$
+Then the expression for the FTCS method becomes,
+$$
+\hat{T}^{n+1}_{k} e^{ ikam } = \left( 1- \frac{2\kappa h}{a^{2}} \right) \hat{T}^{n}_{k} e^{ ikam } + \frac{\kappa h}{a^{2}} \left[ \hat{T}^n_{k} e^{ ika(m+1) } - \hat{T}^n_{k} e^{ ika(m-1) } \right]
+$$
+Re-arrange,
+$$
+\left| \frac{\hat{T}^{n+1}_{k}}{\hat{T}^n_{k}} \right| = \left| 1-\frac{4h\kappa}{a^{2}} \sin ^{2}\left( \frac{ka}{2} \right) \right|
+$$
+This portion on the left is defined to be the *growth factor*. Ideally, this should be less than 1 if the solution is not to blow up, and so this equation is stable when,
+$$
+h \leq \frac{a^{2}}{2\kappa}
+$$
+Provided the resolution is adequate
+
+You can repeat the same analysis for FTCS on the wave equation. You will find that the method will grow without bounds, and so is always unstable.
