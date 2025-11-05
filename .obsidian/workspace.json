@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computational/lectures/Lecture 8.md",
+                "file": "electromagnetic/homework/PSET4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 8"
+              "title": "PSET4"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7e760ec1d8687e50",
@@ -138,8 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -151,9 +149,13 @@
   },
   "active": "69d4a1647e99ea0c",
   "lastOpenFiles": [
+    "attachments/Pasted image 20251104202026.png",
+    "attachments/Pasted image 20251104162022.png",
+    "attachments/Pasted image 20251104113644.png",
+    "computational/lectures/Lecture 8.md",
+    "electromagnetic/homework/PSET4.md",
     "quantum/lectures/Lecture 14.md",
     "electromagnetic/lectures/Lecture 15.md",
-    "computational/lectures/Lecture 8.md",
     "electromagnetic/textbook/Lecture 13-14.md",
     "attachments/Pasted image 20251031233956.png",
     "electromagnetic/homework/PSET3.md",
@@ -176,8 +178,6 @@
     "attachments/Pasted image 20251022230234.png",
     "attachments/Pasted image 20251022225212.png",
     "attachments/Pasted image 20251022224356.png",
-    "attachments/Pasted image 20251022223730.png",
-    "attachments/Pasted image 20251022221535.png",
     "environmental/midterm/Long answer.md",
     "quantum/lectures/Lecture 13.md",
     "numerical/textbook/Week 7.md",
@@ -187,8 +187,6 @@
     "environmental/midterm",
     "Rough work.md",
     "computational/lectures/Lecture 6.md",
-    "quantum/lectures/Lecture 12.md",
-    "quantum/lectures/Lecture 11.md",
     "quantum/midterm",
     "numerical/homework",
     "numerical/lectures",
