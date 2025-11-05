@@ -9,6 +9,9 @@ The non-converged version does not look symmetric (about the vertical bisector $
 
 We believe that it is because of the iteration procedure applied by the Gauss-Seidel method. The method iterates across the plane from left-to-right, bottom-to-top. This order of updates means that some points will have more updated information than others, and so will be updated differently.
 - Which points have more updated information?
+- There is a shock wave / inconsistency in the top-right
+	- If we make the time step smaller the shock wave also gets smaller
+- TA confirmed this is all correct
 
 The temperature at $x=25$ and $y=10$ is, 0.34 celsius
 ### Question 3
@@ -42,3 +45,4 @@ $$
 Written answer:
 
 As time progresses, we notice that eventually the wave propagates until it "becomes vertical". In real life, we would expect a shock wave to develop here, but because our wave would no longer be a function, the simulation breaks down. That is, the simulation is accurate until the wave is no longer a function.
+- Took this from a TA
