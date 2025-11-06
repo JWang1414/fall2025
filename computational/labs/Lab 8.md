@@ -46,3 +46,8 @@ Written answer:
 
 As time progresses, we notice that eventually the wave propagates until it "becomes vertical". In real life, we would expect a shock wave to develop here, but because our wave would no longer be a function, the simulation breaks down. That is, the simulation is accurate until the wave is no longer a function.
 - Took this from a TA
+
+Rough work
+$$
+\nabla^{2}T=0
+$$

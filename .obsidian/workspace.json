@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computational/labs/Lab 8.md",
+                "file": "quantum/lectures/Lecture 15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 8"
+              "title": "Lecture 15"
             }
           }
         ]
@@ -148,15 +148,16 @@
   },
   "active": "69d4a1647e99ea0c",
   "lastOpenFiles": [
-    "quantum/lectures/Lecture 14.md",
     "computational/labs/Lab 8.md",
+    "quantum/lectures/Lecture 15.md",
+    "computational/lectures/Lecture 8.md",
+    "quantum/lectures/Lecture 14.md",
     "numerical/homework/PSET2.md",
     "electromagnetic/homework/PSET4.md",
     "attachments/Pasted image 20251104202026.png",
     "attachments/Pasted image 20251104162022.png",
     "attachments/Pasted image 20251104113644.png",
     "electromagnetic/lectures/Lecture 15.md",
-    "computational/lectures/Lecture 8.md",
     "electromagnetic/textbook/Lecture 13-14.md",
     "attachments/Pasted image 20251031233956.png",
     "electromagnetic/homework/PSET3.md",
@@ -185,7 +186,6 @@
     "numerical/midterm/Relevant Questions.md",
     "numerical/midterm",
     "environmental/midterm",
-    "Rough work.md",
     "quantum/midterm",
     "numerical/homework",
     "numerical/lectures",
