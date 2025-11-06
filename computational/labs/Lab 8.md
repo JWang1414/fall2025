@@ -7,7 +7,7 @@ $$
 c.
 The non-converged version does not look symmetric (about the vertical bisector $x=100$)
 
-We believe that it is because of the iteration procedure applied by the Gauss-Seidel method. The method iterates across the plane from left-to-right, bottom-to-top. This order of updates means that some points will have more updated information than others, and so will be updated differently.
+We believe this is a consequence of the iteration procedure applied by the Gauss-Seidel method, since it iterates across the plane from left-to-right, bottom-to-top. This order of updates means the bottom-left point skewing points will have less updated information to work with, because they are updated first.
 - Which points have more updated information?
 - There is a shock wave / inconsistency in the top-right
 	- If we make the time step smaller the shock wave also gets smaller
@@ -46,8 +46,3 @@ Written answer:
 
 As time progresses, we notice that eventually the wave propagates until it "becomes vertical". In real life, we would expect a shock wave to develop here, but because our wave would no longer be a function, the simulation breaks down. That is, the simulation is accurate until the wave is no longer a function.
 - Took this from a TA
-
-Rough work
-$$
-\nabla^{2}T=0
-$$
