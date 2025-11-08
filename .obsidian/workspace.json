@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computational/labs/Lab 8.md",
+                "file": "electromagnetic/textbook/Lecture 15-16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 8"
+              "title": "Lecture 15-16"
             }
           },
           {
@@ -178,8 +178,15 @@
   },
   "active": "ccaf566abb50f86b",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "electromagnetic/homework/PSET4.md",
+    "electromagnetic/textbook/Lecture 15-16.md",
+    "computational/lectures/Lecture 5.md",
+    "computational/lectures/Lecture 6.md",
+    "computational/lectures/Lecture 7.md",
+    "sdlckm.md",
+    "README.md",
     "computational/labs/Lab 8.md",
+    "conflict-files-obsidian-git.md",
     "quantum/tutorials/Tutorial 7.md",
     "quantum/lectures/Lecture 15.md",
     "environmental/lectures/Lecture 8.md",
@@ -188,7 +195,6 @@
     "computational/lectures/Lecture 1.md",
     "computational/labs/Lab 1.md",
     "numerical/homework/PSET2.md",
-    "electromagnetic/homework/PSET4.md",
     "attachments/Pasted image 20251104202026.png",
     "attachments/Pasted image 20251104162022.png",
     "attachments/Pasted image 20251104113644.png",
@@ -203,16 +209,10 @@
     "electromagnetic/lectures/Lecture 13.md",
     "electromagnetic/lectures/Lecture 14.md",
     "electromagnetic/textbook/Lecture 10-11.md",
-    "environmental/midterm/Short answer.md",
-    "numerical/textbook/Week 8.md",
-    "numerical/midterm/Practice Questions.md",
-    "computational/labs/Lab 7.md",
     "attachments/Pasted image 20251030214719.png",
     "attachments/Pasted image 20251030213120.png",
     "attachments/Pasted image 20251030212803.png",
     "attachments/Pasted image 20251030210431.png",
-    "numerical/midterm/Tutorial 4.md",
-    "numerical/midterm/Tutorial 3.md",
     "attachments/Pasted image 20251022230234.png",
     "numerical/midterm",
     "environmental/midterm",
