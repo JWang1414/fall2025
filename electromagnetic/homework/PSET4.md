@@ -125,3 +125,101 @@ $$
 - Everything from here is computations
 - The result is that the two magnetic fields match
 ![[Pasted image 20251104202026.png]]
+Since there is no free charge in this system, $\nabla \times \vec{H}=0$. I define the new scalar potential,
+$$
+\vec{H} = -\nabla W
+$$
+Where,
+$$
+\nabla^{2}W = \nabla \cdot \vec{M}
+$$
+Note that $\nabla \cdot \vec{M}$ is zero everywhere except for at the surface of the sphere. I will solve this problem using the method of separation of variables.
+
+Boundary conditions,
+$$
+\begin{cases}
+W_\text{inside} = W_\text{outside} & r=R \\
+\mu_{0} \frac{ \partial W_\text{outside} }{ \partial r } = \mu \frac{ \partial W_\text{inside} }{ \partial r }  & r=R \\
+W = -\frac{B_{0}}{\mu_{0}} r \cos\theta & r\gg R
+\end{cases}
+$$
+General solution for spherical potential is,
+$$
+W(r, \theta) = \sum_{l=0}^{\infty} \left( A_{l}r^{l} + \frac{B_{l}}{r^{l+1}} \right) P_{l}(\cos\theta)
+$$
+Potential inside and outside the sphere will be,
+$$
+W_\text{inside}(r, \theta) = \sum_{l=0}^{\infty} A_{l}r^{l} P_{l} (\cos\theta) \qquad W_\text{outside}(r, \theta) = -\frac{B_{0}}{\mu_{0}} r \cos\theta + \sum_{l=0}^{\infty} \frac{C_{l}}{r^{l+1}} P_{l}(\cos\theta)
+$$
+- Summation terms have been eliminated so solutions are finite
+- The term in $W_\text{outside}$ to account for boundary condition 3
+
+Apply boundary condition 1,
+$$
+\sum_{l=0}^{\infty} A_{l}R^{l} P_{l} (\cos\theta) = -\frac{B_{0}}{\mu_{0}} R \cos\theta + \sum_{l=0}^{\infty} \frac{C_{l}}{R^{l+1}} P_{l}(\cos\theta)
+$$
+By the properties of the Lagrange polynomials,
+$$
+\begin{cases}
+A_{l} R^{l} = \frac{C^{l}}{R^{l+1}} & l \neq 1 \\
+A_{1} R = -\frac{B_{0}}{\mu_{0}} R + \frac{C_{1}}{R^{2}} & l=1
+\end{cases}
+$$
+Apply boundary condition 2,
+$$
+\mu \sum_{l=0}^{\infty} lA_{l} R^{l-1} P_{l}(\cos\theta) = -B_{0} \cos\theta - \mu_{0}\sum_{l=0}^{\infty} \frac{(l+1)C_{l}}{R^{l+2}} P_{l}(\cos\theta)
+$$
+Therefore,
+$$
+\begin{cases}
+\mu lA_{l} R^{l-1} = -\mu_{0} \frac{(l+1)C_{l}}{R^{l+2}} & l \neq 1 \\
+\mu A_{1} = -B_{0} - \mu_{0} \frac{2C_{1}}{R^{3}} & l=1
+\end{cases}
+$$
+In the case when $l \neq 1$
+$$
+A_{l}R^{l} = \frac{C^{l}}{R^{l+1}}
+$$
+$$
+A_{l}R^{l} = -\frac{\mu_{0}}{\mu} \frac{(l+1)C_{l}}{lR^{l+1}}
+$$
+$$
+C_{l} = -\frac{\mu_{0}}{\mu} \frac{l+1}{l} C_{l}
+$$
+Note that $\mu_{0}(l+1) / \mu l$ is always positive. I conclude that $C_{l}=0$ for all $l \neq 1$. By extension, $A_{l}=0$ for all $l \neq 1$.
+
+In the case when $l=1$
+$$
+A_{1}R = -\frac{B_{0}}{\mu_{0}} R + \frac{C_{1}}{R^{2}}
+$$
+$$
+\mu A_{1} = -B_{0} - \mu_{0} \frac{2C_{1}}{R^{3}}
+$$
+Multiply first equation by $2\mu_{0}$
+$$
+2\mu_{0} A_{1} R = -2B_{0}R + \mu_{0} \frac{2C_{1}}{R^{2}}
+$$
+Multiply the second equation by $R$
+$$
+\mu R A_{1} = -B_{0}R - \mu_{0} \frac{2C_{1}}{R^{2}}
+$$
+Add the two equations together and solve for $A_{1}$
+$$
+2\mu_{0}A_{1} R + \mu A_{1}R = -2B_{0}R - B_{0}R \implies 2\mu_{0}A_{1} + \mu A_{1} = -2B_{0} - B_{0}
+$$
+$$
+A_{1} (2\mu_{0}+\mu) = -3B_{0} \implies A_{1} = -\frac{3B_{0}}{\mu+2\mu_{0}}
+$$
+The potential inside the sphere is therefore,
+$$
+W_\text{inside} (r, \theta) = -\frac{3B_{0}}{\mu+2\mu_{0}} r \cos\theta = - \frac{3B_{0}z}{\mu+2\mu_{0}}
+$$
+Solve for $\vec{H}$
+$$
+\vec{H}_\text{inside} = -\frac{3B_{0}}{\mu+2\mu_{0}} \hat{z} = \frac{3\vec{B}_{0}}{\mu+2\mu_{0}}
+$$
+Solve for $\vec{B}$
+$$
+\vec{B} = \mu \vec{H} = \frac{3\mu \vec{B}_{0}}{\mu + 2\mu_{0}} = \frac{3(1+\chi_{m})}{3+\chi_{m}} \vec{B}_{0}
+$$
+Where $\chi_{m}$ is the magnetic susceptibility.
