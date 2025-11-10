@@ -4,15 +4,15 @@ The charge per-unit-volume in this sphere is,
 $$
 \rho r' d\theta dr'
 $$
-Where $r'$ is the radius measured from the origin. Infinitely small current and area of each loop in the sphere,
+Where $r'$ is the radius measured from the origin. To compute the magnetic dipole moment, I will cut the sphere into a series of circular loops, each with current $dI$ and area $A$.
 $$
 dI = (\rho r' dr' d\theta) (r\omega) \qquad A = \pi r^{2}
 $$
-Where $r=r'\sin\theta$ is the radius measured from the $z$-axis. The magnetic dipole moment is therefore,
+Where $r=r'\sin\theta$ is the radius measured from the $z$-axis. The magnetic dipole moment for each loop is therefore,
 $$
 dm = A dI = \pi \rho \omega r' r^{3} dr' d\theta = \pi \rho \omega (r')^4 \sin ^{3}\theta \, dr' \, d\theta
 $$
-Magnetic dipole moment is therefore,
+The total magnetic dipole moment becomes:
 $$
 \begin{align}
 m  & = \pi \rho \omega \int_{0}^{R} \int_{0}^{\pi} (r')^{4} \sin ^{3}\theta \, dr'  \, d\theta  \\
@@ -20,25 +20,26 @@ m  & = \pi \rho \omega \int_{0}^{R} \int_{0}^{\pi} (r')^{4} \sin ^{3}\theta \, d
  & = \pi \rho \omega \left( \frac{R^5}{5} \right) \left( \frac{4}{3} \right) 
 \end{align}
 $$
-Substitute in the fact that,
+Recall that, by definition, the charge density $\rho$ is:
 $$
 \rho = \frac{\text{Total Charge}}{\text{Volume}} = \frac{Q}{(4 /3)\pi R^{3}}
 $$
+And so the magnetic dipole moment becomes:
 $$
 m = \pi \left( \frac{Q}{(4 /3)\pi R^{3}} \right)  \omega \left( \frac{R^5}{5} \right) \left( \frac{4}{3} \right) = \frac{Q}{5} \omega R^{2}
 $$
-By the right-hand-rule, the dipole moment will be in the $\hat{z}$ direction.
+Furthermore, using the right-hand rule, I conclude the magnetic dipole moment is in the $\hat{z}$ direction.
 $$
 \vec{m} = \frac{Q}{5} \omega R^{2} \, \hat{z}
 $$
 
 ---
 b.
-The average magnetic field in a sphere is,
+By definition, the average magnetic field in a sphere is:
 $$
 \vec{B}_\text{ave} = \frac{\mu_{0}}{4\pi} \frac{2\vec{m}}{R^{3}}
 $$
-Then,
+For this sphere:
 $$
 \begin{align}
 \vec{B}_\text{ave} & = \frac{\mu_{0}}{4\pi} \frac{2}{R^{3}} \left( \frac{Q}{5} \omega R^{2} \right)  \hat{z} \\
@@ -48,36 +49,36 @@ $$
 ---
 ![[Pasted image 20251104162022.png]]
 c.
-The vector potential of a dipole is,
+By definition, the vector potential of a dipole is:
 $$
 \vec{A}_\text{dip} (\vec{r}) = \frac{\mu_{0}}{4\pi} \frac{\vec{m}\times \hat{r}}{r^{2}}
 $$
-Compute cross product,
+Compute the cross product,
 $$
 \vec{m}\times \hat{r} = m \sin\theta = \frac{Q}{5} \omega R^{2} \sin\theta
 $$
-Therefore,
+Substituting back into $\vec{A}_\text{dip}$, the vector potential is:
 $$
 \vec{A}_\text{dip} = \frac{\mu_{0}}{4\pi} \frac{Q\omega R^{2}}{5} \frac{\sin\theta}{r^{2}} \hat{\phi}
 $$
 ---
 d.
-From example 5.11 in the textbook (given),
+Referring to the example given by the textbook, the vector potential for a spherical shell is:
 $$
 \vec{A} (r, \theta, \phi) = \begin{cases}
 \frac{1}{3} \mu_{0} R\omega \sigma r \sin\theta \, \hat{\phi} & r\leq R \\
 \frac{1}{3} \mu_{0} R^4 \omega \sigma \frac{\sin\theta}{r^{2}} \, \hat{\phi} & r\geq R
 \end{cases}
 $$
-This is for a spherical shell. For a solid sphere, take $\sigma\to \rho \, dr'$ and $R\to r'$. Outside the sphere this becomes,
+For a solid sphere, take $\sigma\to \rho \, dr'$ and $R\to r'$. Outside the sphere, this becomes,
 $$
 = \frac{\mu_{0}\omega \rho}{3} \frac{\sin\theta}{r^{2}} r'^4 \, dr' \implies \frac{\mu_{0}\omega \rho}{3} \frac{\sin\theta}{r^{2}} \int_{0}^{R} r'^4 \, dr' = \frac{\mu_{0}\omega \rho}{3} \frac{\sin\theta}{r^{2}} \frac{R^5}{5}
 $$
-Apply the fact that, by definition, the volume charge density is,
+Once again, substituting in the charge density:
 $$
 \rho = \frac{Q}{(4 /3)\pi R^{3}}
 $$
-And this simplifies into,
+I obtain:
 $$
 \vec{A}_\text{sphere} = \frac{\mu_{0}}{4\pi} \frac{Q\omega R^{2}}{5} \frac{\sin\theta}{r^{2}} \hat{\phi}
 $$
@@ -143,16 +144,15 @@ W_\text{inside} = W_\text{outside} & r=R \\
 W = -\frac{B_{0}}{\mu_{0}} r \cos\theta & r\gg R
 \end{cases}
 $$
-General solution for spherical potential is,
+General solution for a spherical potential is,
 $$
 W(r, \theta) = \sum_{l=0}^{\infty} \left( A_{l}r^{l} + \frac{B_{l}}{r^{l+1}} \right) P_{l}(\cos\theta)
 $$
-Potential inside and outside the sphere will be,
+Inside and outside the sphere, this reduces to:
 $$
 W_\text{inside}(r, \theta) = \sum_{l=0}^{\infty} A_{l}r^{l} P_{l} (\cos\theta) \qquad W_\text{outside}(r, \theta) = -\frac{B_{0}}{\mu_{0}} r \cos\theta + \sum_{l=0}^{\infty} \frac{C_{l}}{r^{l+1}} P_{l}(\cos\theta)
 $$
-- Summation terms have been eliminated so solutions are finite
-- The term in $W_\text{outside}$ to account for boundary condition 3
+Which results because both potentials must be finite at the limits $r\to 0$  or $r\to \infty$ respectively. The additional term in $W_\text{outside}$ arises to account for boundary condition 3.
 
 Apply boundary condition 1,
 $$
@@ -169,7 +169,7 @@ Apply boundary condition 2,
 $$
 \mu \sum_{l=0}^{\infty} lA_{l} R^{l-1} P_{l}(\cos\theta) = -B_{0} \cos\theta - \mu_{0}\sum_{l=0}^{\infty} \frac{(l+1)C_{l}}{R^{l+2}} P_{l}(\cos\theta)
 $$
-Therefore,
+Using the same property,
 $$
 \begin{cases}
 \mu lA_{l} R^{l-1} = -\mu_{0} \frac{(l+1)C_{l}}{R^{l+2}} & l \neq 1 \\
@@ -210,13 +210,13 @@ $$
 $$
 A_{1} (2\mu_{0}+\mu) = -3B_{0} \implies A_{1} = -\frac{3B_{0}}{\mu+2\mu_{0}}
 $$
-The potential inside the sphere is therefore,
+Since this is the only term in the summation, $W_\text{inside}$ is therefore:
 $$
 W_\text{inside} (r, \theta) = -\frac{3B_{0}}{\mu+2\mu_{0}} r \cos\theta = - \frac{3B_{0}z}{\mu+2\mu_{0}}
 $$
 Solve for $\vec{H}$
 $$
-\vec{H}_\text{inside} = -\frac{3B_{0}}{\mu+2\mu_{0}} \hat{z} = \frac{3\vec{B}_{0}}{\mu+2\mu_{0}}
+\vec{H}_\text{inside} = -\nabla W_\text{inside} = \frac{3B_{0}}{\mu+2\mu_{0}} \hat{z} = \frac{3\vec{B}_{0}}{\mu+2\mu_{0}}
 $$
 Solve for $\vec{B}$
 $$

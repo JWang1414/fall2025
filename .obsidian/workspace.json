@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quantum/tutorials/Tutorial 6.md",
+                "file": "electromagnetic/homework/PSET4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tutorial 6"
+              "title": "PSET4"
             }
           }
         ]
@@ -146,7 +146,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "b82bf7dbfa8477f9",
+  "active": "4b30d2c103efcf54",
   "lastOpenFiles": [
     "quantum/tutorials/Tutorial 6.md",
     "conflict-files-obsidian-git.md",
