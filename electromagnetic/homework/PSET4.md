@@ -96,35 +96,42 @@ The total contribution from both at the radius $r$ is therefore,
 $$
 \frac{\mu_{0}\omega \rho}{3} \left[ \frac{\sin\theta}{r^{2}} \int_{0}^{r} r'^{4} \, dr' + r \sin\theta \int_{r}^{R} r' \, dr'  \right] = \frac{\mu_{0}\omega \rho}{3} \left[ \frac{\sin\theta}{r^{2}} \left( \frac{r^5}{5} \right) + \frac{r\sin\theta}{2} (R^{2}-r^{2}) \right]
 $$
+Simplifying this impression, the vector potential is therefore:
 $$
-\frac{\mu_{0}\omega \rho}{30} r \sin\theta \left( 5R^{2} - 3r^{2} \right) \, \hat{\phi}
+\vec{A} = \frac{\mu_{0}\omega \rho}{30} r \sin\theta \left( 5R^{2} - 3r^{2} \right) \, \hat{\phi}
 $$
 Compute the magnetic field,
 $$
-\vec{B} = \nabla \times \vec{A} = \mu_{0}\omega \rho \left[ \left( \frac{R^{2}}{3} - \frac{r^{2}}{5} \right) \cos\theta \hat{r} - \left( \frac{R^{2}}{3} - \frac{2r^{2}}{5} \right) \sin\theta \hat{\theta} \right]
+\begin{align}
+\vec{B} = \nabla \times \vec{A} & = \frac{\mu_{0}\omega \rho}{30} \left[ \frac{1}{r\sin\theta} \frac{ \partial  }{ \partial \theta } r \sin ^{2}\theta (5R^{2} - 3r^{2}) \hat{r} - \frac{1}{r} \frac{ \partial  }{ \partial r } r^{2} \sin\theta (5R^{2} - 3r^{2}) \hat{\theta} \right] \\
+ & = \frac{\mu_{0}\omega \rho}{15} \left[ (5R^{2}-3r^{2}) \cos\theta \, \hat{r} - (5R^{2} - 6r^{2}) \sin \theta \, \hat{\theta} \right] 
+\end{align}
 $$
-- I just copied this down. Write down the full computation later.
-
-Convert $\rho$ to the total charge $Q$ to obtain,
+Convert $\rho$ to $Q$
 $$
-\vec{B} = \frac{\mu_{0}\omega Q}{4\pi R} \left[ \left( 1-\frac{3r^{2}}{5R^{2}} \right) \cos\theta \hat{r} - \left( 1-\frac{6r^{2}}{5R^{2}} \right) \sin\theta \hat{\theta} \right]
+\vec{B} = \frac{\mu_{0}\omega Q}{20 \pi R^{3}} \left[ (5R^{2}-3r^{2}) \cos\theta \, \hat{r} - (5R^{2} - 6r^{2}) \sin \theta \, \hat{\theta} \right]
 $$
 According to the right-hand-rule, the magnetic field will be in the $\hat{z}$ direction. Furthermore, the $\hat{z}$ components of the $\hat{r}$ and $\hat{\theta}$ directions are known to be,
 $$
 \hat{r} \to \cos\theta \hat{z} \qquad \hat{\theta} \to - \sin\theta \hat{z}
 $$
-Therefore,
+And so the average field is,
 $$
-\vec{B} = \frac{\mu_{0}\omega Q}{4\pi R} \left[ \left( 1-\frac{3r^{2}}{5R^{2}} \right) \cos ^{2}\theta + \left( 1-\frac{6r^{2}}{5R^{2}} \right) \sin ^{2} \theta \right] \hat{z}
+\vec{B}_\text{ave} = \frac{1}{(4 /3)\pi R^{3}} \frac{\mu_{0}\omega Q}{20 \pi R^{3}} \hat{z} \int (5R^{2}-3r^{2}) \cos ^{2}\theta - (5R^{2} - 6r^{2}) \sin ^{2}\theta \, dr^{3}
 $$
-Compute the average field,
+Compute this integral,
 $$
 \begin{align}
-B_\text{ave} & = \frac{\mu_{0}\omega Q}{4\pi R} \int_{0}^{R} \int_{0}^{\pi} \int_{0}^{2\pi} \left[ \left( 1-\frac{3r^{2}}{5R^{2}} \right) \cos ^{2}\theta + \left( 1-\frac{6r^{2}}{5R^{2}} \right) \sin ^{2} \theta \right] r^{2} \sin\theta \, dr  \, d\theta  \, d\phi
+ & = 2\pi \int_{0}^{R} \int_{0}^{\pi} \left[ (5R^{2}-3r^{2}) \cos ^{2}\theta - (5R^{2} - 6r^{2}) \sin ^{2}\theta \right] r^{2} \sin\theta \, d\theta  \, dr \\
+ & = \frac{2\pi}{3} \int_{0}^{R} 18r^4 - 10R^{2}r^{2} \, dr  \\
+ & = \frac{2\pi}{3} \left( \frac{4R^5}{15} \right) = \frac{8\pi R^5}{45}
 \end{align}
 $$
-- Everything from here is computations
-- The result is that the two magnetic fields match
+Substitute back in,
+$$
+\vec{B}_\text{ave} = \frac{1}{(4 /3)\pi R^{3}} \frac{\mu_{0}\omega Q}{20 \pi R^{3}} \frac{8\pi R^5}{45} \hat{z} = \frac{\mu_{0}\omega Q}{150\pi R} \hat{z}
+$$
+
 ![[Pasted image 20251104202026.png]]
 Since there is no free charge in this system, $\nabla \times \vec{H}=0$. I define the new scalar potential,
 $$
