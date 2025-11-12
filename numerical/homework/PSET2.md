@@ -48,4 +48,28 @@ Substituting in the exact values and upper-bound determined in previous parts:
 $$
 \frac{\lvert \hat{x}-x \rvert _{\infty}}{\lvert x \rvert _{\infty}} \leq \frac{(105)(0.22)}{\lvert b \rvert _{\infty}} = 23.1 \lvert b \rvert ^{-1}_{\infty}
 $$
-### Question 2
+### Question 3
+---
+a.
+After constructing the Hilbert matrix, you can define the vector $b_{n}$ by creating the vector $x_{n}=\begin{bmatrix}1 & 2 & 3 & \dots\end{bmatrix}^{T}$ and then moving on from there.
+
+Things to compute:
+$$
+\text{Absolute Residual} = |r_{n}| = \lvert b_{n} - H_{n} \hat{x}_{n} \rvert
+$$
+Where $H_{n}$ is the Hilbert matrix and $\hat{x}_{n}$ is the solved version of $x_{n}$.
+$$
+\text{Condition number} = \text{cond}(H_{n})
+$$
+$$
+\text{Relative Error} = \frac{\lvert x_{n} - \hat{x}_{n} \rvert }{\lvert x_{n} \rvert }
+$$
+$$
+\text{norm}(b_{n}) = \lvert b_{n} \rvert
+$$
+- Should be four quantities in total
+- Done for Hilbert matrix of size 2-13
+- Condition number in $c$, relative error in $e$, norm of residual in $r$, and norm of $b_{n}$ in $v$.
+---
+b.
+- "Semilogy" scale means linear on the $x$-axis but log on the $y$-axis

@@ -1,5 +1,7 @@
 [
   "obsidian-git",
   "obsidian-latex-suite",
-  "obsidian-relative-line-numbers"
+  "obsidian-relative-line-numbers",
+  "obsidian-minimal-settings",
+  "obsidian-style-settings"
 ]
