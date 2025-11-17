@@ -101,3 +101,23 @@ Where we have defined the new constant $\beta = \epsilon \Delta t /\Delta x$
 ---
 b.
 $\epsilon=1$, $\Delta x=0.02$, $\Delta t=0.005$, $L_{x}=2\pi$, $T_{f}=2$. The number of sampled points is roughly $N_{x}=L_{x} / \Delta x$ and $N_{t} = T_{f} / \Delta t$. The initial condition is: $u(x, 0)=\sin x$, and the boundary conditions are $u(0, t)=u(L_{x}, t)=0$.
+### Question 2
+---
+a.
+Here, we are interested in using the Crank-Nicolson scheme to solve for the time-evolution of a state inside some quantum well. The time-dependent Schrodinger equation to solve is,
+$$
+i\hbar \frac{ \partial \psi }{ \partial t } = \mathbf{H} \psi = - \frac{\hbar}{2m} \frac{ \partial^{2}\psi }{ \partial x^{2} } + V\psi
+$$
+We used the initial condition, or state:
+$$
+\psi(x, 0) = \psi_{0} \exp \left[ - \frac{(x-x_{0})^{2}}{4\sigma^{2}} + i\kappa x \right]
+$$
+And defined the three potential wells,
+$$
+V(x) =0 \qquad V(x) = \frac{1}{2} m \omega^{2} x^{2} \qquad V(x) = V_{0} \left( \frac{x^{2}}{x_{1}} - 1 \right)^{2}
+$$
+These are the square well, harmonic well, and double well, respectively. The discretized Hamiltonian $\mathbf{H}_{D}$ was modelled as a tridiagonal matrix, and adjusted according to the well we were interested in testing.
+
+Our system used the physical parameters: $L=10^{-8}$ m, $m=9.11\times 10^{-31}$ kg, $\sigma=L /25$, and $\kappa=500 /L$. The wells were defined from $-L /2$ to $L /2$ before being set to infinity. The space was discretized with $P=1024$ segments, and the simulation ran for $N=3000$ time steps of size $\tau=10^{-18}$ s. The wavefunction itself was offset so that $x_{0}=L /5$.
+
+For these cases, we used the parameters: $\omega=3\times 10^{15}$ rad/s, and $N=4000$ on the harmonic well, and: $V_{0}=6\times 10^{-17}$ J, $x_{0}=L /3$, $x_{1}=L /4$, and $N=6000$ on the double well. All unmentioned parameters remained identical to the square well case.
