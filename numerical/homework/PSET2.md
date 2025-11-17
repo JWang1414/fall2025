@@ -53,6 +53,10 @@ $$
 a.
 After constructing the Hilbert matrix, you can define the vector $b_{n}$ by creating the vector $x_{n}=\begin{bmatrix}1 & 2 & 3 & \dots\end{bmatrix}^{T}$ and then moving on from there.
 
+$$
+(b_{n})_{i} = \sum_{j=1}^{n} \frac{j}{i+j-1}
+$$
+
 Things to compute:
 $$
 \text{Absolute Residual} = |r_{n}| = \lvert b_{n} - H_{n} \hat{x}_{n} \rvert
