@@ -37,7 +37,7 @@ However, sometimes it is not so easy to solve for $x(z)$.
 2. Much faster for multi-dimensional integrals
 3. Easier to implement for complicated domains
 #### Hit-or-Miss MC
-If your function fit inside a finite region where we want to integrate from $x=0$ to $x=2$. Define the area of the box as $A$.
+If your function fits inside a finite region where we want to integrate from $x=0$ to $x=2$. Define the area of the box as $A$.
 1. Randomly pick $N$ locations $(x, y)$ inside the box
 2. Count the number of locations that are in the shaded region
 3. The fraction of points inside the shaded region is $k /N$, which approximates the probability $p$
@@ -62,7 +62,7 @@ I = (b-a) \left< f \right>
 $$
 Estimate $\left< f \right>$ using random numbers:
 $$
-\left< f \right> \approx \frac{1}{N} \sum_{i=1}^{N} f(x_{i}) \implies I \frac{b-a}{N} \sum_{i=1}^{N} f(x_{i})
+\left< f \right> \approx \frac{1}{N} \sum_{i=1}^{N} f(x_{i}) \implies I \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_{i})
 $$
 Here, we pick $x$, for the hit-or-miss method we use $(x, y)$.
 
@@ -78,3 +78,13 @@ $$
 I = \int_{a}^{b} f(x) \, dx = \left< \frac{f(x)}{w(x)} \right> \int_{a}^{b} w(x) \, dx
 $$
 Where the angle brackets define the weighted average $\left< X \right>_{w}$, the average of $X$ over a set of points that sample important regions more frequency according to $w$.
+
+Generally after choosing a weight function, the non-uniform distribution is,
+$$
+p(x) = \frac{w(x)}{\int_{a}^{b} w(x) \, dx }
+$$
+The expected error using this method is,
+$$
+\sigma = \sqrt{ \frac{\left< f^{2} \right> -\left< f \right> ^{2}}{N} } \int_{a}^{b} w(x) \, dx
+$$
+Which, just like the rest of the MC method, varies as $N^{-1/2}$

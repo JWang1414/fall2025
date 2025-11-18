@@ -13,12 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "electromagnetic/lectures/Lecture 19.md",
+=======
+                "file": "numerical/textbook/Week 10.md",
+>>>>>>> 1e719050ec5c2c4b9b6d38ba85651be061e70a05
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Lecture 19"
+=======
+              "title": "Week 10"
+>>>>>>> 1e719050ec5c2c4b9b6d38ba85651be061e70a05
             }
           }
         ]
@@ -151,20 +159,28 @@
   },
   "active": "18bc17f68f60b2fb",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "electromagnetic/textbook/Lecture 17-18.md",
     "electromagnetic/lectures/Lecture 19.md",
+=======
+    "attachments/Pasted image 20251118131356.png",
+    "attachments/Pasted image 20251118131200.png",
+    "numerical/textbook/Week 10.md",
+    "numerical/textbook/Week 9.md",
+    "computational/lectures/Lecture 10.md",
+    "computational/labs/Lab 9.md",
+    "quantum/tutorials/Tutorial 8.md",
+>>>>>>> 1e719050ec5c2c4b9b6d38ba85651be061e70a05
     "quantum/lectures/Lecture 17.md",
     "computational/lectures/Lecture 10.md",
     "environmental/lectures/Lecture 9.md",
-    "numerical/textbook/Week 9.md",
-    "attachments/Pasted image 20251113212117.png",
-    "quantum/tutorials/Tutorial 8.md",
-    "electromagnetic/lectures/Lecture 17.md",
     "conflict-files-obsidian-git.md",
-    "quantum/lectures/Lecture 16.md",
-    "computational/labs/Lab 9.md",
+    "electromagnetic/lectures/Lecture 17.md",
     "numerical/homework/PSET2 Q2.md",
     "numerical/homework/PSET2.md",
+    "attachments/Pasted image 20251113212117.png",
+    "quantum/lectures/Lecture 16.md",
+    "numerical/homework/PSET1 Q2.md",
     "computational/lectures/Lecture 9.md",
     "quantum/tutorials/Tutorial 7.md",
     "computational/lectures/Lecture 5.md",
@@ -177,7 +193,10 @@
     "quantum/lectures/Lecture 15.md",
     "quantum/lectures/Lecture 14.md",
     "quantum/lectures/Lecture 13.md",
+<<<<<<< HEAD
     "quantum/lectures/Lecture 12.md",
+=======
+>>>>>>> 1e719050ec5c2c4b9b6d38ba85651be061e70a05
     "quantum/midterm2",
     "attachments/Pasted image 20251106162115.png",
     "attachments/Pasted image 20251104202026.png",
@@ -187,7 +206,6 @@
     "attachments/Pasted image 20251030214719.png",
     "attachments/Pasted image 20251030213120.png",
     "attachments/Pasted image 20251030212803.png",
-    "attachments/Pasted image 20251030210431.png",
     "numerical/midterm",
     "environmental/midterm",
     "quantum/midterm",
