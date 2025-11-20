@@ -72,7 +72,7 @@ This is a Rabi oscillation. This state, under the driving force from the applied
 # Question 2
 ---
 i.
-Recall that, for this Hamiltonian we have:
+The perturbation on this Hamiltonian is proportional to:
 $$
 H_{0n} (t) \propto \bra{0} x^{3} \ket{n}  \frac{A}{\tau} e^{ -t^{2}/\tau }
 $$
