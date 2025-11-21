@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quantum/tutorials/Tutorial 9.md",
+                "file": "environmental/lectures/Lecture 10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tutorial 9"
+              "title": "Lecture 10"
             }
           }
         ]
@@ -150,6 +150,7 @@
   "active": "18bc17f68f60b2fb",
   "lastOpenFiles": [
     "quantum/tutorials/Tutorial 9.md",
+    "environmental/lectures/Lecture 10.md",
     "quantum/lectures/Lecture 18.md",
     "quantum/lectures/Lecture 17.md",
     "computational/labs/Lab 10.md",
@@ -177,7 +178,6 @@
     "numerical/homework/PSET1 Q2.md",
     "computational/lectures/Lecture 9.md",
     "quantum/tutorials/Tutorial 7.md",
-    "computational/lectures/Lecture 5.md",
     "quantum/midterm2",
     "attachments/Pasted image 20251106162115.png",
     "attachments/Pasted image 20251104202026.png",
