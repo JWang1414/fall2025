@@ -26,37 +26,57 @@ $$
 # Question 3
 ---
 a.
+To evaluate the integral:
 $$
-\int_{0}^{1} \frac{x^{-1/2}}{1+e^{ x }} \, dx  \qquad w(x) = x^{-1/2} \qquad p(x) = \frac{1}{2\sqrt{ x }}
+\int_{0}^{1} \frac{x^{-1/2}}{1+e^{ x }} \, dx
 $$
-According to the textbook the summation we should compute is:
+We will define the weight function $w(x)$ and associated probability distribution function $p(x)$:
+$$
+w(x) = x^{-1/2} \qquad p(x) = \frac{1}{2\sqrt{ x }}
+$$
+The use of the Monte Carlo importance sampling method calls for us to compute the summation:
 $$
 I \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(x_{i})}{w(x_{i})} \int_{a}^{b} w(x) \, dx
 $$
-Where $N$ is the number of sample points, and the interval runs from $a$ to $b$.
+Where $N$ is the number of sample points, and the interval runs from $a$ to $b$. The points $x_{i}$ are the points randomly drawn according to the probability distribution function $p(x)$.
 
-Compute the integral for the weight function:
+The definite integral of the weight function on this interval is:
 $$
 \int_{0}^{1} w(x) \, dx = \int_{0}^{1} x^{-1/2} \, dx = 2\sqrt{ x } \big|^1_{0} = 2
 $$
-Solve for the distribution function:
+And the transformation function according to the probability distribution function is:
 $$
 z = \int_{0}^{x(z)} p(x) \, dx = \frac{1}{2} \int_{0}^{x} \frac{1}{\sqrt{ x' }} \, dx' = \frac{1}{2} (2\sqrt{ x }) = \sqrt{ x }
 $$
-Invert this:
+Solve for $x(z)$ by inverting $z$,
 $$
 z=\sqrt{ x } \implies x(z) = z^{2}
 $$
-The integral to solve is therefore:
+The summation to compute for this problem is therefore:
 $$
 I \approx \frac{2}{N} \sum_{i=1}^{N} \frac{1}{1+e^{ x_{i} }}
 $$
-Where the $x$ are randomly generated, determined by the non-linear distribution $x(z)$.
+$$
+I = (b-a) \left< f \right> \approx \frac{b-a}{N} \sum_{i=1}^{N} f(x_{i})
+$$
+$$
+\int_{0}^{1} \frac{x^{-1/2}}{1+e^{ x }} \, dx = 0.838933
+$$
+
+
+
 
 ---
 b.
+Now, we turn our attention to the integral:
 $$
-\int_{0}^{10} e^{ -2\lvert x-5 \rvert  } \, dx \qquad w(x) = \frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 } \qquad p(x) = \frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 }
+\int_{0}^{10} e^{ -2\lvert x-5 \rvert  } \, dx
+$$
+
+
+
+$$
+w(x) = p(x) = \frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 }
 $$
 Compute the integral for the weight function:
 $$
@@ -67,4 +87,7 @@ Instead of solving for a probability distribution function, I will instead use `
 The integral to solve is therefore:
 $$
 I \approx \frac{\sqrt{ 2\pi }}{N} \text{erf}\left( \frac{5}{\sqrt{ 2 }} \right) \sum_{i=1}^{N} \exp \left[ \frac{(x-5)^{2}}{2} - 2\lvert x-5 \rvert  \right]
+$$
+$$
+\int_{0}^{10} e^{ -2\lvert x-5 \rvert  } \, dx = 1 - \frac{1}{e^{ 10 }} \approx 0.999955
 $$
