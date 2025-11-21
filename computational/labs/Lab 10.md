@@ -1,38 +1,3 @@
-# Question 3
----
-a.
-Weight function is
-$$
-w(x) = x^{-1/2}
-$$
-Probability function we're supposed to get is,
-$$
-p(x) = \frac{1}{2\sqrt{ x }}
-$$
-Work
-$$
-z = \int_{0}^{x(z)} p(x') \, dx' = \frac{1}{2} \int_{0}^{x(z)} \frac{1}{\sqrt{ x' }} \, dx'
-$$
-$$
-\frac{1}{2} \int_{0}^{x(z)} \frac{1}{\sqrt{ x' }} \, dx' = \frac{1}{2} (2\sqrt{ x(z) }) = \sqrt{ x(z) }
-$$
-$$
-z = \sqrt{ x(z) } \implies x(z) = z^{2}
-$$
----
-b.
-$$
-\frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 }
-$$
-$$
-z = \int_{0}^{x(z)} p(x') \, dx' =\frac{1}{\sqrt{ 2\pi }} \int_{0}^{x(z)} e^{ -(x-5)^{2}/2 } \, dx
-$$
-$$
-z = \frac{1}{2} \left[ \text{erf}\left( \frac{\sqrt{ 2 }x - 5\sqrt{ 2 }}{2} \right) + \text{erf}\left( \frac{5}{\sqrt{ 2 }} \right) \right]
-$$
-$$
-x(z) = \sqrt{ 2 } \text{ erf}^{-1}\left( 2x - \text{erf}\left( \frac{5}{\sqrt{ 2 }} \right) \right) + 5
-$$
 # Question 1
 ---
 a.
@@ -57,4 +22,49 @@ $$
 Invert these functions to solve for $\theta$ and $\phi$ as a function of $z$ to find:
 $$
 \theta(z) = \arccos(1-2z) \qquad \phi(z) = 2\pi z
+$$
+# Question 3
+---
+a.
+$$
+\int_{0}^{1} \frac{x^{-1/2}}{1+e^{ x }} \, dx  \qquad w(x) = x^{-1/2} \qquad p(x) = \frac{1}{2\sqrt{ x }}
+$$
+According to the textbook the summation we should compute is:
+$$
+I \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(x_{i})}{w(x_{i})} \int_{a}^{b} w(x) \, dx
+$$
+Where $N$ is the number of sample points, and the interval runs from $a$ to $b$.
+
+Compute the integral for the weight function:
+$$
+\int_{0}^{1} w(x) \, dx = \int_{0}^{1} x^{-1/2} \, dx = 2\sqrt{ x } \big|^1_{0} = 2
+$$
+Solve for the distribution function:
+$$
+z = \int_{0}^{x(z)} p(x) \, dx = \frac{1}{2} \int_{0}^{x} \frac{1}{\sqrt{ x' }} \, dx' = \frac{1}{2} (2\sqrt{ x }) = \sqrt{ x }
+$$
+Invert this:
+$$
+z=\sqrt{ x } \implies x(z) = z^{2}
+$$
+The integral to solve is therefore:
+$$
+I \approx \frac{2}{N} \sum_{i=1}^{N} \frac{1}{1+e^{ x_{i} }}
+$$
+Where the $x$ are randomly generated, determined by the non-linear distribution $x(z)$.
+
+---
+b.
+$$
+\int_{0}^{10} e^{ -2\lvert x-5 \rvert  } \, dx \qquad w(x) = \frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 } \qquad p(x) = \frac{1}{\sqrt{ 2\pi }} e^{ -(x-5)^{2}/2 }
+$$
+Compute the integral for the weight function:
+$$
+\frac{1}{\sqrt{ 2\pi }} \int_{0}^{10} e^{ -(x-5)^{2}/2 } \, dx = \frac{1}{\sqrt{ 2\pi }} \left[ \sqrt{ 2\pi } \text{ erf}\left( \frac{5}{\sqrt{ 2 }} \right) \right] = \text{erf}\left( \frac{5}{\sqrt{ 2 }} \right)
+$$
+Instead of solving for a probability distribution function, I will instead use `np.random.normal` to sample from a normal function. $p(x)$ has a mean of 5, and standard deviation 1.
+
+The integral to solve is therefore:
+$$
+I \approx \frac{\sqrt{ 2\pi }}{N} \text{erf}\left( \frac{5}{\sqrt{ 2 }} \right) \sum_{i=1}^{N} \exp \left[ \frac{(x-5)^{2}}{2} - 2\lvert x-5 \rvert  \right]
 $$
