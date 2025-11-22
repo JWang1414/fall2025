@@ -91,3 +91,11 @@ $$
 $$
 \int_{0}^{10} e^{ -2\lvert x-5 \rvert  } \, dx = 1 - \frac{1}{e^{ 10 }} \approx 0.999955
 $$
+# Question 2
+$$
+I(\mu) \approx (0.4 + 0.6\mu)I_{1}
+$$
+Photons will be released at some angle $\theta$, and then scatter into some optical depth $\tau_{i+1}$, for step $i$. The width of the photosphere is $\tau _\text{max}$. The optical depth for each step is sampling from $\tau=-\log \xi$, where $\xi$ is a random number from 0 to 1, and the directional cosine will be taken as $\mu=\cos\theta$.
+$$
+N(\mu) \, d\mu \propto I(\mu)\mu \, d\mu \implies \frac{N(\mu)}{\mu} \, d\mu \propto I(\mu) \, d\mu
+$$
