@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computational/labs/Lab 10.md",
+                "file": "numerical/textbook/Week 11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 10"
+              "title": "Week 11"
             }
           }
         ]
@@ -149,8 +149,11 @@
   },
   "active": "5a73c3b334abced9",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "attachments/Pasted image 20251122165420.png",
+    "numerical/textbook/Week 10.md",
+    "numerical/textbook/Week 11.md",
     "computational/labs/Lab 10.md",
+    "conflict-files-obsidian-git.md",
     "quantum/tutorials/Tutorial 9.md",
     "environmental/lectures/Lecture 10.md",
     "electromagnetic/textbook/Lecture 17-18.md",
@@ -163,7 +166,6 @@
     "electromagnetic/lectures/Lecture 16.md",
     "electromagnetic/lectures/Lecture 15.md",
     "electromagnetic/textbook/Lecture 15-16.md",
-    "numerical/textbook/Week 10.md",
     "attachments/Pasted image 20251118131356.png",
     "attachments/Pasted image 20251118131200.png",
     "numerical/textbook/Week 9.md",
@@ -176,8 +178,6 @@
     "numerical/homework/PSET2.md",
     "attachments/Pasted image 20251113212117.png",
     "quantum/lectures/Lecture 16.md",
-    "numerical/homework/PSET1 Q2.md",
-    "computational/lectures/Lecture 9.md",
     "quantum/midterm2",
     "attachments/Pasted image 20251106162115.png",
     "attachments/Pasted image 20251104202026.png",
