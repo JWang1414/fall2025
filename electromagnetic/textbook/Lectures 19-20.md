@@ -86,3 +86,181 @@ $$
 Note that field energy doesn't obey the superposition principle.
 - If you double the charge in a sphere, the field doubles, but the energy quadruples.
 - This applied to the Poynting vector, momentum, angular momentum, and the stress tensor
+# The Wave Equation
+For a physical string, the wave equation is:
+$$
+\frac{ \partial^2 f }{ \partial z ^2 } = \frac{1}{v^{2}} \frac{ \partial^2 f }{ \partial t ^2 }
+$$
+Where the speed of propagation for the wave is:
+- Recall that the wave equation is *linear*. The sum of two solutions is another solution
+$$
+v = \sqrt{ \frac{T}{\mu} }
+$$
+$T$ is the tension in the string, and $\mu$ is the mass per unit length.
+# Sinusoidal Waves
+$$
+f(z, t) = A \cos[k(z-vt)+\delta]
+$$
+$A$ is the amplitude of this wave, and the argument in the cosine is called the phase. $\delta$ is called a phase constant.
+
+When $z=vt-\delta /k$, the phase is zero. Define this to be the *central maximum*. $k$ is the *wave number*, and is defined to be:
+$$
+\lambda = \frac{2\pi}{k}
+$$
+The period of oscillation is:
+$$
+T = \frac{2\pi}{kv}
+$$
+Where $v$ is the wave speed. The frequency of oscillation is:
+$$
+f = \frac{1}{T} = \frac{kv}{2\pi} = \frac{v}{\lambda}
+$$
+And the angular frequency is:
+$$
+\omega = 2\pi f = kv
+$$
+A sinusoidal oscillation of wave number $k$ and angular frequency $\omega$ travelling to the right is written:
+$$
+f(z, t) = A \cos(kz-\omega t+\delta)
+$$
+Swapping the sign of $k$ changes the direction the wave moves in. 
+![[Pasted image 20251123115727.png]]
+- I have included this figure to show an interpretation of $\delta /k$. This wave is moving towards the left, and so it different from the one written above
+
+In complex notation, the wave can also be written like:
+$$
+f(z, t) = \mathrm{Re} \left\{ A \exp \left( i(kz-\omega t+\delta) \right)  \right\}
+$$
+Common notation is to work with the complex wave function:
+$$
+\tilde{f}(z, t) \equiv \tilde{A} \exp \left[ i(kz-\omega t) \right]
+$$
+And then take the real version of the wave afterwards:
+$$
+\tilde{A} \equiv A e^{ i\delta } \qquad f(z, t) = \mathrm{Re} \left[ \tilde{f}(z, t) \right]
+$$
+Complex notation helps to add waves, but not multiply them:
+$$
+\mathrm{Re} \{ \tilde{f}_{1} + \tilde{f}_{2} \} = \mathrm{Re}\{ \tilde{f}_{1} \} + \mathrm{Re}\{ \tilde{f}_{2} \}
+$$
+$$
+\mathrm{Re}\{ \tilde{f}_{1} \cdot \tilde{f}_{2} \} \neq \mathrm{Re}\{ \tilde{f}_{1} \} \cdot \mathrm{Re} \{ \tilde{f}_{2} \}
+$$
+Any wave can be expressed as the linear combination of sinusoidal wave:
+$$
+\tilde{f}(z, t) = \int_{-\infty}^{\infty} \tilde{A}(k) e^{ i(kx-\omega t) } \, dk
+$$
+Where we can obtain $\tilde{A}(k)$ using Fourier transforms.
+# Boundary Conditions: Reflection and Transmission
+Lets say we have two string tied together with difference $\mu$. Then, at the intersection between the two, we will have an incident wave, reflected wave, and a transmitted wave.
+- The incident wave will split into the other two waves
+
+The wave velocity will change from one string to another, so the wavelength and wave numbers will follow suit:
+$$
+\frac{\lambda_{1}}{\lambda_{2}} = \frac{k_{2}}{k_{1}} = \frac{v_{1}}{v_{2}}
+$$
+The wave function and the complex wave function must be continuous at the break, with a continuous derivative:
+$$
+\tilde{f}(0^{-}, t) = \tilde{f}(0^{+}, t) \qquad \frac{ \partial \tilde{f} }{ \partial z } \bigg|_{0^{-}} = \frac{ \partial \tilde{f} }{ \partial z } \bigg|_{0^{+}}
+$$
+Assuming the knot itself has negligible mass.
+
+If the second string is infinitely massive, for example, than the first string is essentially tied to an immovable post, and so everything gets reflected.
+# Polarization
+If the displacement is perpendicular to the direction of propagation, the waves are *transverse* waves
+
+If the waves are parallel (like compression waves) than the waves are *longitudinal* waves.
+
+The *polarization vector* $\hat{n}$ defined the plane of vibration. For transverse waves, $\hat{n}$ is perpendicular to the direction of propagation:
+$$
+\hat{n}\cdot \hat{z} =0
+$$
+And it is defined in terms of the *polarization angle* $\theta$
+$$
+\hat{n} = \cos\theta \hat{x} + \sin\theta \hat{y}
+$$
+# The Wave Equation for $\vec{E}$ and $\vec{B}$
+In free space with no charge and current, we have:
+$$
+\nabla^{2} \vec{E} = \mu_{0}\epsilon_{0} \frac{ \partial^2 \vec{E} }{ \partial t ^2 } \qquad \nabla^{2}\vec{B} = \mu_{0}\epsilon_{0} \frac{ \partial^2 \vec{B} }{ \partial t ^2 }
+$$
+Each component of $\vec{E}$ and $\vec{B}$ satisfy the 3D wave equation:
+$$
+\nabla^{2}f = \frac{1}{v^{2}} \frac{ \partial ^2 f }{ \partial t ^2 }
+$$
+If you solve for $v$ here, you will discover the speed of light:
+$$
+c = \frac{1}{\sqrt{ \epsilon_{0} \mu_{0} }}
+$$
+# Monochromatic Plane Waves
+In this regime, we confine our attention to sinusoidal waves of frequency $\omega$. Called monochromatic because different frequencies correspond to different colours.
+
+We are interested in waves of the form:
+$$
+\tilde{E}(z, t) = \tilde{E}_{0} e^{ i(kz-\omega t) }
+$$
+Where $\tilde{E}_{0}$ is a complex amplitude, and $\omega=ck$. The version for the magnetic field is identical, just with $E$ swapped with $B$.
+
+In free space, Maxwell's equations tell us:
+$$
+(\tilde{E}_{0})_{z} = (\tilde{B}_{0})_{z} =0
+$$
+So the waves have no $z$ dependence, and must be transverse waves. Going further, we have:
+$$
+\tilde{\mathbf{B}}_{0} = \frac{k}{\omega} (\hat{z}\times  \tilde{\mathbf{E}}_{0})
+$$
+So $\vec{E}$ and $\vec{B}$ are perpendicular to each other, alongside both being perpendicular to the propagation direction. Their real amplitudes are related by:
+$$
+B_{0} = \frac{k}{\omega} E_{0} = \frac{1}{c} E_{0}
+$$
+The common models for the electric and magnetic fields are:
+$$
+\begin{align}
+\vec{E}(z, t) & = E_{0} \cos(kz-\omega t+\delta) \hat{x} \\
+\vec{B}(z, t) & = \frac{1}{c} E_{0} \cos(kz-\omega t+\delta) \hat{y}
+\end{align}
+$$
+In terms of a propagation vector $\vec{k}$, pointing in the direction of propagation with magnitude $k$, the equations are generalized to:
+$$
+\begin{align}
+\tilde{\mathbf{E}}(\vec{r}, t) & = \tilde{E}_{0} \exp \left[ i(\vec{k}\cdot \vec{r}-\omega t) \right] \hat{n} \\
+\tilde{\mathbf{B}}(\vec{r}, t) & = \frac{1}{c} \tilde{E}_{0} \exp \left[ i(\vec{k}\cdot \vec{r}-\omega t) \right] (\hat{k}\times \hat{n}) = \frac{1}{c} \hat{k}\times  \tilde{\mathbf{E}}
+\end{align}
+$$
+Where $\hat{n}$ is the polarization vectors. Since $\vec{E}$ is transverse,
+$$
+\hat{n}\cdot \hat{k}=0
+$$
+# Energy and Momentum in Electromagnetic Waves
+Recall that the energy per unit volume in electromagnetic fields is:
+$$
+u = \frac{1}{2} \left( \epsilon_{0} E^{2} + \frac{1}{\mu_{0}} B^{2} \right)
+$$
+For monochromatic plane waves:
+$$
+B^{2} = \frac{1}{c^{2}} E^{2} = \mu_{0}\epsilon_{0} E^{2}
+$$
+Therefore,
+$$
+u = \epsilon_{0} E^{2} = \epsilon_{0} E_{0}^{2} \cos ^{2}(kz-\omega t+\delta)
+$$
+It follows that the Poynting vector becomes:
+$$
+\vec{S} = \frac{1}{\mu_{0}} (\vec{E}\times \vec{B}) = cu \hat{z}
+$$
+The momentum density becomes:
+$$
+\vec{g} = \frac{1}{c} u\hat{z}
+$$
+However, these terms are typically very rapidly fluctuating because of the short wavelengths in the cosine. So, the average value is typically more enlightening.
+$$
+\left< u \right> = \frac{1}{2} \epsilon_{0} E_{0}^{2} \qquad \left< \vec{S} \right> = \frac{1}{2} c \epsilon_{0} E_{0}^{2}\hat{z} \qquad \left< g \right> = \frac{1}{2c} \epsilon_{0} E_{0}^{2} \hat{z}
+$$
+The average power per unit area is also called the intensity: $I \equiv \left< S \right>$.
+- This is the scalar version of the Poynting vector from the looks of it
+
+For a perfect absorber, all momentum is delivered onto the surface, and the average force per unit area from the momentum transfer is:
+$$
+P = \frac{1}{A} \frac{\left< \vec{g} \right> Ac\Delta t}{\Delta t} = \frac{1}{2} \epsilon_{0} E_{0}^{2} = \frac{I}{c}
+$$
+Also called the *radiation pressure*. Note that for a perfect reflector the pressure is double.
