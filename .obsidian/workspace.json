@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "numerical/textbook/Week 11.md",
+                "file": "electromagnetic/textbook/Lectures 19-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 11"
+              "title": "Lectures 19-20"
             }
           }
         ]
@@ -149,9 +149,10 @@
   },
   "active": "5a73c3b334abced9",
   "lastOpenFiles": [
+    "numerical/textbook/Week 11.md",
+    "electromagnetic/textbook/Lectures 19-20.md",
     "attachments/Pasted image 20251122165420.png",
     "numerical/textbook/Week 10.md",
-    "numerical/textbook/Week 11.md",
     "computational/labs/Lab 10.md",
     "conflict-files-obsidian-git.md",
     "quantum/tutorials/Tutorial 9.md",
@@ -185,7 +186,6 @@
     "attachments/Pasted image 20251104113644.png",
     "attachments/Pasted image 20251031233956.png",
     "attachments/Pasted image 20251030214719.png",
-    "attachments/Pasted image 20251030213120.png",
     "numerical/midterm",
     "environmental/midterm",
     "quantum/midterm",
