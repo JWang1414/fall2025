@@ -51,3 +51,48 @@ $$
 $$
 Which is just the cross section of the sphere.
 # 1D Scattering
+Lets say we have some barrier blocking an incident beam $Ae^{ ikx }$. Well, we would expect to have a reflected and transmitted beam. The coefficients of which are $B$ and $C$, respectively. We have:
+$$
+\left\lvert  \frac{B}{A}  \right\rvert ^{2} = \text{Reflection Coefficient} \qquad \left\lvert  \frac{C}{A}  \right\rvert ^{2} = \text{Transmission Coefficient}
+$$
+So, if we have some particle $\vec{k}$ incident on a potential, than what is the scattered state $\vec{k}'$? Let define the beam $\ket{\psi}$:
+$$
+\ket{\psi} = \ket{\vec{k}} + \sum_{\vec{p}\neq \vec{k}} a_{\vec{p}} \ket{\vec{p}}
+$$
+Where $\ket{\vec{k}}$ is the incident beam and $\ket{\vec{p}}$ is the scattered beam
+
+So, for this system we would expect $\ket{\psi _\text{in}}=\ket{\vec{k}}$ and $\ket{\psi _\text{out}}$ should be some set of spherical waves.
+
+The behaviour of this quantum system should abide by the Schrodinger equation, so:
+$$
+-\frac{\hbar^{2}}{2m} \nabla^{2}\psi + V \psi = E\psi = \frac{(\hbar k)^{2}}{2m} \psi
+$$
+- Notice that this also defines that $k$ should be.
+
+Based on our experience with the hydrogen atom, we expect the spherical waves to have the separated form:
+$$
+\psi = R(r) Y_{lm}(\theta, \phi)
+$$
+- If you substitute the spherical harmonics and radii functions into the Schrodinger equation here, you will get something very nasty
+
+Introduce $R = u /r$ and it should become:
+$$
+-\frac{\hbar^{2}}{2m} \frac{d^{2}u}{dr^{2}} + \frac{\hbar^{2}l(l+1)}{2mr^{2}} u + V(r) u = Eu
+$$
+Where the term in the middle (the one related to $u$) is called the "centrifugal term"
+- I think I missed the exact name
+
+The solutions to this problem should be plane waves that look something like:
+$$
+u = e^{ \pm ikr } \implies R_\text{out} = \frac{e^{ \pm ikr }}{r}
+$$
+The intuition behind $u$ is that the problem looks very similar to a free particle problem. And so we just end up with a particle that keeps going with nothing impeding it. However, we can see from $R_\text{out}$ that the radial portion will end up decaying as a function of $r$.
+
+The most general form for the wave function is therefore:
+$$
+\psi(\vec{r}) = e^{ ikz } + f(\theta, \phi) \frac{e^{ ikr }}{r}
+$$
+Where the first term is reminiscent of the incident wave, and the second the scattered wave.
+$$
+d\sigma \propto \lvert f(\theta, \phi) \rvert ^{2}
+$$
