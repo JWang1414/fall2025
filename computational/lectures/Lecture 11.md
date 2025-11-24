@@ -33,7 +33,7 @@ $$
 7. Measure the quantity $X$ in its current state, and store it
 8. Repeat from step 2
 
-This model typically ends up converging to the Boltzmann Stat Mech states.
+Typically, given any initial state, the system will progressively evolve towards one where all states follow Boltzmann.
 # Simulated annealing
 Annealing comes from metal working. It's based on the idea of finding the optimal cooling rate for the product to be sturdy, as opposed to snapping from the change in temperature.
 
@@ -41,4 +41,3 @@ This method is good for finding global min/max in complicated systems.
 
 Use the function $f$ the energy function, and then reduce the temperature in the system until the ground state is discovered
 - Sometimes it can be wrong though. Especially if there are two min/max with similar energies
-

@@ -94,5 +94,5 @@ $$
 $$
 Where the first term is reminiscent of the incident wave, and the second the scattered wave.
 $$
-d\sigma \propto \lvert f(\theta, \phi) \rvert ^{2}
+d\sigma \propto \lvert f(\theta, \phi) \rvert ^{2} \, d\Omega
 $$
