@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "7d55a8f840de0110",
+        "id": "70af7d05361782db",
         "type": "tabs",
         "children": [
           {
-            "id": "18bc17f68f60b2fb",
+            "id": "5a73c3b334abced9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "electromagnetic/lectures/Lecture 21.md",
+                "file": "numerical/homework/PSET3 Q2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 21"
+              "title": "PSET3 Q2"
+            }
+          },
+          {
+            "id": "5804a00b29dfe70b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "numerical/textbook/Week 7.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Week 7"
             }
           }
         ]
@@ -147,46 +161,45 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "18bc17f68f60b2fb",
+  "active": "5a73c3b334abced9",
   "lastOpenFiles": [
-    "electromagnetic/lectures/Lecture 8.md",
-    "electromagnetic/lectures/Lecture 21.md",
-    "electromagnetic/lectures/Lecture 10.md",
-    "electromagnetic/lectures/Lecture 9.md",
-    "electromagnetic/lectures/Lecture 11.md",
-    "electromagnetic/lectures/Lecture 12.md",
-    "electromagnetic/lectures/Lecture 13.md",
-    "electromagnetic/lectures/Lecture 14.md",
-    "electromagnetic/lectures/Lecture 15.md",
-    "electromagnetic/lectures/Lecture 16.md",
-    "electromagnetic/lectures/Lecture 17.md",
-    "electromagnetic/lectures/Lecture 19.md",
-    "electromagnetic/lectures/Lecture 20.md",
-    "electromagnetic/lectures/Lecture 5.md",
-    "electromagnetic/lectures/Lecture 3.md",
-    "electromagnetic/lectures/Lecture 2.md",
-    "electromagnetic/lectures/Lecture 1.md",
-    "computational/lectures/Lecture 11.md",
-    "quantum/lectures/Lecture 19.md",
-    "quantum/lectures/Lecture 18.md",
-    "quantum/lectures/Lecture 17.md",
-    "conflict-files-obsidian-git.md",
-    "numerical/textbook/Week 11.md",
+    "numerical/textbook/Week 7.md",
+    "numerical/homework/PSET3 Q2.md",
+    "attachments/Pasted image 20251125103635.png",
+    "numerical/textbook/Week 8.md",
+    "numerical/textbook/Week 10.md",
+    "numerical/textbook/Week 9.md",
+    "attachments/Pasted image 20251125094948.png",
     "electromagnetic/textbook/Lectures 19-20.md",
-    "attachments/Pasted image 20251123115727.png",
-    "attachments/Pasted image 20251122165420.png",
+    "quantum/lectures/Lecture 19.md",
+    "environmental/final/Final Notes.md",
+    "environmental/final",
+    "electromagnetic/lectures/Lecture 21.md",
+    "computational/lectures/Lecture 11.md",
     "attachments/Pasted image 20251124132430.png",
     "attachments/Pasted image 20251124131945.png",
-    "environmental/final/Final Notes.md",
+    "attachments/Pasted image 20251123115727.png",
+    "numerical/textbook/Week 11.md",
+    "attachments/Pasted image 20251122165420.png",
+    "computational/labs/Lab 10.md",
+    "conflict-files-obsidian-git.md",
+    "quantum/tutorials/Tutorial 9.md",
     "environmental/lectures/Lecture 10.md",
-    "environmental/final",
+    "electromagnetic/textbook/Lecture 17-18.md",
+    "quantum/lectures/Lecture 18.md",
+    "electromagnetic/lectures/Lecture 20.md",
+    "electromagnetic/lectures/Lecture 19.md",
+    "electromagnetic/lectures/Lecture 1.md",
+    "electromagnetic/lectures/Lecture 2.md",
+    "electromagnetic/lectures/Lecture 17.md",
+    "electromagnetic/lectures/Lecture 16.md",
+    "electromagnetic/lectures/Lecture 15.md",
+    "electromagnetic/textbook/Lecture 15-16.md",
     "attachments/Pasted image 20251118131356.png",
     "attachments/Pasted image 20251118131200.png",
     "attachments/Pasted image 20251113212117.png",
     "quantum/midterm2",
     "attachments/Pasted image 20251106162115.png",
-    "attachments/Pasted image 20251104202026.png",
-    "attachments/Pasted image 20251104162022.png",
     "numerical/midterm",
     "environmental/midterm",
     "quantum/midterm",
