@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quantum/lectures/Lecture 21.md",
+                "file": "quantum/tutorials/Tutorial 10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 21"
+              "title": "Tutorial 10"
             }
           }
         ]
@@ -147,17 +147,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cfd6733158e464b1",
+  "active": "a06345c59553ad8f",
   "lastOpenFiles": [
+    "quantum/lectures/Lecture 20.md",
+    "quantum/tutorials/Tutorial 10.md",
     "quantum/lectures/Lecture 21.md",
+    "electromagnetic/lectures/Lecture 22.md",
+    "electromagnetic/lectures/Lecture 21.md",
+    "electromagnetic/lectures/Lecture 20.md",
     "conflict-files-obsidian-git.md",
     "numerical/homework/PSET3 Q4.md",
     "numerical/homework/PSET3 Q3.md",
     "numerical/homework/PSET3 Q2.md",
     "attachments/Pasted image 20251125103635.png",
     "attachments/Pasted image 20251125094948.png",
-    "quantum/lectures/Lecture 20.md",
-    "electromagnetic/lectures/Lecture 21.md",
     "electromagnetic/lectures/Lecture 8.md",
     "electromagnetic/lectures/Lecture 10.md",
     "electromagnetic/lectures/Lecture 9.md",
@@ -169,14 +172,11 @@
     "electromagnetic/lectures/Lecture 16.md",
     "electromagnetic/lectures/Lecture 17.md",
     "electromagnetic/lectures/Lecture 19.md",
-    "electromagnetic/lectures/Lecture 20.md",
     "electromagnetic/lectures/Lecture 5.md",
     "electromagnetic/lectures/Lecture 3.md",
     "electromagnetic/lectures/Lecture 2.md",
     "electromagnetic/lectures/Lecture 1.md",
     "computational/lectures/Lecture 11.md",
-    "quantum/lectures/Lecture 19.md",
-    "quantum/lectures/Lecture 18.md",
     "attachments/Pasted image 20251123115727.png",
     "attachments/Pasted image 20251122165420.png",
     "attachments/Pasted image 20251124132430.png",
