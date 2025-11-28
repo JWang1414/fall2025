@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "numerical/homework/PSET3 Q4.md",
+                "file": "computational/labs/Lab 11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PSET3 Q4"
+              "title": "Lab 11"
             }
           }
         ]
@@ -149,9 +149,10 @@
   },
   "active": "5a73c3b334abced9",
   "lastOpenFiles": [
+    "numerical/homework/PSET3 Q4.md",
+    "computational/labs/Lab 11.md",
     "numerical/textbook/Week 7.md",
     "numerical/homework/PSET3 Q3.md",
-    "numerical/homework/PSET3 Q4.md",
     "numerical/homework/PSET3 Q2.md",
     "attachments/Pasted image 20251125103635.png",
     "numerical/textbook/Week 8.md",
@@ -181,7 +182,6 @@
     "electromagnetic/lectures/Lecture 2.md",
     "electromagnetic/lectures/Lecture 17.md",
     "electromagnetic/lectures/Lecture 16.md",
-    "electromagnetic/lectures/Lecture 15.md",
     "attachments/Pasted image 20251118131356.png",
     "attachments/Pasted image 20251118131200.png",
     "attachments/Pasted image 20251113212117.png",
