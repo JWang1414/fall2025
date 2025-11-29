@@ -26,26 +26,20 @@ f(x) - p_{n}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod_{j=0}^{n} (x-x_{j})
 $$
 Where $\xi$ is an unknown point in $\text{ospr}\{ x_{0}, \dots, x_{n} \}$ that depends on $x$.
 
-Evaluating the formula for $p_{1}(x)$,
+For $p_{1}(x)$ this becomes:
 $$
-\frac{f^{(1+1)}(\xi)}{(1+1)!} \prod_{j=0}^{n} (x-x_{j}) = \frac{e^{ -\xi }}{2} (x+1)(x-1)
+\frac{f^{(2)}(\xi)}{2!} \prod_{j=0}^{n} (x-x_{j}) = \frac{e^{ -\xi }}{2} (x+1)(x-1) = \frac{e^{ -\xi }}{2} (x^{2}-1)
 $$
-In the interval $x \in[-1, 1]$ and $\xi \in(-1, 1)$, an upper bound on the absolute value of the error can be found for $x=0$ and $\xi=-1$
+For any $x \in[-1, 1]$, $\xi \in(-1, 1)$. The absolute value of the error is maximized when $x=0$ and $\xi=-1$.
 $$
-\left| \frac{e^{ -\xi }}{2} (x+1) (x-1) \right| \leq \frac{e^{ -\xi }}{2} < \frac{e}{2}
+\left| \frac{e^{ -\xi }}{2}(x^{2}-1) \right| \leq \frac{e^{ -\xi }}{2} < \frac{e}{2}
 $$
-The lower bound on the absolute value is 0, since the expression vanishes for $x=\pm 1$. The bound on the absolute error is therefore:
+For any $x \in[1, 2]$, $\xi \in(-1, 2)$. To maximize the error, choose $x=2$ and $\xi=-1$
 $$
-\text{Error} < \frac{e}{2}
+\left| \frac{e^{ -\xi }}{2}(x^{2}-1) \right| \leq \frac{3}{2} e^{ -\xi } < \frac{3e}{2}
 $$
-In the interval $x \in[1, 2]$ and $\xi \in(1, 2)$, an upper bound is found using $x=2$ and $\xi=1$.
-$$
-\left| \frac{e^{ -\xi }}{2} (x+1) (x-1) \right| \leq \frac{3}{2} e^{ -\xi } < \frac{3}{2e}
-$$
-The lower bound is 0, for the same reason as above. The bound on the absolute error is therefore:
-$$
-\text{Error} < \frac{3}{2e}
-$$
+The lower bound on the error in both cases is 0. This because at the chosen interpolating points $x_{0}=-1$ and $x_{1}=1$, the error will be 0, and at least one of these points is included in both intervals.
+
 ---
 c.
 Initial points are:
@@ -76,17 +70,44 @@ f(x) - p_{n}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod_{j=0}^{n} (x-x_{j})
 $$
 For $p_{2}(x)$ this becomes:
 $$
-\frac{f^{(2+1)}(\xi)}{(2+1)!} \prod_{j=0}^{n} (x-x_{j}) = - \frac{e^{ -\xi }}{6} (x+1)x(x-1)
+\frac{f^{(3)}(\xi)}{3!} \prod_{j=0}^{n} (x-x_{j}) = -\frac{e^{ -\xi }}{6} (x+1)x(x-1) = -\frac{e^{ -\xi }}{6} x(x^{2}-1)
 $$
-On the interval $x \in[-1, 1]$ and $\xi \in(-1, 1)$ an upper bound on the absolute value  of the error can be found on $x=3^{-1/2}$ and $\xi=-1$.
+For any $x \in[-1, 1]$, $\xi \in(-1, 1)$. First, find the local maximum points for $x(x^{2}-1)$ in this range:
 $$
-\left| - \frac{e^{ -\xi }}{6}x(x^{2}-1) \right| \leq \frac{\sqrt{ 3 }}{27} e^{ -\xi } < \frac{e\sqrt{ 3 }}{27}
+\frac{d}{dx} x(x^{2}-1) = 3x^{2}-1 =0 \implies x = \frac{1}{\sqrt{ 3 }}
 $$
-On the interval $x \in[1, 2]$ and $\xi \in(1, 2)$ an upper bound on the absolute value of the error can be found on $x=2$ and $\xi=1$.
+Choose $x=3^{-1/2}$ and $\xi=-1$ to maximize the error:
 $$
-\left| - \frac{e^{ -\xi }}{6}x(x^{2}-1) \right| \leq e^{ -\xi } < e^{-1}
+\left| -\frac{e^{ -\xi }}{6} x(x^{2}-1) \right| \leq \frac{\sqrt{ 3 }}{27} e^{ -\xi } < \frac{e\sqrt{ 3 }}{27}
 $$
-- The lower bound in both cases is going to be 0 because the error on the interpolated points $x=\pm 1, 0$ is always zero
-- I'm not sure I did this problem correctly. In particular, I think I might have messed up the values of $\xi$ I've substituted into the error equations. I will check this later
+For any $x \in[1, 2]$, $\xi \in(-1, 2)$. To maximize the error, choose $x=2$ and $\xi=-1$.
+$$
+\left| -\frac{e^{ -\xi }}{6} x(x^{2}-1) \right| \leq e^{ -\xi } < e
+$$
+
+Same as part b, the lower bound on the error within both intervals is 0.
+
 ---
 e.
+They Taylor series expansion for $f(x)=e^{ -x }$ is:
+$$
+e^{ -x } = \sum_{k=0}^{\infty} \frac{(-x)^{k}}{k!}
+$$
+They first two Taylor polynomials of degree 1 and 2 are:
+$$
+t_{1}(x) = 1-x \qquad t_{2}(x) = 1 - x + \frac{x^{2}}{2}
+$$
+Comments:
+Taylor series expansions are centred at $x=0$, and so both of the Taylor series expansions are exact when $x=0$.
+
+The polynomial interpolants, however, are based on numerous points (2 points and 3 points, respectively) and they are exact at these points.
+
+The maximum error for the interpolants is always lower than the maximum error for the Taylor polynomials
+
+Near $x=0$, the Taylor polynomials are far more accurate. Even though $p_{2}$ uses $x=0$ as a point of reference, just like $t_{2}$, $t_{2}$ is still far more accurate in this regime.
+
+On the contrary, further from $x=0$, the polynomial interpolants are more accurate.
+
+Despite both the linear approximations being straight lines, $p_{1}$ is placed in such a way that the error is typically much smaller than $t_{1}$.
+
+In summary, the polynomial interpolants have better average performance on wider ranges, but the Taylor polynomials have superior performance where they are centred.
