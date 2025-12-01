@@ -1,6 +1,7 @@
 # Question 2
 ---
 a.
+Set $f(x)=0$ to make it easier to find the roots:
 $$
 f(x) = x \sin x -1 =0 \implies x = \frac{1}{\sin x}
 $$
@@ -9,16 +10,14 @@ And so $f(x)$ has two roots in the interval $[0, \pi]$
 
 ---
 b.
-Evaluate $f(x)$ at these two points:
+At the two endpoints, $f(x)$ is:
 $$
 \begin{align}
 f\left( \frac{\pi}{4} \right) & = \left( \frac{\pi}{4} \right) \sin\left( \frac{\pi}{4} \right) -1 = \frac{\pi \sqrt{ 2 }}{8} -1 \approx -0.44 < 0 \\
 f\left( \frac{\pi}{2} \right) & = \left( \frac{\pi}{2} \right) \sin\left( \frac{\pi}{2} \right) -1 = \frac{\pi}{2} -1 \approx 0.57 > 0
 \end{align}
 $$
-$f(x)$ is a continuous function, and so, according to the intermediate value theorem, there must be a root within this interval.
-
-Note that on the interval $[\pi /4, \pi /2]$, the functions $\cos x$, $\sin x$, and $x$ are all strictly positive, except for $\cos(\pi /2)=0$. I conclude that:
+$f(x)$ is a continuous function, and so, according to the intermediate value theorem, there must be a root within this interval. Furthermore, on the interval $[\pi /4, \pi /2]$, the functions $\cos x$, $\sin x$, and $x$ are all strictly positive, except for $\cos(\pi /2)=0$. I conclude that:
 $$
 f'(x) = \sin x + x \cos x >0 \qquad \text{when } \frac{\pi}{4} \leq x < \frac{\pi}{2}
 $$
@@ -26,7 +25,7 @@ At the point $x=\pi /2$,
 $$
 f'\left( \frac{\pi}{2} \right) = \sin\left( \frac{\pi}{2} \right) + \frac{\pi}{2} \cos\left( \frac{\pi}{2} \right) = 1
 $$
-So $f'(x)$ is positive on the interval $[\pi /4, \pi /2]$. According to Theorem 3 from the class slides on existence and/or uniqueness of roots, the root in this interval previously found by the IVT must also be unique.
+So $f'(x)$ is positive on the interval $[\pi /4, \pi /2]$. According to Theorem 3 from the class slides on the existence and/or uniqueness of roots, the root in this interval previously found by the IVT must also be unique.
 
 ---
 c.
@@ -46,12 +45,13 @@ So $I$ has length at least $\pi /6$. Furthermore, evaluating $f(1)$:
 $$
 f(1) = (1) \sin(1) - 1 \approx -0.16
 $$
-Therefore, according to the IVT, this interval contained the fixed point $x^*$.
+Therefore, according to the evaluations of this function in part b, and the IVT, this interval contains the fixed point $x^*$.
 
 Now, I will show $g(x)$ is a contraction mapping on this interval, and so converges. That is, I will show $g(x)$ maps onto itself via $\lvert g'(x) \rvert<1$
 $$
 \lvert g'(x) \rvert = \left| - \frac{\cos x}{\sin ^{2}x} \right| <1 \implies -1 < \frac{\cos x}{\sin ^{2}x} <1
 $$
+I obtain:
 $$
 -\sin ^{2}x < \cos x < \sin ^{2}x
 $$
@@ -59,7 +59,7 @@ Within the interval $I$, $\cos x$ and $\sin ^{2}x$ are both positive. Furthermor
 $$
 \lvert \cos x \rvert < \lvert \sin ^{2}x \rvert \implies -\sin ^{2}x < \cos x < \sin ^{2}x
 $$
-The same condition required for $\lvert g'(x) \rvert<1$. Hence, $g(x)$ converges assuming the initial point is within the interval $(1, \pi /2)$.
+The same condition required for $\lvert g'(x) \rvert<1$, hence, $g(x)$ converges assuming the initial point is within the interval $(1, \pi /2)$.
 
 Now, I will expand this interval by testing points outside of it. If the initial point is $x_{0}=\pi /4$, then:
 $$
@@ -69,9 +69,7 @@ Subsequent iterations will continue to converge to the root. If the initial poin
 $$
 g\left( \frac{\pi}{2} \right) = \frac{1}{\sin(\pi /2)} = 1 > \frac{\pi}{4}
 $$
-Which will eventually converge to the root.
-
-An expanded interval upon which $g(x)$ will converge to the root is:
+Which will eventually converge to the root. An expanded interval upon which $g(x)$ will converge to the root is:
 $$
 I = \left[ \frac{\pi}{4}, \frac{\pi}{2} \right]
 $$
@@ -97,7 +95,7 @@ Therefore,
 $$
 \lim_{ k \to \infty } \frac{\lvert e_{k+1} \rvert }{\lvert e_{k} \rvert ^{r}} = \lim_{ k \to \infty } \frac{\lvert g'(\xi_{k})e_{k} \rvert }{\lvert e_{k} \rvert ^{r}}
 $$
-Which converges to the constant $C=\lvert g'(x^*) \rvert$ if $r=1$. Importantly,
+Which converges to the constant $C=\lvert g'(x^*) \rvert$ if $r=1$. Importantly, for the function $g(x)$:
 $$
 \lvert g'(x^*) \rvert = \left\lvert  \frac{\cos x^*}{\sin ^{2} x^*}  \right\rvert
 $$

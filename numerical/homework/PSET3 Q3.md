@@ -1,17 +1,13 @@
 # Question 3
 ---
 a.
-Interpolating polynomial $p_{1}(x)$ of the function $f(x)=e^{ -x }$
-
-Data points $x_{0}=-1$ and $x_{1}=1$
-
 The initial points are:
 $$
-f[-1] = e \qquad f[1] = e^{ -1 }
+f[x_{0}] = e \qquad f[x_{1}] = e^{ -1 }
 $$
 Then,
 $$
-f[-1, 1] = \frac{f[1]-f[-1]}{(1)-(-1)} = \frac{e^{ -1 } - e}{2}
+f[x_{0}, x_{1}] = \frac{f[x_{1}]-f[x_{0}]}{(1)-(-1)} = \frac{e^{ -1 } - e}{2}
 $$
 The polynomial is therefore:
 $$
@@ -24,7 +20,7 @@ The error in polynomial interpolation is defined to be,
 $$
 f(x) - p_{n}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod_{j=0}^{n} (x-x_{j})
 $$
-Where $\xi$ is an unknown point in $\text{ospr}\{ x_{0}, \dots, x_{n} \}$ that depends on $x$.
+Where $\xi$ is an unknown point in $\text{ospr}\{ x_{0}, \dots, x_{n}, x \}$ that depends on $x$.
 
 For $p_{1}(x)$ this becomes:
 $$
@@ -34,7 +30,7 @@ For any $x \in[-1, 1]$, $\xi \in(-1, 1)$. The absolute value of the error is max
 $$
 \left| \frac{e^{ -\xi }}{2}(x^{2}-1) \right| \leq \frac{e^{ -\xi }}{2} < \frac{e}{2}
 $$
-For any $x \in[1, 2]$, $\xi \in(-1, 2)$. To maximize the error, choose $x=2$ and $\xi=-1$
+For any $x \in[1, 2]$, $\xi \in(-1, 2)$. Choose $x=2$ and $\xi=-1$ to maximize the error.
 $$
 \left| \frac{e^{ -\xi }}{2}(x^{2}-1) \right| \leq \frac{3}{2} e^{ -\xi } < \frac{3e}{2}
 $$
@@ -46,14 +42,14 @@ Initial points are:
 $$
 f[x_{0}] = e \qquad f[x_{1}] = 1 \qquad f[x_{2}] = e^{-1}
 $$
-Then,
+The first chain of coefficients is:
 $$
 f[x_{0}, x_{1}] = \frac{f[x_{1}] - f[x_{0}]}{x_{1}-x_{0}} = \frac{1-e}{0-(-1)} = 1-e
 $$
 $$
 f[x_{1}, x_{2}] = \frac{f[x_{2}] - f[x_{1}]}{x_{2}-x_{1}} = \frac{e^{-1}-1}{1-0} = e^{-1}-1
 $$
-Then,
+The last coefficient is:
 $$
 f[x_{0}, x_{1}, x_{2}] = \frac{f[x_{1}, x_{2}] - f[x_{0}, x_{1}]}{x_{2}-x_{0}} = \frac{(e^{-1}-1) - (1-e)}{1-(-1)} = \frac{(e-1)^{2}}{2e}
 $$
@@ -72,28 +68,27 @@ For $p_{2}(x)$ this becomes:
 $$
 \frac{f^{(3)}(\xi)}{3!} \prod_{j=0}^{n} (x-x_{j}) = -\frac{e^{ -\xi }}{6} (x+1)x(x-1) = -\frac{e^{ -\xi }}{6} x(x^{2}-1)
 $$
-For any $x \in[-1, 1]$, $\xi \in(-1, 1)$. First, find the local maximum points for $x(x^{2}-1)$ in this range:
+First, find the local maximum points for $x(x^{2}-1)$ in the range $x \in[-1, 1]$:
 $$
 \frac{d}{dx} x(x^{2}-1) = 3x^{2}-1 =0 \implies x = \frac{1}{\sqrt{ 3 }}
 $$
-Choose $x=3^{-1/2}$ and $\xi=-1$ to maximize the error:
+For any $x \in[-1, 1]$, $\xi \in(-1, 1)$. Choose $x=3^{-1/2}$ and $\xi=-1$ to maximize the error:
 $$
 \left| -\frac{e^{ -\xi }}{6} x(x^{2}-1) \right| \leq \frac{\sqrt{ 3 }}{27} e^{ -\xi } < \frac{e\sqrt{ 3 }}{27}
 $$
-For any $x \in[1, 2]$, $\xi \in(-1, 2)$. To maximize the error, choose $x=2$ and $\xi=-1$.
+For any $x \in[1, 2]$, $\xi \in(-1, 2)$. Choose $x=2$ and $\xi=-1$ to maximize the error.
 $$
 \left| -\frac{e^{ -\xi }}{6} x(x^{2}-1) \right| \leq e^{ -\xi } < e
 $$
-
-Same as part b, the lower bound on the error within both intervals is 0.
+For the same reasoning as in part b, the lower bound on the error for both intervals is 0.
 
 ---
 e.
-They Taylor series expansion for $f(x)=e^{ -x }$ is:
+The Taylor series expansion for $f(x)=e^{ -x }$ is:
 $$
 e^{ -x } = \sum_{k=0}^{\infty} \frac{(-x)^{k}}{k!}
 $$
-They first two Taylor polynomials of degree 1 and 2 are:
+The first two Taylor polynomials of degree 1 and 2 are:
 $$
 t_{1}(x) = 1-x \qquad t_{2}(x) = 1 - x + \frac{x^{2}}{2}
 $$
