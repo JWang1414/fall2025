@@ -29,56 +29,99 @@ $$
 \frac{d\sigma}{d\Omega} = \lvert f(\theta, \phi) \rvert ^{2}
 $$
 This works under any regime, with or without perturbation theory. You do, however, need to determine what $f(\theta, \phi)$ is supposed to be.
+# Integral Form of the Schrodinger Equation
+The time-independent Schrodinger equation,
+$$
+-\frac{\hbar^{2}}{2m} \nabla^{2}\psi + V\psi = E\psi
+$$
+Can be rearranged and written as:
+$$
+(\nabla^{2}+k^{2})\psi = Q
+$$
+Where we have defined,
+$$
+k\equiv \frac{\sqrt{ 2mE }}{\hbar} \qquad Q \equiv \frac{2m}{\hbar^{2}} V\psi
+$$
+Which looks very similar to the Helmholtz equation from electrodynamics. The difference here is that $Q$ depends on $\psi$, so we cannot really duplicate the exact solution.
 
-Lets look at this problem from another standpoint, starting with the Schrodinger equation:
+Our goal is therefore to find some function $G(\vec{r})$ that solves the Helmholtz equation with a delta function "source"
 $$
--\frac{\hbar^{2}}{2m} \nabla^{2}\psi(\vec{r}) + V(r) \psi(\vec{r}) = E\psi(\vec{r})= \frac{\hbar^{2}k^{2}}{2m} \psi(\vec{r})
+(\nabla^{2}+k^{2})G(\vec{r}) = \delta^{3}(\vec{r})
 $$
-Notice that this system is independent of time. The energy has be substituted in. Rearrange this to find:
+Assuming we find this function, we have,
 $$
-(\nabla^{2} + k^{2}) \psi(\vec{r}) = \frac{2m}{\hbar^{2}} V(r) \psi(\vec{r})
+\psi(\vec{r}) = \int G(\vec{r}-\vec{r}_{0}) Q(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
 $$
-In electrostatics, we mind solve a similar problem such that:
-$$
-\nabla^{2}\phi(\vec{r}) = \frac{\rho(\vec{r})}{\epsilon_{0}}
-$$
-$$
-\phi(\vec{r}) = \int \frac{1}{4\pi\epsilon_{0}} \frac{\rho(\vec{r}')}{\lvert \vec{r}-\vec{r}' \rvert } \, d^{3}\vec{r}' = \int \mathcal{K}(\vec{r}-\vec{r}') \rho(\vec{r}') \, d^{3}\vec{r}'
-$$
-Where we have defined the function $\mathcal{K}$, which essentially acts as a sort of "determining" function. Something often called a "Green's function" or "kernel". We would like to draw a similar metaphor for this system with the quantum system we have created:
-$$
-\psi(\vec{r}) = \int G(\vec{r}-\vec{r}_{0}) \left( \frac{2m}{\hbar^{2}} \right) V(\vec{r}_{0}) \psi(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
-$$
-Where we have the new Green's function in this problem $G$. For this to work, we would like to have:
-$$
-(\nabla^{2} + k^{2}) G(\vec{r}) = \delta (\vec{r})
-$$
-We won't go through the details, but the correct function is:
-$$
-G(\vec{r}) = - \frac{e^{ ikr }}{\lvert \vec{r} \rvert }
-$$
-Which gives us:
-$$
-\psi(\vec{r}) = \psi _\text{free}(\vec{r}) +  \int \left( -\frac{e^{ ik\lvert \vec{r}-\vec{r}_{0} \rvert  }}{\lvert \vec{r}-\vec{r}_{0} \rvert } \right)  \left( \frac{2m}{\hbar^{2}} \right) V(\vec{r}_{0}) \psi(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
-$$
-However, notice that if we have a solution to the Schrodinger equation for this problem for the potential $V(\vec{r})=0$, the result will completely vanish. So we can actually add an extra $\psi _\text{free}(\vec{r})$ term to this.
-- This is an addendum, which is why it is written afterwards
+Which you can check will satisfy Schrodinger equation by substituting this $\psi(\vec{r})$ into $(\nabla^{2}+k^{2})\psi$.
 
-The wave function for the free particle is:
+We call $G(\vec{r})$ the Green's function for the Helmholtz equation, and our goal is to figure out what it is. The process with Fourier transforms and some algebra is in the textbook, but the answer is:
 $$
-\psi _\text{free}(\vec{r}) = A e^{ ikz }
+G(\vec{r}) = \frac{1}{(2\pi)^{3}} \int \frac{e^{ i\vec{s}\cdot \vec{r} }}{k^{2}-s^{2}} \, d^{3}\vec{s}
 $$
-If we assume that $\psi(\vec{r}_{0})$ is small, than we can use perturbation theory. The 1st order approximation is:
+Which is a complex integral that can be solved with complex analysis techniques.
 $$
-\psi(\vec{r}) = A e^{ ikz } +  \int \left( -\frac{e^{ ik\lvert \vec{r}-\vec{r}_{0} \rvert  }}{\lvert \vec{r}-\vec{r}_{0} \rvert } \right)  \left( \frac{2m}{\hbar^{2}} \right) V(\vec{r}_{0}) (e^{ ikz_{0} }) \, d^{3}\vec{r}_{0}
+G(\vec{r}) = - \frac{e^{ ikr }}{4\pi r}
 $$
-Lets assume that $\vec{r}\gg \vec{r}_{0}$.
+Which is the Greens function for our problem. However, notice that we can also add any arbitrary number of functions $G_{0}$ to $G$ so long as:
 $$
-e^{ ik\lvert \vec{r}-\vec{r}_{0} \rvert  } \approx \exp \left( ikr\left( 1- \frac{\vec{r}_{0}\cdot \vec{r}}{r^{2}} \right) \right)
+(\nabla^{2}+k^{2}) G_{0}(\vec{r}) =0
+$$
+You can easily verify that $G+G_{0}$ will still satisfy the condition we would like. Turns out, this function is actually the free particle.
+$$
+(\nabla^{2}+k^{2})\psi_{0}=0
+$$
+Substitute this into the integral equation for $\psi(\vec{r})$ to find,
+$$
+\psi(\vec{r}) = \psi_{0}(\vec{r}) - \frac{m}{2\pi \hbar^{2}} \int \frac{e^{ ik|\vec{r}-\vec{r}_{0}| }}{|\vec{r}-\vec{r}_{0}|} V(\vec{r}_{0})\psi(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
+$$
+Where the added $\psi_{0}$ term manifests as a consequence of the varying Green's functions. This equation is the integral form of Schrodinger's equation. The issue is, you can't really use this, because $\psi$ is on the left and right sides.
+# The First Born Approximation
+Suppose that $V(\vec{r}_{0})$ is localized about $\vec{r}_{0}=0$, and we are interested in regions where $\lvert \vec{r} \rvert\gg \lvert \vec{r}_{0} \rvert$. Then,
+$$
+\left| \vec{r}-\vec{r}_{0} \right| ^{2} = r^{2}+r_{0}^{2} - 2 \vec{r}\cdot \vec{r}_{0} \approx r^{2}\left( 1-2 \frac{\vec{r}\cdot \vec{r}_{0}}{r^{2}} \right)
 $$
 Then,
 $$
-- \frac{e^{ ik\lvert \vec{r}-\vec{r}_{0} \rvert  }}{\lvert \vec{r}-\vec{r}_{0} \rvert } \approx - \frac{e^{ ikr } e^{ -ik\vec{r}_{0}\cdot \hat{r} }}{r}
+\left| \vec{r}-\vec{r}_{0} \right|  \approx r-\hat{r}\cdot \vec{r}_{0}
 $$
-Where we have defined $\hat{r}=\vec{r} / r$. Notice that $\vec{r}_{0}\cdot \hat{r}=r_{0}$.
-- Something with the math went wrong. Fix this later.
+Let $\vec{k}=k\hat{r}$, then,
+$$
+e^{ ik|\vec{r}-\vec{r}_{0}| } \approx e^{ ikr } e^{ -i\vec{k}\cdot \vec{r}_{0} }
+$$
+So we approximate,
+$$
+\frac{e^{ ik|\vec{r}-\vec{r}_{0}| }}{|\vec{r}-\vec{r}_{0}|} \approx \frac{e^{ ikr }}{r} e^{ -i\vec{k}\cdot \vec{r}_{0} }
+$$
+Now, lets model
+$$
+\psi_{0}(\vec{r}) = A e^{ ikz }
+$$
+As an incident plane wave. From this we obtain:
+$$
+\psi(\vec{r}) \approx Ae^{ ikz } - \frac{m}{2\pi \hbar^{2}} \frac{e^{ ikr }}{r} \int e^{ -i\vec{k}\cdot \vec{r}_{0} } V(\vec{r}_{0}) \psi(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
+$$
+And so the scattering amplitude is therefore,
+$$
+f(\theta, \phi) = -\frac{m}{2\pi \hbar^{2}A} \int e^{ -i\vec{k}\cdot \vec{r}_{0} } V(\vec{r}_{0}) \psi(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
+$$
+The Born approximation claims that the incoming plane wave is not substantially altered by the potential, and so,
+$$
+\psi(\vec{r}_{0}) \approx \psi \vec{r}_{0}(\vec{r}_{0}) = Ae^{ ikz_{0} } = Ae^{ i\vec{k}'\cdot \vec{r}_{0} }
+$$
+Where we have defined,
+$$
+\vec{k}'=k\hat{z}
+$$
+Note that $\vec{k}'$ points in the direction of the incident beam, and $\vec{k}$ points toward the detector. Under this regime, the scattering amplitude is now,
+$$
+f(\theta, \phi) \approx -\frac{m}{2\pi \hbar^{2}} \int e^{ i(\vec{k}'-\vec{k})\cdot \vec{r}_{0} } V(\vec{r}_{0}) \, d^{3}\vec{r}_{0}
+$$
+For low energy scattering, the exponential factor is roughly constant,
+$$
+f(\theta, \phi) \approx -\frac{m}{2\pi \hbar^{2}} \int V(\vec{r}) \, d^{3}\vec{r}
+$$
+And for a spherically symmetrical potential $V(\vec{r})=V(r)$
+$$
+f(\theta) \approx -\frac{2m}{\hbar^{2}\kappa} \int_{0}^{\infty} rV(r) \sin(\kappa r) \, dr
+$$
+Where $\vec{\kappa}=\vec{k}'-\vec{k}$.
