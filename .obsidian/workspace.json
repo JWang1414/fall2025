@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quantum/lectures/Lecture 21.md",
+                "file": "electromagnetic/textbook/Lectures 21-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 21"
+              "title": "Lectures 21-22"
             }
           }
         ]
@@ -149,8 +149,10 @@
   },
   "active": "1d87b59adb3fde02",
   "lastOpenFiles": [
-    "computational/lectures/Lecture 12.md",
+    "electromagnetic/textbook/Lectures 21-22.md",
+    "electromagnetic/textbook/Lectures 19-20.md",
     "quantum/lectures/Lecture 21.md",
+    "computational/lectures/Lecture 12.md",
     "quantum/lectures/Lecture 20.md",
     "quantum/lectures/Lecture 19.md",
     "electromagnetic/homework/PSET 5.md",
@@ -178,8 +180,6 @@
     "numerical/textbook/Week 7.md",
     "attachments/Pasted image 20251125103635.png",
     "numerical/textbook/Week 8.md",
-    "numerical/textbook/Week 10.md",
-    "numerical/textbook/Week 9.md",
     "attachments/Pasted image 20251125094948.png",
     "environmental/final",
     "attachments/Pasted image 20251124132430.png",
