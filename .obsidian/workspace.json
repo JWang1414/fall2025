@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "numerical/final/tut6.md",
+                "file": "environmental/final/Final Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tut6"
+              "title": "Final Notes"
             }
           }
         ]
@@ -149,9 +149,12 @@
   },
   "active": "1d87b59adb3fde02",
   "lastOpenFiles": [
+    "environmental/lectures/Lecture 11.md",
+    "environmental/final/Short Answer.md",
+    "environmental/final/Final Notes.md",
+    "numerical/final/tut6.md",
     "numerical/final/tut7.md",
     "numerical/final/notes.md",
-    "numerical/final/tut6.md",
     "numerical/final/tut8.md",
     "attachments/Pasted image 20251204165256.png",
     "attachments/Pasted image 20251204132616.png",
@@ -184,9 +187,6 @@
     "electromagnetic/textbook/Lecture 13-14.md",
     "electromagnetic/homework/PSET 4.md",
     "electromagnetic/homework/PSET 3.md",
-    "electromagnetic/textbook/Lecture 10-11.md",
-    "electromagnetic/textbook/Lecture 8-9.md",
-    "electromagnetic/textbook/Lecture 6-7.md",
     "electromagnetic/homework/Untitled",
     "environmental/final",
     "quantum/midterm2",
