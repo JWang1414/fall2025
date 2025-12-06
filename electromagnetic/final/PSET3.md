@@ -41,3 +41,25 @@ $$
 $$
 Which is proportional to the force from $\vec{E}_\text{dip}$. So the movement is in the shape of a pendulum
 - This makes perfect sense, but I could not possibly see myself coming up with this solution during a final exam
+![[Pasted image 20251205210820.png]]
+Use Gauss' law
+$$
+\oint \vec{E}\cdot d\vec{a} = \frac{Q_\text{enc}}{\epsilon_{0}}
+$$
+$$
+\oint \vec{E}\cdot d\vec{a} = 4\pi r^{2} E
+$$
+$$
+Q_\text{enc} = \frac{q}{\pi a^{3}} (4\pi) \int_{0}^{r} r^{2} e^{ -2r/a } \, dr = \frac{4q}{a^{3}} \left[ \frac{1}{4} a (a^{2}-e^{ -2r/a } (a^{2}+2ar+2r^{2})) \right]
+$$
+$$
+Q = \frac{q}{a^{2}} (a^{2} - e^{ -2r/a } (a^{2}+2ar + 2r^{2})) = q - \frac{qe^{ -2r/a }}{a^{2}} (a^{2}+2ar+2r^{2})
+$$
+Field is therefore,
+$$
+\vec{E} = \frac{q}{4\pi \epsilon_{0} r^{2}} \left( 1 - \frac{e^{ -2r/a }}{a^{2}} (a^{2}+2ar+2r^{2}) \right)
+$$
+Expand out the exponential as a Taylor series and the first non-zero term will be,
+$$
+E = \frac{q}{4\pi\epsilon_{0}d^{2}} \left( \frac{4}{3} \frac{d^{3}}{a^{3}} \right)= \frac{1}{3\pi\epsilon_{0}a^{3}} qd \implies \alpha = 3\pi \epsilon_{0} a^{3}
+$$

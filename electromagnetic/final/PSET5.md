@@ -121,3 +121,47 @@ Now you can find the total with $b=a$
 $$
 P_\text{in} = \frac{I^{2}wa^{2}t}{\pi a^{4}\epsilon_{0}} = \frac{I^{2}wt}{\pi a^{2}\epsilon_{0}}
 $$
+![[Pasted image 20251206122013.png]]
+$\vec{E}$ has no $z$ component and so (i) tells us nothing. (ii) says
+$$
+\tilde{B}_{0_{I}} \sin\theta_{I} - \tilde{B}_{0_{R}} \sin\theta_{R} = \tilde{B}_{0_{T}} \sin\theta_{T}
+$$
+$\vec{E}$ is pointing entirely in the $\hat{y}$ direction so (iii) tells us,
+$$
+\tilde{E}_{0_{I}} - \tilde{E}_{0_{R}} = \tilde{E}_{0_{T}}
+$$
+(iv) tells us,
+$$
+\frac{1}{\mu_{1}}(\tilde{B}_{0_{I}} \cos\theta_{I} + \tilde{B}_{0_{R}} \cos\theta_{R}) = \frac{1}{\mu_{2}}(\tilde{B}_{0_{T}} \cos\theta_{T})
+$$
+In terms of the electric field (i) can be simplified into
+$$
+v_{1}^{-1} \sin\theta_{I} (\tilde{E}_{0_{I}} - \tilde{E}_{0_{R}}) = v_{2}^{-1} \sin\theta_{T} \tilde{E}_{0_{T}}
+$$
+$$
+\tilde{E}_{0_{I}} - \tilde{E}_{0_{R}} = \frac{v_{1}}{v_{2}} \frac{\sin\theta_{T}}{\sin\theta_{I}} \tilde{E}_{0_{T}}
+$$
+by the law of refraction, this term is 1, and (i) simplifies into (iii). (iv) turns into,
+$$
+\frac{\cos\theta_{I}}{\mu_{1}v_{1}} (\tilde{E}_{0_{I}} + \tilde{E}_{0_{R}}) = \frac{\cos\theta_{T}}{\mu_{2}v_{2}} \tilde{E}_{0_{T}}
+$$
+$$
+\tilde{E}_{0_{I}} + \tilde{E}_{0_{R}} = \frac{\mu_{1}v_{1}}{\mu_{2}v_{2}} \frac{\cos\theta_{T}}{\cos\theta_{I}} \tilde{E}_{0_{T}}
+$$
+Define,
+$$
+\alpha = \frac{\cos\theta_{T}}{\cos\theta_{I}} \qquad \beta = \frac{\mu_{1}v_{1}}{\mu_{2}v_{2}}
+$$
+So,
+$$
+\tilde{E}_{0_{I}} + \tilde{E}_{0_{R}} = \alpha \beta \tilde{E}_{0_{T}}
+$$
+Solve the obtained system of equations to find,
+$$
+\tilde{E}_{0_{T}} = \frac{2}{\alpha \beta+1} \tilde{E}_{0_{I}} \qquad \tilde{E}_{0_{R}} = \frac{\alpha \beta-1}{\alpha \beta+1} \tilde{E}_{0_{I}}
+$$
+By the definition of Brewster's angle, we require,
+$$
+\alpha \beta - 1 =0 \implies \frac{\cos\theta_{T}}{\cos\theta_{I}} \frac{\mu_{1}v_{1}}{\mu_{2}v_{2}} =1 \implies \mu_{1}v_{1} \cos\theta_{T} = \mu_{2}v_{2} \cos\theta_{I}
+$$
+- Everything I did here is right, but I do not want to check the rest of the things
