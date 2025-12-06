@@ -100,3 +100,24 @@ I conclude that the stable configuration the two dipoles would adopt is with bot
 ---
 d.
 All of them would face in the same direction.
+![[Pasted image 20251206164107.png]]
+The boundary conditions at this surface are,
+$$
+B^{\perp}_\text{above} - B^{\perp}_\text{below} = 0 \qquad \vec{H}^{\parallel}_\text{above} - \vec{H}^{\parallel}_\text{below} = \vec{K}_{f} \times \hat{n} =0
+$$
+So therefore we have,
+$$
+B^{\perp}_\text{above} = B^{\perp}_\text{below} \qquad  \vec{H}^{\parallel}_\text{above} = \vec{H}^{\parallel}_\text{below}
+$$
+Convert from $\vec{H}$ to $\vec{B}$ to find,
+$$
+\frac{\vec{B}^{\parallel}_\text{above}}{\mu_{1}} = \frac{\vec{B}^{\parallel}_\text{below}}{\mu_{2}}
+$$
+By the definition of the tangent function
+$$
+\tan\theta = \frac{B^{\parallel}}{B^{\perp}}
+$$
+Therefore,
+$$
+\frac{\tan\theta_{2}}{\tan\theta_{1}} = \frac{\vec{B}^{\parallel}_\text{below}}{\vec{B}^{\perp}_\text{below}} \frac{\vec{B}^{\perp}_\text{above}}{\vec{B}^{\parallel}_\text{above}} = \frac{\vec{B}^{\parallel}_\text{below}}{\vec{B}^{\parallel}_\text{above}} = \frac{\mu_{2}}{\mu_{1}}
+$$
