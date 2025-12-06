@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "electromagnetic/final/PSET3.md",
+                "file": "quantum/final/PSET 8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PSET3"
+              "title": "PSET 8"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "environmental/lectures/Lecture 11.md",
+                "file": "quantum/tutorials/Tutorial 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 11"
+              "title": "Tutorial 9"
             }
           }
         ]
@@ -163,11 +163,24 @@
   },
   "active": "33a38b09021125db",
   "lastOpenFiles": [
-    "electromagnetic/final/PSET4.md",
+    "quantum/tutorials/Tutorial 9.md",
+    "quantum/final/PSET 8.md",
+    "quantum/final/PSET 9.md",
+    "quantum/lectures/Lecture 17.md",
+    "quantum/lectures/Lecture 16.md",
+    "quantum/lectures/Lecture 15.md",
+    "quantum/lectures/Lecture 18.md",
+    "quantum/lectures/Lecture 19.md",
+    "quantum/lectures/Lecture 20.md",
+    "quantum/tutorials/Tutorial 10.md",
+    "quantum/final/PSET 10.md",
+    "environmental/lectures/Lecture 11.md",
     "electromagnetic/final/PSET3.md",
+    "quantum/final",
+    "quantum/final.md",
+    "electromagnetic/final/PSET4.md",
     "environmental/final/Long Answer.md",
     "environmental/final/Short Answer.md",
-    "environmental/lectures/Lecture 11.md",
     "environmental/lectures/Lecture 10.md",
     "environmental/lectures/Lecture 9.md",
     "environmental/lectures/Lecture 8.md",
@@ -177,37 +190,24 @@
     "environmental/lectures/Lecture 6.md",
     "environmental/final/Final Notes.md",
     "numerical/final/tut6.md",
-    "numerical/final/tut7.md",
-    "numerical/final/notes.md",
-    "numerical/final/tut8.md",
     "attachments/Pasted image 20251204165256.png",
     "attachments/Pasted image 20251204132616.png",
     "attachments/Pasted image 20251204120053.png",
     "attachments/Pasted image 20251204115618.png",
     "numerical/final",
-    "numerical/Untitled.md",
-    "electromagnetic/final/PSET1.md",
-    "electromagnetic/final/PSET2.md",
     "attachments/Pasted image 20251203231522.png",
     "attachments/Pasted image 20251203222249.png",
-    "electromagnetic/final/PSET5.md",
     "attachments/Pasted image 20251203194334.png",
     "attachments/Pasted image 20251203194312.png",
     "attachments/Pasted image 20251203170819.png",
     "attachments/Pasted image 20251203155837.png",
-    "quantum/lectures/Lecture 11.md",
     "electromagnetic/final",
-    "electromagnetic/Untitled.md",
-    "electromagnetic/textbook/Lectures 21-22.md",
-    "electromagnetic/textbook/Lectures 19-20.md",
-    "quantum/lectures/Lecture 21.md",
     "electromagnetic/homework/Untitled",
     "environmental/final",
     "quantum/midterm2",
     "numerical/midterm",
     "environmental/midterm",
     "quantum/midterm",
-    "numerical/homework",
-    "numerical/lectures"
+    "numerical/homework"
   ]
 }
