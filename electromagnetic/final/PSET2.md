@@ -42,3 +42,82 @@ $$
 $$
 - You can go further and simplify the expression for $A_{l}$ to determine exactly which ones are zero and which ones are non-zero
 - I'm too lazy to do that though
+![[Pasted image 20251206183250.png]]
+Separation of variables, solve Laplace equation where $V=0$ if $x=0,a$, $y=0, a$ and $z=0$. On the remaining boundary condition $V=V_{0}$ on $z=a$.
+
+Equation to solve is,
+$$
+\frac{1}{X} \frac{d^{2}X}{dx^{2}} + \frac{1}{Y} \frac{d^{2}Y}{dy^{2}} + \frac{1}{Z} \frac{d^{2}Z}{dz^{2}}
+$$
+Which are all constant.
+$$
+C_{1}+C_{2}+C_{3}=0
+$$
+Define,
+$$
+\frac{d^{2}X}{dx^{2}} = -\beta^{2}X \qquad \frac{d^{2}Y}{dy^{2}} = -\eta^{2}Y \qquad \frac{d^{2}Z}{dz^{2}} = (\beta^{2}+\eta^{2})Z
+$$
+The solution to these equations are,
+$$
+X(x) = A \sin(\beta x) + B \cos(\beta x)
+$$
+$$
+Y(y) = C \sin(\eta y) + D \cos(\eta y)
+$$
+$$
+Z(z) = Ee^{ \sqrt{ \beta^{2}+\eta^{2} }z } + F e^{ -\sqrt{ \beta^{2}+\eta^{2} }z }
+$$
+From the boundary conditions I can conclude:
+$$
+B=D=0
+$$
+Furthermore,
+$$
+A \sin(\beta a) =0 \implies \beta a=n\pi \implies \beta = \frac{n\pi}{a}
+$$
+Same with $Y$
+$$
+C \sin(\eta y)=0 \implies \eta = \frac{m\pi}{a}
+$$
+At $z=0$ we have,
+$$
+Ee^{ 0 } + Fe^{ 0 } = E+F =0 \implies E=-F
+$$
+Collecting the admissible solutions into an infinite sum,
+$$
+V(x, y, z) = \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} A_{m, n}(e^{ \sqrt{ \beta^{2}+\eta^{2} }z } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }z }) \sin\left( \frac{n\pi x}{a} \right) \sin\left( \frac{m\pi y}{a} \right)
+$$
+The final boundary condition tells us,
+$$
+V_{0} = \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} A_{m, n}(e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a }) \sin\left( \frac{n\pi x}{a} \right) \sin\left( \frac{m\pi y}{a} \right)
+$$
+The coefficients are therefore,
+$$
+A_{m, n}(e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a }) \left( \frac{a^{2}}{4} \right) = \int_{0}^{a} \int_{0}^{a} V_{0} \sin\left( \frac{n\pi x}{a} \right) \sin\left( \frac{m\pi y}{a} \right) \, dx  \, dy
+$$
+$$
+A_{m, n} = \frac{4 V_{0}}{a^{2}(e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a })} \int_{0}^{a} \int_{0}^{a} \sin\left( \frac{n\pi x}{a} \right) \sin\left( \frac{m\pi y}{a} \right) \, dx  \, dy
+$$
+Solve this integral,
+$$
+\int_{0}^{a} \sin\left( \frac{n\pi x}{a} \right) \, dx = \frac{a}{n\pi} (1-\cos(n\pi)) = \begin{cases}
+0 & n\text{ even} \\
+\frac{2a}{n\pi} & n \text{ odd}
+\end{cases}
+$$
+Therefore,
+$$
+A_{m, n} = \frac{16V_{0}}{nm\pi^{2}(e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a })}
+$$
+When $n$ is even and $A_{m, n}=0$ otherwise.
+
+Evaluate the potential at $(a /2, a /2, a /2)$.
+$$
+V(x, y, z) = \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{16V_{0}}{nm\pi^{2}} \frac{e^{ \sqrt{ \beta^{2}+\eta^{2} }z } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }z }}{e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a }} \sin\left( \frac{n\pi x}{a} \right) \sin\left( \frac{m\pi y}{a} \right)
+$$
+$$
+V = \sum_{n=1}^{\infty} \sum_{m=1}^{\infty} \frac{16V_{0}}{nm\pi^{2}} \frac{e^{ \sqrt{ \beta^{2}+\eta^{2} }a/2 } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a/2 }}{e^{ \sqrt{ \beta^{2}+\eta^{2} }a } - e^{ -\sqrt{ \beta^{2}+\eta^{2} }a }} \sin\left( \frac{n\pi}{2} \right) \sin\left( \frac{m\pi}{2} \right)
+$$
+$$
+V = \sum_{n\text{ odd}}^{\infty} \sum_{m\text{ odd}}^{\infty} \frac{16V_{0}}{mn\pi^{2}} \frac{e^{\sqrt{ n^{2}+m^{2} }\pi/2}}{e^{\sqrt{ m^{2}+n^{2} }\pi}+1}
+$$

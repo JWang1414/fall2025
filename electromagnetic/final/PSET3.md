@@ -63,3 +63,21 @@ Expand out the exponential as a Taylor series and the first non-zero term will b
 $$
 E = \frac{q}{4\pi\epsilon_{0}d^{2}} \left( \frac{4}{3} \frac{d^{3}}{a^{3}} \right)= \frac{1}{3\pi\epsilon_{0}a^{3}} qd \implies \alpha = 3\pi \epsilon_{0} a^{3}
 $$
+![[Pasted image 20251206172403.png]]
+Using the method of images, this dipole can be cancelled with another.
+$$
+\vec{N} = \vec{p}\times \left( \frac{p}{4\pi\epsilon_{0}r^{3}} (2\cos\theta \hat{r} + \sin\theta \hat{\theta}) \right)
+$$
+The dipole can be modelled like,
+$$
+\vec{p} = p\cos\theta \hat{r} + p \sin\theta \hat{\theta}
+$$
+Therefore,
+$$
+\vec{N} = \frac{p^{2}}{4\pi\epsilon_{0} (2z)^{3}} \left[ (2\cos\theta \hat{r} + \sin \theta \hat{\theta}) \times (\cos\theta \hat{r} + \sin\theta\hat{\theta}) \right]
+$$
+The answer to this is,
+$$
+\vec{N} = - \frac{p^{2}\sin(2\theta)}{4\pi\epsilon_{0} (2z)^{3}} \hat{\phi}
+$$
+This torque will rotate the dipole and so it will be stable if it's pointing either straight up or down.
