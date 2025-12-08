@@ -165,3 +165,44 @@ $$
 \alpha \beta - 1 =0 \implies \frac{\cos\theta_{T}}{\cos\theta_{I}} \frac{\mu_{1}v_{1}}{\mu_{2}v_{2}} =1 \implies \mu_{1}v_{1} \cos\theta_{T} = \mu_{2}v_{2} \cos\theta_{I}
 $$
 - Everything I did here is right, but I do not want to check the rest of the things
+![[Pasted image 20251207205153.png]]
+![[Pasted image 20251207205223.png]]
+a.
+Fields between the two plates are,
+$$
+\vec{E} = \frac{\sigma}{\epsilon_{0}}\hat{z} \qquad \vec{B} = \mu_{0} \vec{K} = \mu_{0} \sigma v \hat{x}
+$$
+Momentum density is,
+$$
+\vec{g} = \epsilon_{0} (\vec{E}\times \vec{B})= \epsilon_{0}\left( \frac{\sigma}{\epsilon_{0}} \right) (\mu_{0}\sigma v) \hat{z}\times \hat{x} =\mu_{0}\sigma^{2}v \hat{y}
+$$
+Integrate to find the total momentum
+$$
+\vec{p} = \int _{\mathcal{V}} \vec{g} \, d\tau  = \mu_{0}\sigma^{2} v \hat{y} \int_{\mathcal{V}} d\tau = \mu_{0}\sigma^{2}vdA\hat{y}
+$$
+---
+b.
+As it moves down, the force on the upper plate is:
+$$
+\vec{F} = q(\vec{v}\times \vec{B}) = \sigma A\left( u\vec{z} \times \frac{\mu_{0}\sigma v}{2} \hat{x} \right) = \frac{\mu_{0} \sigma^{2}vuA}{2} \hat{y}
+$$
+After the magnetic field disappears, the change in the field is,
+$$
+\frac{ \partial \vec{B} }{ \partial t } =- \mu_{0}\sigma v \hat{x}
+$$
+Mathematically, solving for an induced electric field is identical to solving for a magnetic field with the current:
+$$
+\mu_{0}\vec{K} = \mu_{0}\sigma uv\hat{x} \implies \vec{K} = \sigma uv \hat{x}
+$$
+The magnetic field for some current like this is,
+$$
+\vec{B} = \frac{\mu_{0}K}{2} \hat{y} = \frac{\mu_{0}\sigma uv}{2} \hat{y}
+$$
+Positive or negative depending on the location. The force from the induced electric field onto the bottom plate is therefore,
+$$
+\vec{F} = q\vec{E} = \sigma A \left( \frac{\mu_{0}\sigma uv}{2} \right) \hat{y} = \frac{\mu_{0}\sigma^{2}uvA}{2} \hat{y}
+$$
+According to Newton's second law, the momentum is therefore,
+$$
+\vec{p}_\text{mech} = \int \vec{F} \, dt = \mu_{0}\sigma^{2}vA \hat{y} \int u \, dt = \mu_{0}\sigma^{2}vdA \hat{y}
+$$

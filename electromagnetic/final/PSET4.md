@@ -121,3 +121,55 @@ Therefore,
 $$
 \frac{\tan\theta_{2}}{\tan\theta_{1}} = \frac{\vec{B}^{\parallel}_\text{below}}{\vec{B}^{\perp}_\text{below}} \frac{\vec{B}^{\perp}_\text{above}}{\vec{B}^{\parallel}_\text{above}} = \frac{\vec{B}^{\parallel}_\text{below}}{\vec{B}^{\parallel}_\text{above}} = \frac{\mu_{2}}{\mu_{1}}
 $$
+![[Pasted image 20251207211955.png]]
+![[Pasted image 20251207212541.png]]
+General solution is,
+$$
+W(r, \theta) = \sum_{l=0}^{\infty} \left( A_{l}r^{l} + \frac{B_{l}}{r^{l+1}}  \right) P_{l}(\cos\theta)
+$$
+The boundary conditions are:
+$$
+\begin{cases}
+W_\text{inside} = W_\text{outside} & r=R \\
+\mu_{0} \frac{ \partial W_\text{outside} }{ \partial r } = \mu \frac{ \partial W_\text{inside} }{ \partial r }  & r=R \\
+W = -\frac{B_{0}}{\mu_{0}} r \cos\theta & r\gg R
+\end{cases}
+$$
+Inside the sphere,
+$$
+W(r, \theta) = \sum_{l=0}^{\infty}  A_{l}r^{l} P_{l}(\cos\theta)
+$$
+Outside the sphere,
+$$
+W(r, \theta) = -\frac{B_{0}}{\mu_{0}} r \cos\theta  + \sum_{l=0}^{\infty} \frac{B_{l}}{r^{l+1}} P_{l}(\cos\theta)
+$$
+Apply boundary condition 1,
+$$
+\sum_{l=0}^{\infty} A_{l}R^{l} P_{l}(\cos\theta) = -\frac{B_{0}}{\mu_{0}} R \cos\theta  + \sum_{l=0}^{\infty} \frac{B_{l}}{R^{l+1}} P_{l}(\cos\theta)
+$$
+So,
+$$
+A_{1} R = -\frac{B_{0}}{\mu_{0}} R + \frac{B_{1}}{R^{2}} \qquad \text{for }l=1
+$$
+$$
+A_{l}R^{l} = \frac{B_{l}}{R^{l+1}} \qquad \text{for }l \neq 1
+$$
+Apply boundary condition 2,
+$$
+\mu \sum_{l=0}^{\infty} lA_{l} R^{l-1} P_{l}(\cos\theta) = -B_{0} \cos\theta - \mu_{0} \sum_{l=0}^{\infty} \frac{(l+1)B_{l}}{R^{l+2}} P_{l}(\cos\theta)
+$$
+So,
+$$
+\mu A_{1} = -B_{0} - \mu_{0} \frac{2B_{1}}{R^{3}} \qquad \text{for }l=1
+$$
+$$
+\mu lA_{l}R^{l-1} = - \mu_{0} \frac{(l+1)B_{l}}{R^{l+2}} \qquad \text{for }l \neq 1
+$$
+The equations for $l \neq 1$ are incompatible with each other, and so I conclude,
+$$
+A_{l} = B_{l} =0 \qquad \text{for }l \neq 1
+$$
+From here you can setup a system of equations to solve for $A_{1}$. Which defines the potential $W$ inside the sphere. Then, you can solve for $\vec{B}$ with,
+$$
+\vec{H} \equiv \frac{1}{\mu_{0}} \vec{B} - \vec{M} = \frac{\vec{B}}{\mu_{0}} \implies \vec{B} = \mu_{0}\vec{H} = -\mu_{0} (\nabla W)
+$$

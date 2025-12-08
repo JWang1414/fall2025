@@ -1,4 +1,4 @@
-![[Pasted image 20251201105522.png]]
+	![[Pasted image 20251201105522.png]]
 ![[Pasted image 20251201110502.png]]
 - Remember to draw this diagram
 a.
