@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0bd299cd5653b061",
+        "id": "dba486cd238a4958",
         "type": "tabs",
         "children": [
           {
-            "id": "388fb8865d481295",
+            "id": "a06345c59553ad8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -148,7 +148,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "388fb8865d481295",
+  "active": "a06345c59553ad8f",
   "lastOpenFiles": [
     "electromagnetic/final/PSET4.md",
     "electromagnetic/final/PSET3.md",
@@ -162,7 +162,6 @@
     "attachments/Pasted image 20251207211955.png",
     "attachments/Pasted image 20251207205223.png",
     "attachments/Pasted image 20251207205153.png",
-    "quantum/tutorials/Tutorial 6.md",
     "attachments/Pasted image 20251207190922.png",
     "attachments/Pasted image 20251207190805.png",
     "quantum/final/PSET 6.md",
@@ -177,24 +176,12 @@
     "attachments/Pasted image 20251206172403.png",
     "attachments/Pasted image 20251206171813.png",
     "attachments/Pasted image 20251206164107.png",
-    "quantum/tutorials/Tutorial 9.md",
-    "quantum/final/PSET 9.md",
-    "quantum/lectures/Lecture 17.md",
-    "quantum/lectures/Lecture 16.md",
-    "quantum/lectures/Lecture 15.md",
-    "quantum/lectures/Lecture 18.md",
-    "quantum/lectures/Lecture 19.md",
-    "quantum/lectures/Lecture 20.md",
-    "quantum/tutorials/Tutorial 10.md",
-    "quantum/final",
-    "numerical/final",
-    "electromagnetic/final",
-    "electromagnetic/homework/Untitled",
     "environmental/final",
     "quantum/midterm2",
     "numerical/midterm",
     "environmental/midterm",
     "quantum/midterm",
-    "numerical/homework"
+    "numerical/homework",
+    "numerical/lectures"
   ]
 }
