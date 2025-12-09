@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "electromagnetic/final/Equations.md",
+                "file": "electromagnetic/final/PSET5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Equations"
+              "title": "PSET5"
             }
           }
         ]
@@ -137,7 +137,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,11 +151,13 @@
   "active": "388fb8865d481295",
   "lastOpenFiles": [
     "electromagnetic/final/PSET4.md",
-    "electromagnetic/homework/PSET 5.md",
     "electromagnetic/final/PSET3.md",
+    "electromagnetic/final/PSET2.md",
+    "electromagnetic/final/PSET1.md",
+    "electromagnetic/final/Equations.md",
+    "electromagnetic/homework/PSET 5.md",
     "electromagnetic/homework/PSET 4.md",
     "electromagnetic/final/PSET5.md",
-    "electromagnetic/final/Equations.md",
     "attachments/Pasted image 20251207212541.png",
     "attachments/Pasted image 20251207211955.png",
     "attachments/Pasted image 20251207205223.png",
@@ -170,12 +173,10 @@
     "environmental/final/Long Answer 2.md",
     "environmental/final/Short Answer.md",
     "environmental/final/Long Answer 1.md",
-    "electromagnetic/final/PSET2.md",
     "attachments/Pasted image 20251206183250.png",
     "attachments/Pasted image 20251206172403.png",
     "attachments/Pasted image 20251206171813.png",
     "attachments/Pasted image 20251206164107.png",
-    "electromagnetic/final/PSET1.md",
     "quantum/tutorials/Tutorial 9.md",
     "quantum/final/PSET 9.md",
     "quantum/lectures/Lecture 17.md",
