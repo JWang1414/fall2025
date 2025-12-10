@@ -55,3 +55,37 @@ $$
 \psi^{1}_{n} = \frac{2\alpha}{a} \sqrt{ \frac{2}{a} } \frac{2m_{0}a^{2}}{(\pi \hbar)^{2}} \sum_{m \neq n, m\text{ odd}} (1-m^{2})^{-1} \sin\left( \frac{m\pi x}{a} \right)
 $$
 - This is right, and you can just compute the first three non zero terms ($m=3,5,7$) from here.
+# Question 3
+Inside the well we have,
+$$
+\Psi(x_{1}, x_{2}) = \psi(x_{1}) \psi(x_{2})
+$$
+The ground state and first excited states are:
+$$
+\Psi(x_{1}, x_{2}) = \psi_{0}(x_{1}) \psi_{0}(x_{2})
+$$
+$$
+\Psi(x_{1}, x_{2}) = \psi_{1}(x_{1}) \psi_{0}(x_{2}) \qquad \Psi(x_{1}, x_{2}) = \psi_{0}(x_{1}) \psi_{1}(x_{2})
+$$
+The energy in the infinite square well:
+$$
+E_{n} = \frac{(n\pi \hbar)^{2}}{2ma^{2}}
+$$
+Without the perturbation the energies are,
+$$
+\left[ \frac{(\pi \hbar)^{2}}{2ma^{2}} \right] ^{2} \qquad  \frac{(\pi \hbar)^{2}}{2ma^{2}} \frac{(2\pi \hbar)^{2}}{2ma^{2}} = \left[ \frac{(2\pi \hbar)^{2}}{2ma^{2}} \right] ^{2}
+$$
+For first order perturbation theory,
+$$
+E^{(1)}_{n} = \bra{\psi^{(0)}_{n}} H' \ket{\psi^{(0)}_{n}}
+$$
+For the ground state,
+$$
+\Psi(x_{1}, x_{2}) = \frac{2}{a} \sin\left( \frac{\pi x_{1}}{2} \right) \sin\left( \frac{\pi x_{2}}{a} \right)
+$$
+$$
+\left( \frac{2}{a} \right)^{2}(-aV_{0}) \int_{0}^{a} \int_{0}^{a} \sin ^{2}\left( \frac{\pi x_{1}}{2} \right) \sin ^{2}\left( \frac{\pi x_{2}}{2} \right) \delta(x_{1}-x_{2}) \, dx_{1}  \, dx_{2}
+$$
+$$
+-\frac{4V_{0}}{a} \int_{0}^{a} \sin ^{4}\left( \frac{\pi x_{1}}{2} \right) \, dx_{1} = -\frac{3}{2} V_{0}
+$$
