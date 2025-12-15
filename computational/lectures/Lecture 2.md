@@ -27,9 +27,26 @@ In each of the Riemann sums, we can use a Taylor series approximation of the fun
 ### Error Estimation
 The Euler-MacLaurin formulae help to estimate the error sizes. You can find that, for the trapezoidal rule, it is accurate up to and including terms proportional to $h$. The approximation of error is,
 $$
-\epsilon = \frac{h^{2}[f'(a)-f'(b)]}{12} + H.O.T
+\epsilon = \frac{h^{2}[f'(a)-f'(b)]}{12} + H.O.T.
 $$
-And Simpson's rule, the quadratic one, is accurate up to $h^{2}$. The error is approximated to $h^{4}$, however.
+And for the Simpson's rule,
+$$
+\epsilon = \frac{h^{4}[f'''(a)-f'''(b)]}{180} + H.O.T.
+$$
+We call the trapezoid rule a 1st-order integration rule, and the Simpson's rule a 3rd-order integration rule, because they are accurate up to and including terms proportional to $h$ and $h^{3}$
 
-But what if you don't know the derivatives? Well, there is a way. The general idea is:
-- I didn't get to write this down
+What if you don't know the derivatives? Well, if you know the error of the order, there is a way. For the trapezoid rule, for example, the error has order $h^{2}$.
+
+Choose $N$ intervals, and compute $I_{N}(a, b)$. You know,
+$$
+I(a, b) = I_{N}(a, b) + Ch^{2}
+$$
+Where we are trying to solve for $C$. Compute $I_{2N}(a, b)$, and we know that,
+$$
+I(a, b) = I_{2N}(a, b) + C \left( \frac{h}{2} \right)^{2}
+$$
+But $C$ does not change between the two. Equate the two expressions to find that,
+$$
+\frac{I_{2N}(a, b) - I_{N}(a, b)}{h^{2}} = \frac{3}{4} C
+$$
+And now we have an approximate expression to solve for $C$.
