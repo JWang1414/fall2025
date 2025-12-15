@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computational/final/Likely Tested Material.md",
+                "file": "computational/final/Review.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Likely Tested Material"
+              "title": "Review"
             }
           }
         ]
@@ -150,7 +150,7 @@
   "active": "a06345c59553ad8f",
   "lastOpenFiles": [
     "computational/lectures/Lecture Notes.md",
-    "computational/final/Likely Tested Material.md",
+    "computational/final/Review.md",
     "computational/final",
     "computational/Untitled.md",
     "computational/lectures/Lecture 11.md",
