@@ -201,3 +201,72 @@ $$
 \frac{dx}{dt} = v \qquad \frac{dv}{dt} = \frac{F(x)}{m}
 $$
 The Verlet method is effectively a two variable leapfrog method with 1/2 the cost. It still retains energy conservation. Equations on pg 88.
+# Adaptive time stepping
+Instead of using a constant time step, we can change the time step according to some target accuracy. Generally speaking, the error in each step will vary according to the conditions of the system of differential equations. Our goal here is to use shorter time steps for worse conditioning, and longer time steps for better conditioning.
+
+This is generally accomplished by computing 2 time steps to determine $x_{1}$ and $x_{2}$ to gain a rough estimate of the error, and then computing a 3rd RK4 step to actually progress the simulation. Despite this, adaptive time stepping is typically faster because it uses less steps.
+# Bulirsch-Stoer method
+An adaptation of the leapfrog method using the modified midpoint (MMP) method. Essentially, with a few clever adjustments, this method cancels out some of the errors in the leapfrog method, and so is more accurate.
+- Study this because I don't really get it
+# Boundary Value Problems
+## Shooting method
+Given some set of boundary values, choose some initial conditions, integrate the equations, and then adjust the initial conditions until they fit the conditions you require.
+
+The value that we "shoot" can be adjusted depending on the problem. For example, inside a quantum well the eigenvalues must satisfy the conditions on the left and right walls of the well. So instead we can vary the energies $E$ to determine the energy eigenvalues $E_{n}$.
+# Stability
+Even for physically stable systems, numerical methods can be unstable, and contain errors that grow.
+
+The forward Euler method, for example, can be unstable for some functions if the time step is large enough. This is because the adjustment for each time grows larger and larger over time, and eventually balloons to infinity.
+# Classifying PDEs
+Parabolic, elliptic, and hyperbolic PDEs
+# Elliptic equations
+## Jacobi relaxation method
+Approximate the small adjustments in the discretization of the equation and repeatedly apply it over a space so that it eventually converges to the solution.
+- Always stable
+## Overrelaxation method
+Identical to Jacobi relaxation, but we have added a relaxation parameter. Increasing the relaxation parameter can increase the convergence speed, but it also risks instability
+## Gauss-Seidel method
+Newer values in the relaxation are updated as they are computed, as opposed to going through the whole system in several passes, each pass accounts for the current one. This converges quicker, and also requires less space.
+
+Can be combined with overrelaxation to make it even quicker.
+# Parabolic PDEs
+## FTCS method
+Essentially, we discretize our region in space and time, and then propagate the solution based on the initial conditions.
+
+If you conduct Veon Neumann stability analysis for the FTCS method, you will find that it is stable for parabolic equations, but always diverges for the wave equation.
+- Remember to review Von Neumann stability analysis
+# The implicit method
+Explicitly, we would compute the following time step from the current one. Implicitly, we shift to compute the previous time step from the current one, and then move forward one time step. This accomplishes the same thing, but the equations are different.
+
+Stability analysis reveals here that the implicit method is unconditionally stable, but it will exponentially decay.
+## Crank-Nicolson
+The way we fix the decaying issue is to combine both the explicit and implicit methods. This combination overall makes it so that the growth factor of the system is 1.
+
+It is also more accurate. It is 2nd-order accurate in time, whereas the explicit and implicit methods are 1st-order.
+# Spectral methods
+Essentially, express the problem in the basis of spectral functions using Fourier transforms. In this way, the result at any point in time can be determined just by evaluating the new function that is in the spectral space.
+
+It relies on finding a set of orthogonal functions to use, and so can be difficult to implement in complicated geometries.
+# Random numbers
+Computers cannot actually generate random numbers, and it is also very challenging to see if generated numbers are legitimately random. Generally speaking, we attempt to search for correlations.
+
+Pair-wise correlations, for example, are an example of checking correlations in a large dataset. We can check if the random number distributions have a desired moment, or if particular permutations of numbers are occurring with equal probability.
+
+If you need a weighted distribution, like a distribution with a non-linear distribution function, than you can use a transformation to function to convert a linear distribution into a non-linear one. Python also has functions for normal distributions, for example.
+# Monte Carlo integration
+Leverages random numbers to determine the value of complex integrals. Monte Carlo integration is most powerful for pathological functions, fast-varying functions, or nested/complicated integrals.
+
+All these factors are especially true in the case of complex domains.
+
+Numerous variations:
+- Hit of miss
+- Mean value
+- Importance sampling
+# Monte Carlo simulation
+Using random numbers to simulate chaotic systems. In our case, we use it to simulate statistical mechanics, where the energy levels in a system have a chance to increase or decrease, depending on the latent energy in the system. This is called the *Markov Chain* method.
+# Simulated annealing
+Using MC simulations to find the global minimum or maximum of a system.
+
+Essentially, the problem of finding a min/max can also be interpreted as searching for the "ground state energy" of a system. Simulated annealing is done by starting with a relatively high temperature, and slowly decreasing the temperature in the system to see what the final state of the system becomes.
+
+Of course, because it is random, this is not perfectly accurate. But it has pretty good chances of being correct.
