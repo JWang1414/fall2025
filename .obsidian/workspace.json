@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7e760ec1d8687e50",
@@ -137,7 +138,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,6 +152,8 @@
   "active": "a06345c59553ad8f",
   "lastOpenFiles": [
     "computational/final/Review.md",
+    "computational/labs/Lab 10.md",
+    "computational/labs/Lab 11.md",
     "computational/final/Likely Material.md",
     "computational/lectures/Lecture Notes.md",
     "computational/final",
@@ -174,8 +178,6 @@
     "quantum/tutorials/Tutorial 5.md",
     "quantum/final/PSET 6.md",
     "environmental/final/Short Answer.md",
-    "environmental/final/Long Answer 2.md",
-    "environmental/final/Long Answer 3.md",
     "attachments/Pasted image 20251207212541.png",
     "attachments/Pasted image 20251207211955.png",
     "attachments/Pasted image 20251207205223.png",
